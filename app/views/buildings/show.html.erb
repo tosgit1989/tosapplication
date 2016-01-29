@@ -22,19 +22,21 @@
                 </h2>
               </header>
               <ul style="padding: 0">
-                <li style="border-bottom: dotted 1px">
-                  <div class="thumbnail__caption">
-                    <h3 class="text-xsmall text-overflow" building_name="テスト太郎">
-                      </span>テスト太郎<small 2014=""></small>
-                    </h3>
-                    <p class="text-small">
-                      <span class="rating-star"><i class="star-actived rate-[ここに評価を表示]0"></i></span>
-                    </p>
-                    <p>
-                      面白い！
-                    </p>
-                  </div>
-                </li>
+                <% @building.reviews.each do |review| %> <!--建物ページでレビューの一覧を表示-->
+                    <li style="border-bottom: dotted 1px">
+                      <div class="thumbnail__caption">
+                        <h3 class="text-xsmall text-overflow" building_name="<%= review.user_id %>">
+                          <span><i class="icon-rate-60 text-xxsmall opacity-60" title=""></i></span><%= review.user_id %><small 2014=""></small>
+                        </h3>
+                        <p class="text-small">
+                          <span class="rating-star"><i class="star-actived rate-[ここに評価を表示]0"></i></span>
+                        </p>
+                        <p>
+                          <%= review.review %>
+                        </p>
+                      </div>
+                    </li>
+                <% end %>
               </ul>
             </div>
           </article>
