@@ -1,0 +1,2602 @@
+
+
+Started GET "/" for ::1 at 2016-01-26 15:33:24 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/railties-4.2.5/lib/rails/templates/rails/welcome/index.html.erb (1.6ms)
+Completed 200 OK in 17ms (Views: 9.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tweets" for ::1 at 2016-01-26 15:33:37 +0900
+
+ActionController::RoutingError (No route matches [GET] "/tweets"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (10.0ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (32.9ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.3ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (24.0ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (46.9ms)
+  [1m[36m (22.7ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (19.4ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) 
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateBuildings (20160126064414)
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /Users/kagatoshio/projects/tosapplication2/db/migrate/20160126064414_create_buildings.rb:10)
+  [1m[35m (17.7ms)[0m  CREATE TABLE `buildings` (`id` int(11) auto_increment PRIMARY KEY, `building_name` varchar(255), `image_url` text, `detail` text, `fee` varchar(255), `access` text, `address` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.6ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20160126064414')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (0.6ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'tosapplication2_development'
+  AND fk.table_name = 'buildings'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `buildings`
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateReviews (20160126071713)
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /Users/kagatoshio/projects/tosapplication2/db/migrate/20160126071713_create_reviews.rb:8)
+  [1m[35m (15.3ms)[0m  CREATE TABLE `reviews` (`id` int(11) auto_increment PRIMARY KEY, `rate` int(11), `review` text, `product_id` int(11), `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20160126071713')
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'tosapplication2_development'
+  AND fk.table_name = 'buildings'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `buildings`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'tosapplication2_development'
+  AND fk.table_name = 'reviews'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `reviews`
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to DeviseCreateUsers (20160126072324)
+  [1m[35m (15.6ms)[0m  CREATE TABLE `users` (`id` int(11) auto_increment PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int(11) DEFAULT 0 NOT NULL, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (14.9ms)[0m  [1mCREATE UNIQUE INDEX `index_users_on_email`  ON `users` (`email`) [0m
+  [1m[35m (20.3ms)[0m  CREATE UNIQUE INDEX `index_users_on_reset_password_token`  ON `users` (`reset_password_token`) 
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20160126072324')
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'tosapplication2_development'
+  AND fk.table_name = 'buildings'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `buildings`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'tosapplication2_development'
+  AND fk.table_name = 'reviews'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `reviews`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'tosapplication2_development'
+  AND fk.table_name = 'users'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `users`
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to AddNicknameToUsers (20160126073520)
+  [1m[35m (26.8ms)[0m  ALTER TABLE `users` ADD `nickname` varchar(255)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20160126073520')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (0.4ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'tosapplication2_development'
+  AND fk.table_name = 'buildings'
+[0m
+  [1m[35m (0.4ms)[0m  SHOW CREATE TABLE `buildings`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'tosapplication2_development'
+  AND fk.table_name = 'reviews'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `reviews`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'tosapplication2_development'
+  AND fk.table_name = 'users'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `users`
+
+
+Started GET "/users/sign_up" for ::1 at 2016-01-27 13:56:02 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (9.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/devise-3.5.5/app/views/devise/shared/_links.html.erb (4.5ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/devise-3.5.5/app/views/devise/registrations/new.html.erb within layouts/application (67.1ms)
+Completed 200 OK in 1587ms (Views: 1557.4ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2016-01-27 14:00:12 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/devise-3.5.5/app/views/devise/shared/_links.html.erb (3.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 32ms (Views: 30.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2016-01-27 14:42:13 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/devise-3.5.5/app/views/devise/shared/_links.html.erb (2.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 39ms (Views: 37.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2016-01-27 14:54:58 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/devise-3.5.5/app/views/devise/shared/_links.html.erb (3.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (93.3ms)
+Completed 200 OK in 153ms (Views: 132.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2016-01-27 14:57:58 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/devise-3.5.5/app/views/devise/shared/_links.html.erb (2.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 35ms (Views: 33.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-01-27 15:14:42 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/railties-4.2.5/lib/rails/templates/rails/welcome/index.html.erb (2.7ms)
+Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2016-01-27 15:14:47 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/devise-3.5.5/app/views/devise/shared/_links.html.erb (3.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 58ms (Views: 38.9ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/users/sign_out" for ::1 at 2016-01-27 15:15:25 +0900
+
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.4ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.3ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (30.8ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (17.4ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (37.4ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-01-27 15:19:02 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/devise-3.5.5/app/views/devise/shared/_links.html.erb (8.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (202.0ms)
+Completed 200 OK in 242ms (Views: 224.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2016-01-27 15:19:05 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/devise-3.5.5/app/views/devise/shared/_links.html.erb (2.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 25ms (Views: 23.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-01-27 15:19:07 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/devise-3.5.5/app/views/devise/shared/_links.html.erb (4.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 30ms (Views: 24.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2016-01-27 15:19:10 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/devise-3.5.5/app/views/devise/shared/_links.html.erb (2.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 26ms (Views: 23.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-01-27 15:20:28 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/devise-3.5.5/app/views/devise/shared/_links.html.erb (5.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 37ms (Views: 34.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-01-27 15:20:34 +0900
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AFkR4hSXRtBRzmKjNMJqPaWUy8TKeeabHPscgigkCz+GIQ50vIMiq6AhkZkXeVGUIzBmTiZA0OGoqgX3tSKNlg==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AFkR4hSXRtBRzmKjNMJqPaWUy8TKeeabHPscgigkCz+GIQ50vIMiq6AhkZkXeVGUIzBmTiZA0OGoqgX3tSKNlg==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/devise-3.5.5/app/views/devise/shared/_links.html.erb (5.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 27ms (Views: 25.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-01-27 15:20:36 +0900
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UHHFf7AGEcworsedJJTuel02zEb5e6rK3ySDl6BYUY3WCdrpGBJ1t9lBNKcHL9XT25JhzBVCnLBrdZriPV7XJA==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UHHFf7AGEcworsedJJTuel02zEb5e6rK3ySDl6BYUY3WCdrpGBJ1t9lBNKcHL9XT25JhzBVCnLBrdZriPV7XJA==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/devise-3.5.5/app/views/devise/shared/_links.html.erb (4.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 30ms (Views: 29.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2016-01-27 15:21:31 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/devise-3.5.5/app/views/devise/shared/_links.html.erb (4.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 31ms (Views: 28.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2016-01-27 15:22:48 +0900
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"e/HV8wX4a3yK5/qH8Z92rpOJ04ptdIgyFnlYm5ThUFz9icplrewPB3sICb3SJE0HFS1+AIFNvkiiKEHuCefW9Q==", "user"=>{"email"=>"email1@email1", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "nickname"=>"nickname1"}, "commit"=>"Create User"}
+Unpermitted parameter: nickname
+  [1m[35m (2.1ms)[0m  BEGIN
+  [1m[36mUser Exists (11.4ms)[0m  [1mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'email1@email1' LIMIT 1[0m
+  [1m[35m (1.1ms)[0m  ROLLBACK
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/devise-3.5.5/app/views/devise/shared/_links.html.erb (2.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 146ms (Views: 20.0ms | ActiveRecord: 14.6ms)
+
+
+Started POST "/users" for ::1 at 2016-01-27 15:23:00 +0900
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hoWwcAG0ltKqNzb6krt6Kt7wgZrZ9Rdj6tByYZbWUVcA/a/mqaDyqVvYxcCxAEGDWFQsEDXMIRlegWsUC9DX/g==", "user"=>{"email"=>"email1@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "nickname"=>""}, "commit"=>"Create User"}
+Unpermitted parameter: nickname
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'email1@gmail.com' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/devise-3.5.5/app/views/devise/shared/_links.html.erb (2.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 23ms (Views: 16.4ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users" for ::1 at 2016-01-27 15:23:19 +0900
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j6IcCXl6XL9FQhbbG1xGH+umcCXy9/C5ZbrYACg9DnEJ2gOf0W44xLSt5eE45322bQLdrx7OxsPR68F1tTuI2A==", "user"=>{"email"=>"email1@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "nickname"=>"nickname1"}, "commit"=>"Create User"}
+Unpermitted parameter: nickname
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'email1@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (8.9ms)[0m  INSERT INTO `users` (`email`, `encrypted_password`, `created_at`, `updated_at`) VALUES ('email1@gmail.com', '$2a$10$brBmniGHn.fBWyc/jHLerOlco8B6qbvXKXunI3EsOTvfJT81mYM9O', '2016-01-27 06:23:19', '2016-01-27 06:23:19')
+  [1m[36m (2.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (6.2ms)[0m  [1mUPDATE `users` SET `last_sign_in_at` = '2016-01-27 06:23:19', `current_sign_in_at` = '2016-01-27 06:23:19', `last_sign_in_ip` = '::1', `current_sign_in_ip` = '::1', `sign_in_count` = 1, `updated_at` = '2016-01-27 06:23:19' WHERE `users`.`id` = 1[0m
+  [1m[35m (0.8ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 104ms (ActiveRecord: 18.8ms)
+
+
+Started GET "/" for ::1 at 2016-01-27 15:23:20 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/railties-4.2.5/lib/rails/templates/rails/welcome/index.html.erb (0.1ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to AddBuildingIdToReviews (20160127075539)
+  [1m[35m (45.2ms)[0m  ALTER TABLE `reviews` ADD `building_id` int(11)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20160127075539')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (1.1ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'tosapplication2_development'
+  AND fk.table_name = 'buildings'
+[0m
+  [1m[35m (0.5ms)[0m  SHOW CREATE TABLE `buildings`
+  [1m[36m (0.7ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'tosapplication2_development'
+  AND fk.table_name = 'reviews'
+[0m
+  [1m[35m (0.4ms)[0m  SHOW CREATE TABLE `reviews`
+  [1m[36m (0.6ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'tosapplication2_development'
+  AND fk.table_name = 'users'
+[0m
+  [1m[35m (0.3ms)[0m  SHOW CREATE TABLE `users`
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to RemoveProductIdFromReviews (20160127080408)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20160127080408')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'tosapplication2_development'
+  AND fk.table_name = 'buildings'
+
+  [1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `buildings`[0m
+  [1m[35m (0.2ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'tosapplication2_development'
+  AND fk.table_name = 'reviews'
+
+  [1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `reviews`[0m
+  [1m[35m (0.2ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'tosapplication2_development'
+  AND fk.table_name = 'users'
+
+  [1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `users`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+Migrating to RemoveProductIdFromReviews (20160127080408)
+  [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20160127080408'[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'tosapplication2_development'
+  AND fk.table_name = 'buildings'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `buildings`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'tosapplication2_development'
+  AND fk.table_name = 'reviews'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `reviews`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'tosapplication2_development'
+  AND fk.table_name = 'users'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `users`
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to RemoveProductIdFromReviews (20160127080842)
+  [1m[35m (18.3ms)[0m  ALTER TABLE `reviews` DROP `product_id`
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20160127080842')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'tosapplication2_development'
+  AND fk.table_name = 'buildings'
+[0m
+  [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `buildings`
+  [1m[36m (0.2ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'tosapplication2_development'
+  AND fk.table_name = 'reviews'
+[0m
+  [1m[35m (1.2ms)[0m  SHOW CREATE TABLE `reviews`
+  [1m[36m (1.0ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'tosapplication2_development'
+  AND fk.table_name = 'users'
+[0m
+  [1m[35m (0.6ms)[0m  SHOW CREATE TABLE `users`
+
+
+Started GET "/" for ::1 at 2016-01-27 18:38:32 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/railties-4.2.5/lib/rails/templates/rails/welcome/index.html.erb (0.2ms)
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-01-27 18:38:36 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/railties-4.2.5/lib/rails/templates/rails/welcome/index.html.erb (0.1ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-01-27 18:38:56 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/railties-4.2.5/lib/rails/templates/rails/welcome/index.html.erb (0.1ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2016-01-27 18:39:01 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 14ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/" for ::1 at 2016-01-27 18:39:01 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/railties-4.2.5/lib/rails/templates/rails/welcome/index.html.erb (0.1ms)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-01-27 18:39:09 +0900
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-01-27 18:39:09 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/railties-4.2.5/lib/rails/templates/rails/welcome/index.html.erb (0.0ms)
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2016-01-28 12:37:09 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[35mUser Load (20.1ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 46ms (ActiveRecord: 20.1ms)
+
+
+Started GET "/" for ::1 at 2016-01-28 12:37:09 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/railties-4.2.5/lib/rails/templates/rails/welcome/index.html.erb (0.8ms)
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-01-28 12:37:17 +0900
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-01-28 12:37:17 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/railties-4.2.5/lib/rails/templates/rails/welcome/index.html.erb (0.0ms)
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-01-28 12:37:24 +0900
+Processing by Devise::SessionsController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-01-28 12:37:24 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/railties-4.2.5/lib/rails/templates/rails/welcome/index.html.erb (0.0ms)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2016-01-28 12:37:29 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-01-28 12:37:29 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/railties-4.2.5/lib/rails/templates/rails/welcome/index.html.erb (0.0ms)
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2016-01-28 12:37:43 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-01-28 12:37:43 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/railties-4.2.5/lib/rails/templates/rails/welcome/index.html.erb (0.1ms)
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2016-01-28 12:38:40 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (3.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 31ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/" for ::1 at 2016-01-28 12:38:40 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/railties-4.2.5/lib/rails/templates/rails/welcome/index.html.erb (2.5ms)
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2016-01-28 12:38:50 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-01-28 12:38:50 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/railties-4.2.5/lib/rails/templates/rails/welcome/index.html.erb (0.1ms)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-01-28 12:41:08 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/railties-4.2.5/lib/rails/templates/rails/welcome/index.html.erb (0.0ms)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-01-28 13:16:48 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/railties-4.2.5/lib/rails/templates/rails/welcome/index.html.erb (1.7ms)
+Completed 200 OK in 21ms (Views: 10.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-01-28 13:16:54 +0900
+Processing by Devise::SessionsController#new as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 56ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2016-01-28 13:16:55 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/railties-4.2.5/lib/rails/templates/rails/welcome/index.html.erb (0.0ms)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-01-28 13:17:04 +0900
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-01-28 13:17:04 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/railties-4.2.5/lib/rails/templates/rails/welcome/index.html.erb (0.0ms)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-01-28 13:17:41 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/railties-4.2.5/lib/rails/templates/rails/welcome/index.html.erb (0.0ms)
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2016-01-28 13:17:51 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-01-28 13:17:51 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/railties-4.2.5/lib/rails/templates/rails/welcome/index.html.erb (0.0ms)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/properties" for ::1 at 2016-01-28 13:17:53 +0900
+Processing by Rails::InfoController#properties as */*
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/railties-4.2.5/lib/rails/templates/rails/info/properties.html.erb (0.4ms)
+Completed 200 OK in 13ms (Views: 9.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2016-01-28 13:19:12 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/railties-4.2.5/lib/rails/templates/rails/welcome/index.html.erb (0.1ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/tweets" for ::1 at 2016-01-28 13:19:19 +0900
+
+ActionController::RoutingError (No route matches [GET] "/users/tweets"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.1ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (10.1ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (36.7ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (13.9ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (29.7ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2016-01-28 13:19:24 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 12ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/" for ::1 at 2016-01-28 13:19:24 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/railties-4.2.5/lib/rails/templates/rails/welcome/index.html.erb (0.1ms)
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-01-28 13:22:00 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/railties-4.2.5/lib/rails/templates/rails/welcome/index.html.erb (0.1ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-01-28 13:22:11 +0900
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 17ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2016-01-28 13:22:11 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/railties-4.2.5/lib/rails/templates/rails/welcome/index.html.erb (0.0ms)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-01-28 13:23:56 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/railties-4.2.5/lib/rails/templates/rails/welcome/index.html.erb (0.1ms)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-01-28 13:23:59 +0900
+Processing by Devise::SessionsController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-01-28 13:23:59 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/railties-4.2.5/lib/rails/templates/rails/welcome/index.html.erb (0.0ms)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-01-28 13:32:44 +0900
+Processing by BuildingsController#index as HTML
+  Rendered buildings/index.html.erb within layouts/review_site (0.5ms)
+Completed 500 Internal Server Error in 224ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    35:         <i class="icon-crown color-gray-light"></i>投稿ランキング
+    36:       </h4>
+    37:       <ul class="listview listview--condensed text-small">
+    38:         <% @ranking.each.with_index(1) do |building, i| %>
+    39:             <li data-cinema-id="346394">
+    40:               <a href="/buildings/<%= building.id %>">
+    41:                 <div class="box">
+  app/views/layouts/review_site.html.erb:38:in `_app_views_layouts_review_site_html_erb___3206363993671892140_70127898990100'
+
+
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.5ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (22.9ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (14.8ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (32.7ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2016-01-28 13:38:21 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 9ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2016-01-28 13:38:21 +0900
+Processing by BuildingsController#index as HTML
+  Rendered buildings/index.html.erb within layouts/review_site (0.1ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    35:         <i class="icon-crown color-gray-light"></i>投稿ランキング
+    36:       </h4>
+    37:       <ul class="listview listview--condensed text-small">
+    38:         <% @ranking.each.with_index(1) do |building, i| %>
+    39:             <li data-cinema-id="346394">
+    40:               <a href="/buildings/<%= building.id %>">
+    41:                 <div class="box">
+  app/views/layouts/review_site.html.erb:38:in `_app_views_layouts_review_site_html_erb___3206363993671892140_70127898990100'
+
+
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.2ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (17.8ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (16.3ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (34.8ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-01-28 13:38:26 +0900
+Processing by Devise::SessionsController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-01-28 13:38:26 +0900
+Processing by BuildingsController#index as HTML
+  Rendered buildings/index.html.erb within layouts/review_site (0.0ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    35:         <i class="icon-crown color-gray-light"></i>投稿ランキング
+    36:       </h4>
+    37:       <ul class="listview listview--condensed text-small">
+    38:         <% @ranking.each.with_index(1) do |building, i| %>
+    39:             <li data-cinema-id="346394">
+    40:               <a href="/buildings/<%= building.id %>">
+    41:                 <div class="box">
+  app/views/layouts/review_site.html.erb:38:in `_app_views_layouts_review_site_html_erb___3206363993671892140_70127898990100'
+
+
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.9ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (17.8ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (13.2ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (27.3ms)
+
+
+Started GET "/" for ::1 at 2016-01-28 13:53:58 +0900
+Processing by BuildingsController#index as HTML
+  [1m[36m (4.0ms)[0m  [1mSELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5[0m
+  Rendered buildings/index.html.erb within layouts/review_site (0.1ms)
+Completed 200 OK in 27ms (Views: 16.3ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-28 13:53:58 +0900
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-28 13:53:58 +0900
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-28 13:53:58 +0900
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-28 13:53:58 +0900
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-28 13:53:58 +0900
+
+
+Started GET "/" for ::1 at 2016-01-28 13:54:09 +0900
+Processing by BuildingsController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5
+  Rendered buildings/index.html.erb within layouts/review_site (0.5ms)
+Completed 200 OK in 11ms (Views: 9.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2016-01-28 13:54:10 +0900
+Processing by BuildingsController#index as HTML
+  [1m[36m (0.5ms)[0m  [1mSELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5[0m
+  Rendered buildings/index.html.erb within layouts/review_site (0.0ms)
+Completed 200 OK in 14ms (Views: 10.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/buildings/search" for ::1 at 2016-01-28 13:54:14 +0900
+Processing by BuildingsController#search as HTML
+  [1m[35m (0.4ms)[0m  SELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5
+  Rendered buildings/search.html.erb within layouts/review_site (0.7ms)
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/buildings/search" for ::1 at 2016-01-28 13:54:15 +0900
+Processing by BuildingsController#search as HTML
+  [1m[36m (0.6ms)[0m  [1mSELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5[0m
+  Rendered buildings/search.html.erb within layouts/review_site (0.1ms)
+Completed 200 OK in 13ms (Views: 8.7ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-01-28 13:54:17 +0900
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"FlWbn3VEZ9hLcLHABSFsyiE4osmKnrwrhBaLEq2BYj6QLYQJ3VADo7qfQvommldjp5wPQ2anilEwR5JnMIfklw=="}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.7ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 16ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/" for ::1 at 2016-01-28 13:54:17 +0900
+Processing by BuildingsController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5[0m
+  Rendered buildings/index.html.erb within layouts/review_site (0.0ms)
+Completed 200 OK in 14ms (Views: 10.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/buildings/search" for ::1 at 2016-01-28 13:54:18 +0900
+Processing by BuildingsController#search as HTML
+  [1m[35m (0.5ms)[0m  SELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5
+  Rendered buildings/search.html.erb within layouts/review_site (0.2ms)
+Completed 200 OK in 15ms (Views: 10.5ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-01-28 13:54:19 +0900
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ikTYl8EHsutqRlU9uunFMyQudb97MEsTZgxqu83YPYJ6bOGR3qC43/E65XIOkMiDUhVNM8W/ZUxrNnllier2lw=="}
+Redirected to http://localhost:3000/
+Filter chain halted as :verify_signed_out_user rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-01-28 13:54:19 +0900
+Processing by BuildingsController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5[0m
+  Rendered buildings/index.html.erb within layouts/review_site (0.0ms)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/buildings/search" for ::1 at 2016-01-28 13:54:20 +0900
+Processing by BuildingsController#search as HTML
+  [1m[35m (0.4ms)[0m  SELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5
+  Rendered buildings/search.html.erb within layouts/review_site (0.1ms)
+Completed 200 OK in 12ms (Views: 9.7ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-01-28 13:54:21 +0900
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ae8r/zOBfZ7b0AWIErL4FMchB3Ci6q5RKH7YXC6cwF+ZxxL5LCZ3qkCstcemy/WksRo//BxlgA4lRMuCaq4LSg=="}
+Redirected to http://localhost:3000/
+Filter chain halted as :verify_signed_out_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-01-28 13:54:21 +0900
+Processing by BuildingsController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5[0m
+  Rendered buildings/index.html.erb within layouts/review_site (0.0ms)
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/buildings/search" for ::1 at 2016-01-28 13:54:22 +0900
+Processing by BuildingsController#search as HTML
+  [1m[35m (0.4ms)[0m  SELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5
+  Rendered buildings/search.html.erb within layouts/review_site (0.4ms)
+Completed 200 OK in 14ms (Views: 11.4ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-01-28 13:54:23 +0900
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"DByD+R/5ptLHReQQKvvlXZ7CVD5VUwvWVbXMHYVn5FL8NLr/AF6s5lw5VF+egujt6PlssuvcJYlYj9/DwVUvRw=="}
+Redirected to http://localhost:3000/
+Filter chain halted as :verify_signed_out_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-01-28 13:54:23 +0900
+Processing by BuildingsController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5[0m
+  Rendered buildings/index.html.erb within layouts/review_site (0.1ms)
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-01-28 13:56:31 +0900
+Processing by BuildingsController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5
+  Rendered buildings/index.html.erb within layouts/review_site (0.1ms)
+Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-01-28 13:56:31 +0900
+Processing by BuildingsController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5[0m
+  Rendered buildings/index.html.erb within layouts/review_site (0.1ms)
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-01-28 13:56:32 +0900
+Processing by BuildingsController#index as HTML
+  [1m[35m (0.8ms)[0m  SELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5
+  Rendered buildings/index.html.erb within layouts/review_site (0.1ms)
+Completed 200 OK in 15ms (Views: 10.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2016-01-28 14:25:54 +0900
+Processing by BuildingsController#index as HTML
+  [1m[36m (0.7ms)[0m  [1mSELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5[0m
+  Rendered buildings/index.html.erb within layouts/review_site (0.8ms)
+Completed 200 OK in 47ms (Views: 29.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-28 14:25:54 +0900
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-28 14:25:54 +0900
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-28 14:25:54 +0900
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-28 14:25:54 +0900
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-28 14:25:54 +0900
+
+
+Started GET "/" for ::1 at 2016-01-28 14:26:07 +0900
+Processing by BuildingsController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5
+  Rendered buildings/index.html.erb within layouts/review_site (0.1ms)
+Completed 200 OK in 14ms (Views: 11.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/buildings/search" for ::1 at 2016-01-28 14:26:09 +0900
+Processing by BuildingsController#search as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5[0m
+  Rendered buildings/search.html.erb within layouts/review_site (2.2ms)
+Completed 200 OK in 99ms (Views: 97.1ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-01-28 14:26:11 +0900
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"O3e2spc5DmlxnDKEQ2Xg6PSjWj491Kqzd18ektNjqHbLX4+0iJ4EXerggsv3HO1YgphisoNbhOx6ZQ1Ml1FjYw=="}
+Redirected to http://localhost:3000/
+Filter chain halted as :verify_signed_out_user rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-01-28 14:26:11 +0900
+Processing by BuildingsController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5
+  Rendered buildings/index.html.erb within layouts/review_site (0.0ms)
+Completed 200 OK in 11ms (Views: 9.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/buildings/search" for ::1 at 2016-01-28 14:26:13 +0900
+Processing by BuildingsController#search as HTML
+  [1m[36m (0.6ms)[0m  [1mSELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5[0m
+  Rendered buildings/search.html.erb within layouts/review_site (0.2ms)
+Completed 200 OK in 20ms (Views: 14.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/buildings/search" for ::1 at 2016-01-28 14:39:11 +0900
+Processing by BuildingsController#search as HTML
+  [1m[35m (0.3ms)[0m  SELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5
+  Rendered buildings/search.html.erb within layouts/review_site (1.4ms)
+Completed 200 OK in 20ms (Views: 18.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-28 14:39:11 +0900
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-28 14:39:11 +0900
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-28 14:39:11 +0900
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-28 14:39:11 +0900
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-28 14:39:11 +0900
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-01-28 14:39:15 +0900
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Wn/Qi3d9Zb/EZH9kulwfSh8ispqXqGoWTxQu/zcuB0qqV+mNaNpvi18YzysOJRL6aRmKFiknRElCLj0hcxzMXw=="}
+Redirected to http://localhost:3000/
+Filter chain halted as :verify_signed_out_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-01-28 14:39:15 +0900
+Processing by BuildingsController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5[0m
+  Rendered buildings/index.html.erb within layouts/review_site (0.1ms)
+Completed 200 OK in 17ms (Views: 15.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/buildings/search" for ::1 at 2016-01-28 14:39:17 +0900
+Processing by BuildingsController#search as HTML
+  [1m[35m (0.3ms)[0m  SELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5
+  Rendered buildings/search.html.erb within layouts/review_site (0.3ms)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/buildings/search" for ::1 at 2016-01-28 14:53:00 +0900
+Processing by BuildingsController#search as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5[0m
+  Rendered buildings/search.html.erb within layouts/review_site (0.1ms)
+Completed 200 OK in 21ms (Views: 19.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-28 14:53:00 +0900
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-28 14:53:00 +0900
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-28 14:53:00 +0900
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-28 14:53:00 +0900
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-28 14:53:00 +0900
+
+
+Started GET "/buildings/search?utf8=%E2%9C%93&keyword=hotel1" for ::1 at 2016-01-28 14:53:16 +0900
+Processing by BuildingsController#search as HTML
+  Parameters: {"utf8"=>"✓", "keyword"=>"hotel1"}
+  [1m[35m (0.3ms)[0m  SELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5
+  Rendered buildings/search.html.erb within layouts/review_site (0.4ms)
+Completed 200 OK in 14ms (Views: 12.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/buildings/search?utf8=%E2%9C%93&keyword=" for ::1 at 2016-01-28 14:53:18 +0900
+Processing by BuildingsController#search as HTML
+  Parameters: {"utf8"=>"✓", "keyword"=>""}
+  [1m[36m (0.4ms)[0m  [1mSELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5[0m
+  Rendered buildings/search.html.erb within layouts/review_site (0.1ms)
+Completed 200 OK in 16ms (Views: 13.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/buildings/search?utf8=%E2%9C%93&keyword=" for ::1 at 2016-01-28 15:27:28 +0900
+Processing by BuildingsController#search as HTML
+  Parameters: {"utf8"=>"✓", "keyword"=>""}
+  [1m[35m (0.4ms)[0m  SELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5
+  Rendered buildings/search.html.erb within layouts/review_site (0.3ms)
+Completed 200 OK in 29ms (Views: 26.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-28 15:27:28 +0900
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-28 15:27:28 +0900
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-28 15:27:28 +0900
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-28 15:27:28 +0900
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-28 15:27:28 +0900
+
+
+Started GET "/" for ::1 at 2016-01-28 15:27:31 +0900
+Processing by BuildingsController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5[0m
+  Rendered buildings/index.html.erb within layouts/review_site (0.1ms)
+Completed 200 OK in 31ms (Views: 28.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-01-28 15:27:32 +0900
+Processing by BuildingsController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5
+  Rendered buildings/index.html.erb within layouts/review_site (0.1ms)
+Completed 200 OK in 13ms (Views: 10.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-01-28 15:27:33 +0900
+Processing by BuildingsController#index as HTML
+  [1m[36m (0.6ms)[0m  [1mSELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5[0m
+  Rendered buildings/index.html.erb within layouts/review_site (0.0ms)
+Completed 200 OK in 12ms (Views: 9.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-01-28 15:27:33 +0900
+Processing by BuildingsController#index as HTML
+  [1m[35m (0.9ms)[0m  SELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5
+  Rendered buildings/index.html.erb within layouts/review_site (0.1ms)
+Completed 200 OK in 16ms (Views: 14.1ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-01-28 15:27:35 +0900
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"yu/J2AT/5+6i9/NssDepn3VWRLQ9g6bSu6Ku5Sm4xHU6x/DeG1jt2jmLQyMETqQvA218OIMMiI22mL07bYoPYA=="}
+Redirected to http://localhost:3000/
+Filter chain halted as :verify_signed_out_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-01-28 15:27:35 +0900
+Processing by BuildingsController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5[0m
+  Rendered buildings/index.html.erb within layouts/review_site (0.1ms)
+Completed 200 OK in 12ms (Views: 10.0ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-01-28 15:27:36 +0900
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"SKGnQRdsfSAHGowYncB+Kxw9b7JJe3HEdKgVWA3LASq4iZ5HCMt3FJxmPFcpuXObagZXPvf0X5t5kgaGSfnKPw=="}
+Redirected to http://localhost:3000/
+Filter chain halted as :verify_signed_out_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-01-28 15:27:36 +0900
+Processing by BuildingsController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5
+  Rendered buildings/index.html.erb within layouts/review_site (0.0ms)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/buildings/search" for ::1 at 2016-01-28 15:27:37 +0900
+Processing by BuildingsController#search as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5[0m
+  Rendered buildings/search.html.erb within layouts/review_site (0.2ms)
+Completed 200 OK in 11ms (Views: 8.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/buildings/search?utf8=%E2%9C%93&keyword=hotel1" for ::1 at 2016-01-28 15:32:15 +0900
+Processing by BuildingsController#search as HTML
+  Parameters: {"utf8"=>"✓", "keyword"=>"hotel1"}
+  [1m[35m (0.3ms)[0m  SELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5
+  Rendered buildings/search.html.erb within layouts/review_site (0.1ms)
+Completed 200 OK in 11ms (Views: 9.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/buildings/search?utf8=%E2%9C%93&keyword=" for ::1 at 2016-01-28 15:32:17 +0900
+Processing by BuildingsController#search as HTML
+  Parameters: {"utf8"=>"✓", "keyword"=>""}
+  [1m[36m (0.3ms)[0m  [1mSELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5[0m
+  Rendered buildings/search.html.erb within layouts/review_site (0.1ms)
+Completed 200 OK in 10ms (Views: 8.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/buildings/search?utf8=%E2%9C%93&keyword=" for ::1 at 2016-01-28 15:32:17 +0900
+Processing by BuildingsController#search as HTML
+  Parameters: {"utf8"=>"✓", "keyword"=>""}
+  [1m[35m (0.6ms)[0m  SELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5
+  Rendered buildings/search.html.erb within layouts/review_site (0.3ms)
+Completed 200 OK in 12ms (Views: 9.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/buildings/search?utf8=%E2%9C%93&keyword=" for ::1 at 2016-01-28 15:32:17 +0900
+Processing by BuildingsController#search as HTML
+  Parameters: {"utf8"=>"✓", "keyword"=>""}
+  [1m[36m (0.3ms)[0m  [1mSELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5[0m
+  Rendered buildings/search.html.erb within layouts/review_site (0.1ms)
+Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/buildings/search?utf8=%E2%9C%93&keyword=" for ::1 at 2016-01-28 15:32:18 +0900
+Processing by BuildingsController#search as HTML
+  Parameters: {"utf8"=>"✓", "keyword"=>""}
+  [1m[35m (0.3ms)[0m  SELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5
+  Rendered buildings/search.html.erb within layouts/review_site (0.1ms)
+Completed 200 OK in 12ms (Views: 9.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/buildings/search?utf8=%E2%9C%93&keyword=" for ::1 at 2016-01-28 15:32:18 +0900
+Processing by BuildingsController#search as HTML
+  Parameters: {"utf8"=>"✓", "keyword"=>""}
+  [1m[36m (0.3ms)[0m  [1mSELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5[0m
+  Rendered buildings/search.html.erb within layouts/review_site (0.2ms)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/buildings/search?utf8=%E2%9C%93&keyword=" for ::1 at 2016-01-28 15:32:18 +0900
+Processing by BuildingsController#search as HTML
+  Parameters: {"utf8"=>"✓", "keyword"=>""}
+  [1m[35m (0.3ms)[0m  SELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5
+  Rendered buildings/search.html.erb within layouts/review_site (0.1ms)
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/buildings/search?utf8=%E2%9C%93&keyword=" for ::1 at 2016-01-28 15:32:18 +0900
+Processing by BuildingsController#search as HTML
+  Parameters: {"utf8"=>"✓", "keyword"=>""}
+  [1m[36m (0.3ms)[0m  [1mSELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5[0m
+  Rendered buildings/search.html.erb within layouts/review_site (0.1ms)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/buildings/search?utf8=%E2%9C%93&keyword=" for ::1 at 2016-01-28 15:32:19 +0900
+Processing by BuildingsController#search as HTML
+  Parameters: {"utf8"=>"✓", "keyword"=>""}
+  [1m[35m (0.4ms)[0m  SELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5
+  Rendered buildings/search.html.erb within layouts/review_site (0.1ms)
+Completed 200 OK in 21ms (Views: 18.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/buildings/search?utf8=%E2%9C%93&keyword=" for ::1 at 2016-01-28 15:32:19 +0900
+Processing by BuildingsController#search as HTML
+  Parameters: {"utf8"=>"✓", "keyword"=>""}
+  [1m[36m (0.3ms)[0m  [1mSELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5[0m
+  Rendered buildings/search.html.erb within layouts/review_site (0.1ms)
+Completed 200 OK in 11ms (Views: 9.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/buildings/search?utf8=%E2%9C%93&keyword=" for ::1 at 2016-01-28 15:32:19 +0900
+Processing by BuildingsController#search as HTML
+  Parameters: {"utf8"=>"✓", "keyword"=>""}
+  [1m[35m (0.4ms)[0m  SELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5
+  Rendered buildings/search.html.erb within layouts/review_site (0.1ms)
+Completed 200 OK in 13ms (Views: 11.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/buildings/search?utf8=%E2%9C%93&keyword=" for ::1 at 2016-01-28 15:32:19 +0900
+Processing by BuildingsController#search as HTML
+  Parameters: {"utf8"=>"✓", "keyword"=>""}
+  [1m[36m (0.3ms)[0m  [1mSELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5[0m
+  Rendered buildings/search.html.erb within layouts/review_site (0.1ms)
+Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/buildings/search?utf8=%E2%9C%93&keyword=" for ::1 at 2016-01-28 15:32:19 +0900
+Processing by BuildingsController#search as HTML
+  Parameters: {"utf8"=>"✓", "keyword"=>""}
+  [1m[35m (0.4ms)[0m  SELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5
+  Rendered buildings/search.html.erb within layouts/review_site (0.1ms)
+Completed 200 OK in 11ms (Views: 8.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/buildings/search" for ::1 at 2016-01-28 15:32:26 +0900
+Processing by BuildingsController#search as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5[0m
+  Rendered buildings/search.html.erb within layouts/review_site (0.1ms)
+Completed 200 OK in 15ms (Views: 12.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/buildings/search" for ::1 at 2016-01-28 15:32:27 +0900
+Processing by BuildingsController#search as HTML
+  [1m[35m (0.3ms)[0m  SELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5
+  Rendered buildings/search.html.erb within layouts/review_site (0.1ms)
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/sign_out" for ::1 at 2016-01-28 15:32:40 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"sign_out"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+ActionView::MissingTemplate (Missing template users/show, application/show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/kagatoshio/projects/tosapplication2/app/views"
+  * "/Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/devise-3.5.5/app/views"
+):
+  actionview (4.2.5) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.5) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.5) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.5) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.5) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.5) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.5) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.5) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.5) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.5) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.5) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.5) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.5) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.5) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.5) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.2.5) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.5) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.5) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.5) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.5) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.5) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.5) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.5) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.5) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.5) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.5) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.5) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.5) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:76:in `call'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  warden (1.2.4) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.4) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.4) lib/warden/manager.rb:34:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.5) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.1ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (20.7ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (18.3ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (36.7ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2016-01-28 15:32:51 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/devise-3.5.5/app/views/devise/shared/_links.html.erb (5.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (24.9ms)
+Completed 200 OK in 46ms (Views: 40.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-01-28 15:33:09 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/devise-3.5.5/app/views/devise/shared/_links.html.erb (8.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 37ms (Views: 32.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-01-28 15:33:40 +0900
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ce4tX2b6HhWlJAoNQBScbuo0a/q6RwdK8oSnl+jMSqz5xhRZeV0UIT5YukL0bZHenA9TdgTIKRX/vrRJrP6BuQ==", "user"=>{"email"=>"email1@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'email1@gmail.com'  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (3.1ms)[0m  [1mUPDATE `users` SET `current_sign_in_at` = '2016-01-28 06:33:41', `sign_in_count` = 2, `updated_at` = '2016-01-28 06:33:41' WHERE `users`.`id` = 1[0m
+  [1m[35m (0.7ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 90ms (ActiveRecord: 5.4ms)
+
+
+Started GET "/" for ::1 at 2016-01-28 15:33:41 +0900
+Processing by BuildingsController#index as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5[0m
+  Rendered buildings/index.html.erb within layouts/review_site (0.1ms)
+Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-01-28 15:33:44 +0900
+Processing by BuildingsController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5
+  Rendered buildings/index.html.erb within layouts/review_site (0.1ms)
+Completed 200 OK in 15ms (Views: 12.8ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-01-28 15:33:46 +0900
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"U5bI/3SXx+tKOhXdJK8EFCvL/IOlQDz5z7QIkrgH+KzW6exZQ2O+mED+chClzBszbEmO4kjm2OjA2Noq4rPB8g=="}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2016-01-28 15:33:46 +0900
+Processing by BuildingsController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5
+  Rendered buildings/index.html.erb within layouts/review_site (0.0ms)
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-01-28 15:33:47 +0900
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"pe/adUdD5QsAJC+zTEkmYjTV/3svO2A6sP12KGqUOYcWQB1x40cQX43FfhQ3gM5mC2BKmYJYYN6LsxYMFq/L1w=="}
+Redirected to http://localhost:3000/
+Filter chain halted as :verify_signed_out_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-01-28 15:33:47 +0900
+Processing by BuildingsController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5[0m
+  Rendered buildings/index.html.erb within layouts/review_site (0.0ms)
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-01-28 15:33:47 +0900
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"KSbT5DFysaW/blCZwsr8IYZIdfAwOxay5Wxbsn8QP7maiRTglXZE8TKPAT65AxQluf3AEp1YFlbeIjuWAyvN6Q=="}
+Redirected to http://localhost:3000/
+Filter chain halted as :verify_signed_out_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-01-28 15:33:47 +0900
+Processing by BuildingsController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5
+  Rendered buildings/index.html.erb within layouts/review_site (0.1ms)
+Completed 200 OK in 11ms (Views: 9.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-01-28 15:40:30 +0900
+Processing by BuildingsController#index as HTML
+  [1m[36m (0.6ms)[0m  [1mSELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5[0m
+  Rendered buildings/index.html.erb within layouts/review_site (0.1ms)
+Completed 200 OK in 29ms (Views: 18.8ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-28 15:40:30 +0900
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-28 15:40:30 +0900
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-28 15:40:30 +0900
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-28 15:40:30 +0900
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-28 15:40:30 +0900
+
+
+Started GET "/buildings/search" for ::1 at 2016-01-28 15:40:38 +0900
+Processing by BuildingsController#search as HTML
+  [1m[35m (1.3ms)[0m  SELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5
+  Rendered buildings/search.html.erb within layouts/review_site (0.3ms)
+Completed 200 OK in 17ms (Views: 12.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/buildings/search" for ::1 at 2016-01-28 15:40:39 +0900
+Processing by BuildingsController#search as HTML
+  [1m[36m (1.0ms)[0m  [1mSELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5[0m
+  Rendered buildings/search.html.erb within layouts/review_site (0.3ms)
+Completed 200 OK in 16ms (Views: 11.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/buildings/search" for ::1 at 2016-01-28 15:40:39 +0900
+Processing by BuildingsController#search as HTML
+  [1m[35m (0.3ms)[0m  SELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5
+  Rendered buildings/search.html.erb within layouts/review_site (0.1ms)
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/buildings/search" for ::1 at 2016-01-28 15:40:40 +0900
+Processing by BuildingsController#search as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5[0m
+  Rendered buildings/search.html.erb within layouts/review_site (0.1ms)
+Completed 200 OK in 14ms (Views: 12.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/buildings/search" for ::1 at 2016-01-28 15:40:40 +0900
+Processing by BuildingsController#search as HTML
+  [1m[35m (0.3ms)[0m  SELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5
+  Rendered buildings/search.html.erb within layouts/review_site (0.2ms)
+Completed 200 OK in 15ms (Views: 13.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/buildings/search" for ::1 at 2016-01-28 15:40:51 +0900
+Processing by BuildingsController#search as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5[0m
+  Rendered buildings/search.html.erb within layouts/review_site (0.1ms)
+Completed 200 OK in 13ms (Views: 9.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/buildings/search" for ::1 at 2016-01-28 15:40:52 +0900
+Processing by BuildingsController#search as HTML
+  [1m[35m (0.3ms)[0m  SELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5
+  Rendered buildings/search.html.erb within layouts/review_site (0.1ms)
+Completed 200 OK in 12ms (Views: 9.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/buildings/search" for ::1 at 2016-01-28 15:40:53 +0900
+Processing by BuildingsController#search as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5[0m
+  Rendered buildings/search.html.erb within layouts/review_site (0.1ms)
+Completed 200 OK in 16ms (Views: 14.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/buildings/search" for ::1 at 2016-01-28 15:40:53 +0900
+Processing by BuildingsController#search as HTML
+  [1m[35m (0.5ms)[0m  SELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5
+  Rendered buildings/search.html.erb within layouts/review_site (0.1ms)
+Completed 200 OK in 11ms (Views: 8.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/buildings/search" for ::1 at 2016-01-28 15:40:53 +0900
+Processing by BuildingsController#search as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5[0m
+  Rendered buildings/search.html.erb within layouts/review_site (0.2ms)
+Completed 200 OK in 15ms (Views: 13.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/buildings/search" for ::1 at 2016-01-28 15:52:06 +0900
+Processing by BuildingsController#search as HTML
+  [1m[35m (0.3ms)[0m  SELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5
+  Rendered buildings/search.html.erb within layouts/review_site (0.2ms)
+Completed 200 OK in 23ms (Views: 17.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-28 15:52:06 +0900
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-28 15:52:06 +0900
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-28 15:52:06 +0900
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-28 15:52:06 +0900
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-28 15:52:06 +0900
+
+
+Started GET "/buildings" for ::1 at 2016-01-28 16:05:52 +0900
+
+ActionController::RoutingError (No route matches [GET] "/buildings"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.6ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (32.0ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (15.8ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.6ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (35.7ms)
+
+
+Started GET "/buildings/index" for ::1 at 2016-01-28 16:06:04 +0900
+Processing by BuildingsController#show as HTML
+  Parameters: {"id"=>"index"}
+  [1m[36m (1.0ms)[0m  [1mSELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5[0m
+  Rendered buildings/show.html.erb within layouts/review_site (0.6ms)
+Completed 200 OK in 33ms (Views: 15.8ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/" for ::1 at 2016-01-28 16:08:40 +0900
+Processing by BuildingsController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5
+  Rendered buildings/index.html.erb within layouts/review_site (0.1ms)
+Completed 200 OK in 16ms (Views: 14.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-01-28 16:12:08 +0900
+Processing by BuildingsController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5[0m
+  Rendered buildings/index.html.erb within layouts/review_site (0.0ms)
+Completed 200 OK in 23ms (Views: 15.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-28 16:12:08 +0900
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-28 16:12:08 +0900
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-28 16:12:08 +0900
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-28 16:12:08 +0900
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-28 16:12:08 +0900
+
+
+Started GET "/" for ::1 at 2016-01-28 16:12:37 +0900
+Processing by BuildingsController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5
+  Rendered buildings/index.html.erb within layouts/review_site (0.1ms)
+Completed 200 OK in 20ms (Views: 16.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2016-01-28 16:20:20 +0900
+Processing by BuildingsController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5[0m
+  Rendered buildings/index.html.erb within layouts/review_site (0.8ms)
+Completed 200 OK in 20ms (Views: 17.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-28 16:20:20 +0900
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-28 16:20:20 +0900
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-28 16:20:20 +0900
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-28 16:20:20 +0900
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-28 16:20:20 +0900
+
+
+Started GET "/" for ::1 at 2016-01-28 16:21:41 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by BuildingsController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5
+  Rendered buildings/index.html.erb within layouts/review_site (1.6ms)
+Completed 200 OK in 284ms (Views: 265.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-28 16:21:41 +0900
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-28 16:21:41 +0900
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-28 16:21:41 +0900
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-28 16:21:41 +0900
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-28 16:21:41 +0900
+
+
+Started GET "/" for ::1 at 2016-01-28 16:21:43 +0900
+Processing by BuildingsController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5[0m
+  Rendered buildings/index.html.erb within layouts/review_site (0.0ms)
+Completed 200 OK in 11ms (Views: 9.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-28 16:21:43 +0900
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-28 16:21:43 +0900
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-28 16:21:43 +0900
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-28 16:21:43 +0900
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-28 16:21:43 +0900
+
+
+Started GET "/" for ::1 at 2016-01-28 17:28:12 +0900
+Processing by BuildingsController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5
+  [1m[36mBuilding Load (6.6ms)[0m  [1mSELECT  `buildings`.* FROM `buildings`  ORDER BY id ASC LIMIT 2[0m
+  Rendered buildings/index.html.erb within layouts/review_site (20.8ms)
+Completed 200 OK in 68ms (Views: 38.9ms | ActiveRecord: 15.5ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-28 17:28:12 +0900
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-28 17:28:12 +0900
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-28 17:28:12 +0900
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-28 17:28:13 +0900
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-28 17:28:13 +0900
+
+
+Started GET "/" for ::1 at 2016-01-28 17:28:13 +0900
+Processing by BuildingsController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5
+  [1m[36mBuilding Load (0.3ms)[0m  [1mSELECT  `buildings`.* FROM `buildings`  ORDER BY id ASC LIMIT 2[0m
+  Rendered buildings/index.html.erb within layouts/review_site (1.0ms)
+Completed 200 OK in 17ms (Views: 13.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/buildings/search" for ::1 at 2016-01-28 17:38:13 +0900
+Processing by BuildingsController#search as HTML
+  [1m[35m (0.5ms)[0m  SELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5
+  [1m[36mBuilding Load (3.2ms)[0m  [1mSELECT  `buildings`.* FROM `buildings` WHERE (building_name LIKE('%%')) LIMIT 2[0m
+  Rendered buildings/search.html.erb within layouts/review_site (14.6ms)
+Completed 200 OK in 54ms (Views: 33.7ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/buildings/search" for ::1 at 2016-01-28 17:38:13 +0900
+Processing by BuildingsController#search as HTML
+  [1m[35m (1.3ms)[0m  SELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5
+  [1m[36mBuilding Load (0.7ms)[0m  [1mSELECT  `buildings`.* FROM `buildings` WHERE (building_name LIKE('%%')) LIMIT 2[0m
+  Rendered buildings/search.html.erb within layouts/review_site (3.5ms)
+Completed 200 OK in 33ms (Views: 28.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/buildings/search" for ::1 at 2016-01-28 20:19:44 +0900
+Processing by BuildingsController#search as HTML
+  [1m[35m (0.6ms)[0m  SELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5
+  [1m[36mBuilding Load (0.7ms)[0m  [1mSELECT  `buildings`.* FROM `buildings` WHERE (building_name LIKE('%%')) LIMIT 2[0m
+  Rendered buildings/search.html.erb within layouts/review_site (12.4ms)
+Completed 200 OK in 77ms (Views: 42.7ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-28 20:19:44 +0900
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-28 20:19:44 +0900
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-28 20:19:44 +0900
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-28 20:19:44 +0900
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-28 20:19:44 +0900
+
+
+Started GET "/buildings/search" for ::1 at 2016-01-28 20:19:44 +0900
+Processing by BuildingsController#search as HTML
+  [1m[35m (2.3ms)[0m  SELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5
+  [1m[36mBuilding Load (0.6ms)[0m  [1mSELECT  `buildings`.* FROM `buildings` WHERE (building_name LIKE('%%')) LIMIT 2[0m
+  Rendered buildings/search.html.erb within layouts/review_site (2.6ms)
+Completed 200 OK in 37ms (Views: 29.2ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/buildings/search" for ::1 at 2016-01-28 20:19:49 +0900
+Processing by BuildingsController#search as HTML
+  [1m[35m (2.5ms)[0m  SELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5
+  [1m[36mBuilding Load (0.4ms)[0m  [1mSELECT  `buildings`.* FROM `buildings` WHERE (building_name LIKE('%%')) LIMIT 2[0m
+  Rendered buildings/search.html.erb within layouts/review_site (1.9ms)
+Completed 200 OK in 26ms (Views: 19.7ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/buildings/search" for ::1 at 2016-01-28 20:19:51 +0900
+Processing by BuildingsController#search as HTML
+  [1m[35m (0.3ms)[0m  SELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5
+  [1m[36mBuilding Load (0.4ms)[0m  [1mSELECT  `buildings`.* FROM `buildings` WHERE (building_name LIKE('%%')) LIMIT 2[0m
+  Rendered buildings/search.html.erb within layouts/review_site (1.2ms)
+Completed 200 OK in 13ms (Views: 11.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/buildings/search" for ::1 at 2016-01-28 20:19:52 +0900
+Processing by BuildingsController#search as HTML
+  [1m[35m (1.7ms)[0m  SELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5
+  [1m[36mBuilding Load (0.3ms)[0m  [1mSELECT  `buildings`.* FROM `buildings` WHERE (building_name LIKE('%%')) LIMIT 2[0m
+  Rendered buildings/search.html.erb within layouts/review_site (1.1ms)
+Completed 200 OK in 16ms (Views: 12.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/buildings/search" for ::1 at 2016-01-28 20:19:52 +0900
+Processing by BuildingsController#search as HTML
+  [1m[35m (0.3ms)[0m  SELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5
+  [1m[36mBuilding Load (0.3ms)[0m  [1mSELECT  `buildings`.* FROM `buildings` WHERE (building_name LIKE('%%')) LIMIT 2[0m
+  Rendered buildings/search.html.erb within layouts/review_site (1.1ms)
+Completed 200 OK in 18ms (Views: 16.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/buildings/search" for ::1 at 2016-01-28 20:19:53 +0900
+Processing by BuildingsController#search as HTML
+  [1m[35m (1.0ms)[0m  SELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5
+  [1m[36mBuilding Load (0.4ms)[0m  [1mSELECT  `buildings`.* FROM `buildings` WHERE (building_name LIKE('%%')) LIMIT 2[0m
+  Rendered buildings/search.html.erb within layouts/review_site (1.2ms)
+Completed 200 OK in 18ms (Views: 15.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/buildings/search" for ::1 at 2016-01-28 20:19:53 +0900
+Processing by BuildingsController#search as HTML
+  [1m[35m (0.4ms)[0m  SELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5
+  [1m[36mBuilding Load (0.3ms)[0m  [1mSELECT  `buildings`.* FROM `buildings` WHERE (building_name LIKE('%%')) LIMIT 2[0m
+  Rendered buildings/search.html.erb within layouts/review_site (1.1ms)
+Completed 200 OK in 18ms (Views: 12.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/buildings/search" for ::1 at 2016-01-28 20:19:59 +0900
+Processing by BuildingsController#search as HTML
+  [1m[35m (0.7ms)[0m  SELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5
+  [1m[36mBuilding Load (0.3ms)[0m  [1mSELECT  `buildings`.* FROM `buildings` WHERE (building_name LIKE('%%')) LIMIT 2[0m
+  Rendered buildings/search.html.erb within layouts/review_site (0.9ms)
+Completed 200 OK in 13ms (Views: 9.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/buildings/search" for ::1 at 2016-01-28 20:19:59 +0900
+Processing by BuildingsController#search as HTML
+  [1m[35m (0.9ms)[0m  SELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5
+  [1m[36mBuilding Load (0.4ms)[0m  [1mSELECT  `buildings`.* FROM `buildings` WHERE (building_name LIKE('%%')) LIMIT 2[0m
+  Rendered buildings/search.html.erb within layouts/review_site (1.1ms)
+Completed 200 OK in 16ms (Views: 10.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/buildings/search" for ::1 at 2016-01-28 20:19:59 +0900
+Processing by BuildingsController#search as HTML
+  [1m[35m (0.7ms)[0m  SELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5
+  [1m[36mBuilding Load (1.1ms)[0m  [1mSELECT  `buildings`.* FROM `buildings` WHERE (building_name LIKE('%%')) LIMIT 2[0m
+  Rendered buildings/search.html.erb within layouts/review_site (1.9ms)
+Completed 200 OK in 17ms (Views: 11.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/buildings/search" for ::1 at 2016-01-28 20:19:59 +0900
+Processing by BuildingsController#search as HTML
+  [1m[35m (0.5ms)[0m  SELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5
+  [1m[36mBuilding Load (1.2ms)[0m  [1mSELECT  `buildings`.* FROM `buildings` WHERE (building_name LIKE('%%')) LIMIT 2[0m
+  Rendered buildings/search.html.erb within layouts/review_site (2.2ms)
+Completed 200 OK in 22ms (Views: 15.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/buildings/search" for ::1 at 2016-01-28 20:20:42 +0900
+Processing by BuildingsController#search as HTML
+  [1m[35m (0.4ms)[0m  SELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5
+  [1m[36mBuilding Load (1.5ms)[0m  [1mSELECT  `buildings`.* FROM `buildings` WHERE (building_name LIKE('%%')) LIMIT 2[0m
+  Rendered buildings/search.html.erb within layouts/review_site (3.3ms)
+Completed 200 OK in 30ms (Views: 23.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/buildings/search" for ::1 at 2016-01-28 20:20:42 +0900
+Processing by BuildingsController#search as HTML
+  [1m[35m (0.4ms)[0m  SELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5
+  [1m[36mBuilding Load (0.4ms)[0m  [1mSELECT  `buildings`.* FROM `buildings` WHERE (building_name LIKE('%%')) LIMIT 2[0m
+  Rendered buildings/search.html.erb within layouts/review_site (1.2ms)
+Completed 200 OK in 30ms (Views: 27.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/buildings/1/reviews/new" for ::1 at 2016-01-28 20:20:45 +0900
+Processing by ReviewsController#new as HTML
+  Parameters: {"building_id"=>"1"}
+  [1m[35m (0.4ms)[0m  SELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5
+  [1m[36mBuilding Load (3.1ms)[0m  [1mSELECT  `buildings`.* FROM `buildings` WHERE `buildings`.`id` = 1 LIMIT 1[0m
+  Rendered reviews/new.html.erb within layouts/review_site (37.9ms)
+Completed 200 OK in 81ms (Views: 49.7ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/buildings/1/reviews/new" for ::1 at 2016-01-28 20:20:45 +0900
+Processing by ReviewsController#new as HTML
+  Parameters: {"building_id"=>"1"}
+  [1m[35m (0.5ms)[0m  SELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5
+  [1m[36mBuilding Load (0.4ms)[0m  [1mSELECT  `buildings`.* FROM `buildings` WHERE `buildings`.`id` = 1 LIMIT 1[0m
+  Rendered reviews/new.html.erb within layouts/review_site (4.0ms)
+Completed 200 OK in 29ms (Views: 25.1ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/buildings/1/reviews" for ::1 at 2016-01-28 20:21:08 +0900
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/qACGWjd8SJpZxEfW4WMvd9s74nXRK6JXR3W5qPtYqxND8UdzNkEduSGQLggTGS54Nlaa3onrm1mU7bC39aQ/A==", "review"=>{"nickname"=>"nickn1", "rate"=>"1", "review"=>"revrev"}, "button"=>"", "building_id"=>"1"}
+  [1m[35m (0.3ms)[0m  SELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.3ms)
+
+ActionView::MissingTemplate (Missing template reviews/create, ranking/create, application/create with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/kagatoshio/projects/tosapplication2/app/views"
+  * "/Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/devise-3.5.5/app/views"
+):
+  actionview (4.2.5) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.5) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.5) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.5) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.5) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.5) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.5) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.5) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.5) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.5) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.5) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.5) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.5) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.5) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.5) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.2.5) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.5) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.5) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.5) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.5) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.5) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.5) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.5) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.5) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.5) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.5) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.5) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.5) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:76:in `call'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  warden (1.2.4) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.4) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.4) lib/warden/manager.rb:34:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.5) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.3ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.1ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (27.2ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (17.6ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (38.6ms)
+
+
+Started POST "/buildings/1/reviews" for ::1 at 2016-01-28 20:31:00 +0900
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/qACGWjd8SJpZxEfW4WMvd9s74nXRK6JXR3W5qPtYqxND8UdzNkEduSGQLggTGS54Nlaa3onrm1mU7bC39aQ/A==", "review"=>{"nickname"=>"nickn1", "rate"=>"1", "review"=>"revrev"}, "button"=>"", "building_id"=>"1"}
+  [1m[36m (0.6ms)[0m  [1mSELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 31ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/" for ::1 at 2016-01-28 20:31:00 +0900
+Processing by BuildingsController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5
+  [1m[36mBuilding Load (0.4ms)[0m  [1mSELECT  `buildings`.* FROM `buildings`  ORDER BY id ASC LIMIT 2[0m
+  Rendered buildings/index.html.erb within layouts/review_site (10.2ms)
+Completed 200 OK in 33ms (Views: 25.5ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-28 20:31:00 +0900
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-28 20:31:00 +0900
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-28 20:31:00 +0900
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-28 20:31:00 +0900
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-28 20:31:00 +0900
+
+
+Started GET "/" for ::1 at 2016-01-28 20:31:00 +0900
+Processing by BuildingsController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5
+  [1m[36mBuilding Load (1.1ms)[0m  [1mSELECT  `buildings`.* FROM `buildings`  ORDER BY id ASC LIMIT 2[0m
+  Rendered buildings/index.html.erb within layouts/review_site (2.6ms)
+Completed 200 OK in 36ms (Views: 31.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/buildings/search" for ::1 at 2016-01-28 20:31:06 +0900
+Processing by BuildingsController#search as HTML
+  [1m[35m (0.5ms)[0m  SELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5
+  [1m[36mBuilding Load (0.8ms)[0m  [1mSELECT  `buildings`.* FROM `buildings` WHERE (building_name LIKE('%%')) LIMIT 2[0m
+  Rendered buildings/search.html.erb within layouts/review_site (2.6ms)
+Completed 200 OK in 23ms (Views: 17.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2016-01-28 20:31:06 +0900
+Processing by BuildingsController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5
+  [1m[36mBuilding Load (1.2ms)[0m  [1mSELECT  `buildings`.* FROM `buildings`  ORDER BY id ASC LIMIT 2[0m
+  Rendered buildings/index.html.erb within layouts/review_site (2.5ms)
+Completed 200 OK in 21ms (Views: 17.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/buildings/1/reviews/new" for ::1 at 2016-01-28 20:31:09 +0900
+Processing by ReviewsController#new as HTML
+  Parameters: {"building_id"=>"1"}
+  [1m[35m (0.4ms)[0m  SELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5
+  [1m[36mBuilding Load (1.8ms)[0m  [1mSELECT  `buildings`.* FROM `buildings` WHERE `buildings`.`id` = 1 LIMIT 1[0m
+  Rendered reviews/new.html.erb within layouts/review_site (3.2ms)
+Completed 200 OK in 29ms (Views: 17.2ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/buildings/search" for ::1 at 2016-01-28 20:31:09 +0900
+Processing by BuildingsController#search as HTML
+  [1m[35m (0.6ms)[0m  SELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5
+  [1m[36mBuilding Load (0.8ms)[0m  [1mSELECT  `buildings`.* FROM `buildings` WHERE (building_name LIKE('%%')) LIMIT 2[0m
+  Rendered buildings/search.html.erb within layouts/review_site (2.7ms)
+Completed 200 OK in 30ms (Views: 25.9ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/buildings/1/reviews" for ::1 at 2016-01-28 20:31:20 +0900
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1ipdYFnXMEupqxbz+odVdFaBigqNpA4/O03k5hNkTNJlhZpk/dPFHyRKR1SBTr1waTQ/6CDHDtsAA4TCb1++gg==", "review"=>{"nickname"=>"nicn1", "rate"=>"1", "review"=>"rev"}, "button"=>"", "building_id"=>"1"}
+  [1m[35m (0.5ms)[0m  SELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2016-01-28 20:31:20 +0900
+Processing by BuildingsController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5[0m
+  [1m[35mBuilding Load (0.3ms)[0m  SELECT  `buildings`.* FROM `buildings`  ORDER BY id ASC LIMIT 2
+  Rendered buildings/index.html.erb within layouts/review_site (0.9ms)
+Completed 200 OK in 14ms (Views: 12.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2016-01-28 20:31:20 +0900
+Processing by BuildingsController#index as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5[0m
+  [1m[35mBuilding Load (1.3ms)[0m  SELECT  `buildings`.* FROM `buildings`  ORDER BY id ASC LIMIT 2
+  Rendered buildings/index.html.erb within layouts/review_site (3.2ms)
+Completed 200 OK in 20ms (Views: 16.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for ::1 at 2016-01-28 20:39:18 +0900
+Processing by BuildingsController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5[0m
+  [1m[35mBuilding Load (0.3ms)[0m  SELECT  `buildings`.* FROM `buildings`  ORDER BY id ASC LIMIT 2
+  Rendered buildings/index.html.erb within layouts/review_site (5.7ms)
+Completed 200 OK in 28ms (Views: 19.7ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-28 20:39:19 +0900
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-28 20:39:19 +0900
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-28 20:39:19 +0900
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-28 20:39:19 +0900
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-28 20:39:19 +0900
+
+
+Started GET "/" for ::1 at 2016-01-28 20:39:19 +0900
+Processing by BuildingsController#index as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5[0m
+  [1m[35mBuilding Load (2.0ms)[0m  SELECT  `buildings`.* FROM `buildings`  ORDER BY id ASC LIMIT 2
+  Rendered buildings/index.html.erb within layouts/review_site (3.2ms)
+Completed 200 OK in 21ms (Views: 16.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/buildings/search" for ::1 at 2016-01-28 20:39:22 +0900
+Processing by BuildingsController#search as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5[0m
+  [1m[35mBuilding Load (0.4ms)[0m  SELECT  `buildings`.* FROM `buildings` WHERE (building_name LIKE('%%')) LIMIT 2
+  Rendered buildings/search.html.erb within layouts/review_site (1.6ms)
+Completed 200 OK in 17ms (Views: 14.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2016-01-28 20:39:22 +0900
+Processing by BuildingsController#index as HTML
+  [1m[36m (2.9ms)[0m  [1mSELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5[0m
+  [1m[35mBuilding Load (0.3ms)[0m  SELECT  `buildings`.* FROM `buildings`  ORDER BY id ASC LIMIT 2
+  Rendered buildings/index.html.erb within layouts/review_site (1.5ms)
+Completed 200 OK in 32ms (Views: 26.3ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/buildings/1/reviews/new" for ::1 at 2016-01-28 20:39:24 +0900
+Processing by ReviewsController#new as HTML
+  Parameters: {"building_id"=>"1"}
+  [1m[36m (0.3ms)[0m  [1mSELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5[0m
+  [1m[35mBuilding Load (0.3ms)[0m  SELECT  `buildings`.* FROM `buildings` WHERE `buildings`.`id` = 1 LIMIT 1
+  Rendered reviews/new.html.erb within layouts/review_site (1.9ms)
+Completed 200 OK in 22ms (Views: 13.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/buildings/search" for ::1 at 2016-01-28 20:39:24 +0900
+Processing by BuildingsController#search as HTML
+  [1m[36m (0.5ms)[0m  [1mSELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5[0m
+  [1m[35mBuilding Load (0.8ms)[0m  SELECT  `buildings`.* FROM `buildings` WHERE (building_name LIKE('%%')) LIMIT 2
+  Rendered buildings/search.html.erb within layouts/review_site (2.1ms)
+Completed 200 OK in 38ms (Views: 32.5ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/buildings/1/reviews" for ::1 at 2016-01-28 20:39:31 +0900
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c8559e9yvjEIXICbKOHnKFt6doN68kgQHnZBInYhdbbAYb7xS3ZLZYW90TxTKA8sZM/DYdeRSPQlOCEGChqH5g==", "review"=>{"nickname"=>"nic", "rate"=>"1", "review"=>"nicc"}, "button"=>"", "building_id"=>"1"}
+  [1m[36m (0.3ms)[0m  [1mSELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5[0m
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.3ms)
+
+NameError (undefined local variable or method `review' for #<ReviewsController:0x007fcd223b9d80>):
+  app/controllers/reviews_controller.rb:16:in `create_params'
+  app/controllers/reviews_controller.rb:9:in `create'
+
+
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.1ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (26.1ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (16.4ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.3ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (35.7ms)
+
+
+Started POST "/buildings/1/reviews" for ::1 at 2016-01-28 20:39:58 +0900
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c8559e9yvjEIXICbKOHnKFt6doN68kgQHnZBInYhdbbAYb7xS3ZLZYW90TxTKA8sZM/DYdeRSPQlOCEGChqH5g==", "review"=>{"nickname"=>"nic", "rate"=>"1", "review"=>"nicc"}, "button"=>"", "building_id"=>"1"}
+  [1m[35m (0.4ms)[0m  SELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 3.1ms)
+
+ActiveRecord::UnknownAttributeError (unknown attribute 'nickname' for Review.):
+  app/controllers/reviews_controller.rb:9:in `create'
+
+
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.2ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (20.4ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (14.9ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (32.5ms)
+
+
+Started POST "/buildings/1/reviews" for ::1 at 2016-01-28 20:44:12 +0900
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c8559e9yvjEIXICbKOHnKFt6doN68kgQHnZBInYhdbbAYb7xS3ZLZYW90TxTKA8sZM/DYdeRSPQlOCEGChqH5g==", "review"=>{"nickname"=>"nic", "rate"=>"1", "review"=>"nicc"}, "button"=>"", "building_id"=>"1"}
+  [1m[36m (0.6ms)[0m  [1mSELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5[0m
+Unpermitted parameter: nickname
+  [1m[35m (0.9ms)[0m  BEGIN
+  [1m[36mSQL (3.0ms)[0m  [1mINSERT INTO `reviews` (`rate`, `review`, `building_id`, `created_at`, `updated_at`) VALUES (1, 'nicc', 1, '2016-01-28 11:44:12', '2016-01-28 11:44:12')[0m
+  [1m[35m (1.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 33ms (ActiveRecord: 7.0ms)
+
+
+Started GET "/" for ::1 at 2016-01-28 20:44:12 +0900
+Processing by BuildingsController#index as HTML
+  [1m[36m (0.8ms)[0m  [1mSELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5[0m
+  [1m[35mBuilding Load (0.2ms)[0m  SELECT  `buildings`.* FROM `buildings` WHERE `buildings`.`id` = 1 LIMIT 1
+  [1m[36mBuilding Load (0.3ms)[0m  [1mSELECT  `buildings`.* FROM `buildings`  ORDER BY id ASC LIMIT 2[0m
+  Rendered buildings/index.html.erb within layouts/review_site (0.9ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 1.8ms)
+
+ActionView::Template::Error (undefined method `title' for #<Building:0x007fcd227dc548>):
+    46:                     </div>
+    47:                     <div class="box__cell pl1em">
+    48:                       <p class="text-xsmall no-space">
+    49:                         <%= building.title %>
+    50:                       </p>
+    51:                       <img src="<%= building.image_url %>" alt="">
+    52:                     </div>
+  app/views/layouts/review_site.html.erb:49:in `block in _app_views_layouts_review_site_html_erb___3747237440037475955_70259478564140'
+  app/views/layouts/review_site.html.erb:38:in `each'
+  app/views/layouts/review_site.html.erb:38:in `with_index'
+  app/views/layouts/review_site.html.erb:38:in `_app_views_layouts_review_site_html_erb___3747237440037475955_70259478564140'
+
+
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.0ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (22.9ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (17.9ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/kagatoshio/.rbenv/versions/2.1.3/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (35.4ms)
+
+
+Started GET "/" for ::1 at 2016-01-28 20:46:00 +0900
+Processing by BuildingsController#index as HTML
+  [1m[35m (1.1ms)[0m  SELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5
+  [1m[36mBuilding Load (0.3ms)[0m  [1mSELECT  `buildings`.* FROM `buildings` WHERE `buildings`.`id` = 1 LIMIT 1[0m
+  [1m[35mBuilding Load (0.3ms)[0m  SELECT  `buildings`.* FROM `buildings`  ORDER BY id ASC LIMIT 2
+  Rendered buildings/index.html.erb within layouts/review_site (0.7ms)
+Completed 200 OK in 15ms (Views: 11.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-28 20:46:00 +0900
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-28 20:46:00 +0900
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-28 20:46:00 +0900
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-28 20:46:00 +0900
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-28 20:46:00 +0900
+
+
+Started GET "/" for ::1 at 2016-01-28 20:46:00 +0900
+Processing by BuildingsController#index as HTML
+  [1m[36m (1.0ms)[0m  [1mSELECT  COUNT(`reviews`.`building_id`) AS count_building_id, building_id AS building_id FROM `reviews` GROUP BY `reviews`.`building_id`  ORDER BY count_building_id DESC LIMIT 5[0m
+  [1m[35mBuilding Load (0.4ms)[0m  SELECT  `buildings`.* FROM `buildings` WHERE `buildings`.`id` = 1 LIMIT 1
+  [1m[36mBuilding Load (0.3ms)[0m  [1mSELECT  `buildings`.* FROM `buildings`  ORDER BY id ASC LIMIT 2[0m
+  Rendered buildings/index.html.erb within layouts/review_site (1.2ms)
+Completed 200 OK in 32ms (Views: 27.5ms | ActiveRecord: 1.7ms)
+  [1m[36m (40.1ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (28.0ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) 
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateBuildings (20160126064414)
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /Users/kagatoshio/projects/tosapplication/db/migrate/20160126064414_create_buildings.rb:10)
+  [1m[35m (22.8ms)[0m  CREATE TABLE `buildings` (`id` int(11) auto_increment PRIMARY KEY, `building_name` varchar(255), `image_url` text, `detail` text, `fee` varchar(255), `access` text, `address` text, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20160126064414')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateReviews (20160126071713)
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /Users/kagatoshio/projects/tosapplication/db/migrate/20160126071713_create_reviews.rb:8)
+  [1m[35m (16.1ms)[0m  CREATE TABLE `reviews` (`id` int(11) auto_increment PRIMARY KEY, `rate` int(11), `review` text, `product_id` int(11), `user_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20160126071713')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Migrating to DeviseCreateUsers (20160126072324)
+  [1m[35m (16.7ms)[0m  CREATE TABLE `users` (`id` int(11) auto_increment PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int(11) DEFAULT 0 NOT NULL, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (19.4ms)[0m  [1mCREATE UNIQUE INDEX `index_users_on_email`  ON `users` (`email`) [0m
+  [1m[35m (13.2ms)[0m  CREATE UNIQUE INDEX `index_users_on_reset_password_token`  ON `users` (`reset_password_token`) 
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20160126072324')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Migrating to AddNicknameToUsers (20160126073520)
+  [1m[35m (17.7ms)[0m  ALTER TABLE `users` ADD `nickname` varchar(255)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20160126073520')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Migrating to AddBuildingIdToReviews (20160127075539)
+  [1m[35m (19.7ms)[0m  ALTER TABLE `reviews` ADD `building_id` int(11)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20160127075539')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Migrating to RemoveProductIdFromReviews (20160127080842)
+  [1m[35m (22.0ms)[0m  ALTER TABLE `reviews` DROP `product_id`
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20160127080842')
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (1.0ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (1.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'tosapplication_development'
+  AND fk.table_name = 'buildings'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `buildings`
+  [1m[36m (0.5ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'tosapplication_development'
+  AND fk.table_name = 'reviews'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `reviews`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'tosapplication_development'
+  AND fk.table_name = 'users'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `users`

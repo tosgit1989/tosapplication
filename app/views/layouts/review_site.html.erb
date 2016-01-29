@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html class="pc" lang="ja" xmlns:fb="http://ogp.me/ns/fb#" xmlns:og="http://ogp.me/ns#">
+<head>
+  <meta charset="utf-8">
+    <title>アプリ名</title>
+    <link href='http://fonts.googleapis.com/css?family=Signika:700,300,400,600' rel='stylesheet' type='text/css'>
+    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+  </meta>
+</head>
+<body class="yj950-2">
+  <div id="wrapper">
+    <div id="yjContentsHeader">
+      <nav class="globalnav">
+        <div class="globalnav__menu">
+          <ul class="gmenu">
+            <li class="logo" style="float: left">
+              <a href="/">アプリ名</a>
+            </li>
+              <li class="entry_button" style="float: right">
+                <%= link_to 'サインアウト', "/users/sign_out", method: :delete %>
+              </li>
+            <li class="entry_button" style="float: right">
+              <a href="/buildings/search">投稿する</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="bgcolor-white pt1em pb1em" id="contents">
+      <%= yield %>
+      <aside class="section">
+        <h4 class="text-small hr-bottom--thin no-space-bottom">
+          <i class="icon-crown color-gray-light"></i>投稿ランキング
+        </h4>
+        <ul class="listview listview--condensed text-small">
+          <% @ranking.each.with_index(1) do |building, i| %>
+              <li data-cinema-id="346394">
+                <a href="/buildings/<%= building.id %>">
+                  <div class="box">
+                    <div class="box__cell w40 align-center">
+                      <p class="label bgcolor-gray-lighter align-center">
+                        <%= i %>
+                      </p>
+                    </div>
+                    <div class="box__cell pl1em">
+                      <p class="text-xsmall no-space">
+                        <%= building.building_name %>
+                      </p>
+                      <img src="<%= building.image_url %>" alt="">
+                    </div>
+                  </div>
+                </a>
+              </li>
+          <% end %>
+        </ul>
+      </aside>
+    </div>
+  </div>
+
+<div class="copyright">
+  Copyright (C) 20XX  XXX Corporation. All Rights Reserved.
+</div>
+
+</body>
+</html>

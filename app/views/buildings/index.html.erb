@@ -1,0 +1,34 @@
+  <div id="main_cnt_wrapper">
+    <div id="yjContentsBody">
+      <div class="yjContainer">
+        <span class="yjGuid"><a id="yjContentsStart" name="yjContentsStart"></a><img alt="ここから本文です" height="1" src="http://i.yimg.jp/yui/jp/tmpl/1.1.0/audionav.gif" width="1"></span>
+        <div id="yjMain">
+          <article class="section">
+            <div class="container">
+              <header class="header header--section">
+                <h2 class="text-middle">
+                  <i class="icon-movie color-gray-light"></i>新着建物
+                </h2>
+              </header>
+              <ul class="thumbnails thumbnail--movies row grid4 js-lazy-load-images js-my-check-stats" id="list-module">
+                <% @buildings.each do |building| %>
+                  <li class="col">
+                    <a href="/buildings/<%= building.id %>"><div class="thumbnail__figure" style="background-image:url(<%= building.image_url %>)"></div></a>
+                    <div class="thumbnail__caption">
+                      # 以下のh3要素3行分において、作品タイトルが表示できるように
+                      <h3 class="text-xsmall text-overflow" building_name="<%= building.building_name %>">
+                        <span><i class="icon-rate-60 text-xxsmall opacity-60" title=""></i></span><%= building.building_name %>"
+                      </h3>
+                      <p class="text-small">
+                        <span class="rating-star">
+                          <i class="star-actived rate-[ここに評価を表示]0"></i>
+                        </span>
+                      </p>
+                    </div>
+                  </li>
+                <% end %>
+              </ul>
+            </div>
+          </article>
+        </div>
+        <div id="yjSub">

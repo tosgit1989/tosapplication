@@ -1,0 +1,56 @@
+  <div id="main_cnt_wrapper">
+    <div id="yjContentsBody">
+      <div class="yjContainer">
+        <span class="yjGuid"><a id="yjContentsStart" name="yjContentsStart"></a><img alt="ここから本文です" height="1" src="http://i.yimg.jp/yui/jp/tmpl/1.1.0/audionav.gif" width="1"></span>
+        <div id="yjMain">
+          <article class="section">
+            <div class="container">
+              <header class="header header--section">
+                <h2 class="text-middle">
+                  <i class="icon-movie color-gray-light"></i>投稿する建物を検索
+                </h2>
+              </header>
+              <%= form_tag('/buildings/search', method: :get) do %>
+                <input class="search__query" name="keyword" placeholder="建物名で検索" type="text" value=""><button class="btn-search" building_name="検索" type="submit"><i class="icon-search"></i></button></input>
+              <% end %>
+              <form accept-charset="utf-8" action="/" class="js-search-submit" method="get">
+              </form>
+            </div>
+          </article>
+          <article class="section">
+            <div class="container">
+              <header class="header header--section">
+                <h2 class="text-middle">
+                  <i class="icon-movie color-gray-light"></i>検索結果
+                </h2>
+              </header>
+              <ul class="listview js-lazy-load-images">
+                <% @buildings.each do |building| %>
+                <li>
+                  <a class="listview__element--right-icon" href="/buildings/<%= building.id %>/reviews/new" building_name="<%= building.building_name %>">
+                    <div class="position-right p1em">
+                      <i class="icon-chevron-right color-sub"></i>
+                    </div>
+                    <div class="row no-space-bottom">
+                      <div class="col2">
+                        <div class="thumbnail thumbnail--movies">
+                          <div class="thumbnail__figure" style="background-image: url(<%= building.image_url %>);" building_name="<%= building.building_name %>"></div>
+                        </div>
+                      </div>
+                      <div class="col6 push6">
+                        <h3 class="text-middle text-break">
+                          <span class="color-sub"><%= building.building_name %></span>
+                        </h3>
+                        <p class="text-xsmall text-overflow">
+                          <%= building.detail %>
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <% end %>
+              </ul>
+            </div>
+          </article>
+        </div>
+        <div id="yjSub">
