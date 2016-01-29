@@ -14,7 +14,7 @@
                 <img src="<%= @building.image_url %>" alt="<%= @building.building_name %>">
               </p>
               <div style="text-align: right">
-                <a href="">この建物を投稿する</a>
+                <a href="/buildings/<%= @building.id %>/reviews/new">この建物を投稿する</a> <!--「この建物を投稿する」をクリックすると投稿ページに移動-->
               </div>
               <header class="header header--section">
                 <h2 class="text-middle">
