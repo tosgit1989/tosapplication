@@ -20,9 +20,16 @@
                         <span><i class="icon-rate-60 text-xxsmall opacity-60" title=""></i></span><%= building.building_name %>"
                       </h3>
                       <p class="text-small">
+                        <!--以下のif構文9行分において、トップページで各建物の平均評価点が出るように-->
+                        <% if building.reviews.present? %>
                         <span class="rating-star">
-                          <i class="star-actived rate-[ここに評価を表示]0"></i>
+                          <i class="star_actived rate-<%= building.reviews.average(:rate).round %>0"></i>
                         </span>
+                        <% else %>
+                        <span class="rating-star">
+                          <i class="star-actived rate-0"></i>
+                        </span>
+                        <% end %>
                       </p>
                     </div>
                   </li>
