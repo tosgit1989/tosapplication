@@ -3,7 +3,7 @@
   <div id="yjContentsBody">
     <div class="yjContainer">
       <div class="form_box">
-        <h2>アプリ名<span>新規登録</span></h2>
+        <h2>アプリ名<span>新規登録</span></h2> <!--オリジナルアプリケーション名はまだ決定していないのでアプリ名とした。-->
 
         <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
           <%= devise_error_messages! %>
@@ -16,8 +16,7 @@
 
           <div class="label"><%= f.label :password_confirmation %><br />
           <%= f.password_field :password_confirmation, autocomplete: "off", :placeholder => 'パスワードを入力（確認）' %></div>
-          <div class="label"><%= f.label :nickname %><br />
-          <%= f.text_field :nickname, placeholder: 'ニックネームを入力(必須)' %></div>
+
           <div class="submit">
           <div class="actions">
           <%= f.submit %>

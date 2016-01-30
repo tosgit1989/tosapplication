@@ -2,7 +2,7 @@
   <div id="yjContentsBody">
     <div class="yjContainer">
       <div class="form_box">
-        <h2>アプリ名<span>ログイン</span></h2>
+        <h2>アプリ名<span>ログイン</span></h2> <!--オリジナルアプリケーション名はまだ決定していないのでアプリ名とした。-->
         <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
           <div>
             <%= f.email_field :email, autofocus: true, :placeholder => 'メールアドレスを入力' %>
