@@ -29,7 +29,7 @@
                           <span><i class="icon-rate-60 text-xxsmall opacity-60" title=""></i></span><%= review.user_id %><small 2014=""></small>
                         </h3>
                         <p class="text-small">
-                          <span class="rating-star"><i class="star-actived rate-[ここに評価を表示]0"></i></span>
+                          <span class="rating-star"><i class="star-actived rate-<%= review.rate %>0"></i></span> <!--レビューを意味する星を表示-->
                         </p>
                         <p>
                           <%= review.review %>
