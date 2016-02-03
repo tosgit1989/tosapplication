@@ -1,4 +1,5 @@
 class BuildingsController < RankingController
+  before_action :authenticate_user!, only: :search # ログインしていない時にレビューを投稿しようとすると、ログイン画面にリダイレクト
   def index
     # buildingsテーブルから最新順に建物を２件取得する
     @buildings = Building.order('id ASC').limit(2)

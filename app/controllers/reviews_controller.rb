@@ -1,4 +1,5 @@
 class ReviewsController < RankingController
+  before_action :authenticate_user!, only: :new # ログインしていない時にレビューを投稿しようとすると、ログイン画面にリダイレクト
   def new
     @building = Building.find(params[:building_id])
     @review = Review.new
