@@ -18,9 +18,14 @@
             <li class="logo" style="float: left">
               <a href="/">アプリ名</a>
             </li>
+            <% if user_signed_in? %><!--ログイン中の場合は、サインアウトボタンとマイページボタンを表示-->
               <li class="entry_button" style="float: right">
-                <%= link_to 'サインアウト', "/users/sign_out", method: :delete %>
+                <%= link_to 'サインアウト', destroy_user_session_path, method: :delete %>
               </li>
+              <li class="entry_button" style="float: right">
+                <a href="/users/<%= current_user.id %>">マイページ</a>
+              </li>
+            <% end %>
             <li class="entry_button" style="float: right">
               <a href="/buildings/search">投稿する</a>
             </li>
