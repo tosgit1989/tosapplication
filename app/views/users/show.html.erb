@@ -11,80 +11,18 @@
     <div id="yjContentsBody">
       <div class="yjContainer">
         <ul class="user_page-contents">
-          <li style="background-image: url('http://image.eiga.k-img.com/images/movie/80704/poster2/200.jpg?1407203842')">
+          <%  current_user.reviews.each do |review| %>
+          <li style="background-image: url(<%= review.building.image_url %>)"><!--建物の画像を表示-->
             <div class="meta">
               <header>
-                <div class="building_name">ホテル名</div>
+                <div class="building_name"><%= review.building.building_name %></div><!--建物の名前を表示-->
                 <span class="star"><span class="rating-star"><i class="star-actived rate-100"></i></span></span>
               </header>
-              <div class="user_review">ホテルの感想</div>
+              <div class="user_review"><%= review.review %></div>
             </div>
           </li>
-          <li style="background-image: url('http://image.eiga.k-img.com/images/movie/80704/poster2/200.jpg?1407203842')">
-            <div class="meta">
-              <header>
-                <div class="building_name">ホテル名</div>
-                <span class="star"><span class="rating-star"><i class="star-actived rate-100"></i></span></span>
-              </header>
-              <div class="user_review">ホテルの感想</div>
-            </div>
-          </li>
-          <li style="background-image: url('http://image.eiga.k-img.com/images/movie/80704/poster2/200.jpg?1407203842')">
-            <div class="meta">
-              <header>
-                <div class="building_name">ホテル名</div>
-                <span class="star"><span class="rating-star"><i class="star-actived rate-100"></i></span></span>
-              </header>
-              <div class="user_review">ホテルの感想</div>
-            </div>
-          </li>
-          <li style="background-image: url('http://image.eiga.k-img.com/images/movie/80704/poster2/200.jpg?1407203842')">
-            <div class="meta">
-              <header>
-                <div class="building_name">また別のホテル名</div>
-                <span class="star"><span class="rating-star"><i class="star-actived rate-100"></i></span></span>
-              </header>
-              <div class="user_review">また別のホテルの感想</div>
-            </div>
-          </li>
-          <li style="background-image: url('http://image.eiga.k-img.com/images/movie/80704/poster2/200.jpg?1407203842')">
-            <div class="meta">
-              <header>
-                <div class="building_name">〜</div>
-                <span class="star"><span class="rating-star"><i class="star-actived rate-100"></i></span></span>
-              </header>
-              <div class="user_review">〜</div>
-            </div>
-          </li>
-          <li style="background-image: url('http://image.eiga.k-img.com/images/movie/80704/poster2/200.jpg?1407203842')">
-            <div class="meta">
-              <header>
-                <div class="building_name">〜</div>
-                <span class="star"><span class="rating-star"><i class="star-actived rate-100"></i></span></span>
-              </header>
-              <div class="user_review">〜</div>
-            </div>
-          </li>
-          <li style="background-image: url('http://image.eiga.k-img.com/images/movie/80704/poster2/200.jpg?1407203842')">
-            <div class="meta">
-              <header>
-                <div class="building_name">〜</div>
-                <span class="star"><span class="rating-star"><i class="star-actived rate-100"></i></span></span>
-              </header>
-              <div class="user_review">〜</div>
-            </div>
-          </li>
-          <li style="background-image: url('http://image.eiga.k-img.com/images/movie/80704/poster2/200.jpg?1407203842')">
-            <div class="meta">
-              <header>
-                <div class="building_name">〜</div>
-                <span class="star"><span class="rating-star"><i class="star-actived rate-100"></i></span></span>
-              </header>
-              <div class="user_review">〜</div>
-            </div>
-          </li>
+          <% end %>
         </ul>
-
       </div>
     </div>
   </div>
