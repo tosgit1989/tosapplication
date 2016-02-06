@@ -2,8 +2,8 @@
   <header class="user_page-header">
     <div class="yjContainer">
       <a href="">
-        <div class="user_image"><%= image_tag 'https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xfp1/v/t1.0-1/c32.0.127.127/10256953_450511921719235_7408583294706772933_n.jpg?oh=4b62cd6d72667f23c3c4781dfc763b61&oe=54D54A3C&__gda__=1423979953_5fc50daca871a07e83167f1afbc8d304' %></div>
-        <h2>テスト太郎 <span>さんのマイページ</span></h2>
+        <div class="user_image"></div>
+        <h2><% current_user.nickname %><span>さんのマイページ</span></h2><!--現在ログイン中のユーザー(ニックネーム表示)のマイページであることを表示-->
       </a>
     </div>
   </header>
