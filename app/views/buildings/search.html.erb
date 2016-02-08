@@ -27,7 +27,6 @@
               <ul class="listview js-lazy-load-images">
                 <% @buildings.each do |building| %>
                 <li>
-                  <a class="listview__element--right-icon" href="/buildings/<%= building.id %>/reviews/new" building_name="<%= building.building_name %>">
                     <div class="position-right p1em">
                       <i class="icon-chevron-right color-sub"></i>
                     </div>
@@ -38,15 +37,16 @@
                         </div>
                       </div>
                       <div class="col6 push6">
-                        <h3 class="text-middle text-break">
-                          <span class="color-sub"><%= building.building_name %></span>
-                        </h3>
+                        <a class="listview__element--right-icon" href="/buildings/<%= building.id %>/reviews/new" building_name="<%= building.building_name %>">
+                          <h3 class="text-middle text-break">
+                            <span class="color-sub"><%= building.building_name %></span>
+                          </h3>
+                        </a>
                         <p class="text-xsmall text-overflow">
                           <%= building.detail %>
                         </p>
                       </div>
                     </div>
-                  </a>
                 </li>
                 <% end %>
               </ul>
