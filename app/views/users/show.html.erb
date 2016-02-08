@@ -15,7 +15,9 @@
           <li style="background-image: url(<%= review.building.image_url %>)"><!--建物の画像を表示-->
             <div class="meta">
               <header>
-                <div class="building_name"><%= review.building.building_name %></div><!--建物の名前を表示-->
+                <a href="/buildings/<%= review.building_id %>">
+                  <div class="building_name"><%= review.building.building_name %></div><!--建物の名前を表示-->
+                </a>
                 <span class="star"><span class="rating-star"><i class="star-actived rate-100"></i></span></span>
               </header>
               <div class="user_review"><%= review.review %></div>
