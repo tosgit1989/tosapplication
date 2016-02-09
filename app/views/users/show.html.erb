@@ -3,7 +3,7 @@
     <div class="yjContainer">
       <a href="">
         <div class="user_image"></div>
-        <h2><% current_user.nickname %><span>さんのマイページ</span></h2><!--現在ログイン中のユーザー(ニックネーム表示)のマイページであることを表示-->
+        <h2><%= current_user.nickname %><span>さんのマイページ</span></h2><!--現在ログイン中のユーザー(ニックネーム表示)のマイページであることを表示-->
       </a>
     </div>
   </header>
@@ -11,7 +11,7 @@
     <div id="yjContentsBody">
       <div class="yjContainer">
         <ul class="user_page-contents">
-          <%  current_user.reviews.each do |review| %>
+          <% current_user.reviews.each do |review| %>
           <li style="background-image: url(<%= review.building.image_url %>)"><!--建物の画像を表示-->
             <div class="meta">
               <header>
