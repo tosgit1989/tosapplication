@@ -21,7 +21,7 @@
                 <span class="star"><span class="rating-star"><i class="star-actived rate-100"></i></span></span>
               </header>
               <div class="user_review"><%= review.review %></div>
-              このレビューを <a href="/buildings/<%= review.building_id %>/reviews/<%= review.id %>/edit">編集</a> / <a href="#">削除</a>
+              このレビューを <a href="/buildings/<%= review.building_id %>/reviews/<%= review.id %>/edit">編集</a> / <%= link_to '削除', "/buildings/#{review.building_id}/reviews/#{review.id}", method: :delete, remote: true %>
             </div>
           </li>
           <% end %>

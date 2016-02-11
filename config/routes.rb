@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     devise_for :users
     resources :users, only: :show
     resources :buildings, only: :show do
-    resources :reviews, only: [:new, :create, :edit, :update]
+    resources :reviews, only: [:new, :create, :destroy, :edit, :update]
     collection do
       get 'search'
     end

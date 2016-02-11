@@ -11,6 +11,11 @@ class ReviewsController < RankingController
     redirect_to controller: :buildings, action: :index # トップページにリダイレクトする
   end
 
+  def destroy # レビュー削除機能
+    @review = Review.find(params[:id])
+    @review.destroy
+  end
+
   def edit # レビュー編集機能
     @review = Review.find(params[:id])
     @building = @review.building
