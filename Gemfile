@@ -48,4 +48,5 @@ group :production, :staging do
 end
 gem 'devise'
 gem 'mechanize'
+gem 'nokogiri'
 # ターミナルでコミットできるかどうか確認の目的で追記
