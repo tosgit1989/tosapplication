@@ -10,7 +10,12 @@ class BuildingsController < RankingController
     @building = Building.find(params[:id])
   end
 
-  def search
+  def search1
+    # 検索フォームのキーワードをあいまい検索して、buildingsテーブルから2件の建物情報を取得する
+    @buildings = Building.where('building_name LIKE(?)', "%#{params[:keyword]}%").limit(2)
+  end
+
+  def search2
     # 検索フォームのキーワードをあいまい検索して、buildingsテーブルから2件の建物情報を取得する
     @buildings = Building.where('building_name LIKE(?)', "%#{params[:keyword]}%").limit(2)
   end

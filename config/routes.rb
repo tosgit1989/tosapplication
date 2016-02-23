@@ -8,7 +8,8 @@ Rails.application.routes.draw do
     resources :buildings, only: :show do
     resources :reviews, only: [:new, :create, :destroy, :edit, :update]
     collection do
-      get 'search'
+      get 'search1'
+      get 'search2'
     end
   end
   root 'buildings#index'

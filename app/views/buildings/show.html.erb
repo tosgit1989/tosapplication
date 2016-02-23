@@ -1,44 +1,44 @@
-  <div id="main_cnt_wrapper">
-    <div id="yjContentsBody">
-      <div class="yjContainer">
-        <span class="yjGuid"><a id="yjContentsStart" name="yjContentsStart"></a><img alt="ここから本文です" height="1" src="http://i.yimg.jp/yui/jp/tmpl/1.1.0/audionav.gif" width="1"></span>
-        <div id="yjMain">
-          <article class="section">
-            <div class="container">
-              <header class="header header--section">
-                <h2 class="text-middle">
-                  <i class="icon-movie color-gray-light"></i><%= @building.building_name %>
-                </h2>
-              </header>
-              <p style="text-align: center">
-                <img src="<%= @building.image_url %>" alt="<%= @building.building_name %>">
-              </p>
-              <div style="text-align: right">
-                <a href="/buildings/<%= @building.id %>/reviews/new">この建物を投稿する</a> <!--「この建物を投稿する」をクリックすると投稿ページに移動-->
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <h1 class="text-muted"><%= @building.building_name %></h1><!--title-->
+  </div>
+</nav>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="bs-docs-section">
+
+            <!--建物の画像-->
+            <div class="media">
+              <div class="media-left">
+                <a href="#">
+                  <img class="media-object" src="<%= @building.image_url %>" alt="...">
+                </a>
               </div>
-              <header class="header header--section">
-                <h2 class="text-middle">
-                  <i class="icon-movie color-gray-light"></i>みんなのレビュー
-                </h2>
-              </header>
-              <ul style="padding: 0">
-                <% @building.reviews.each do |review| %> <!--建物ページでレビューの一覧を表示-->
-                    <li style="border-bottom: dotted 1px">
-                      <div class="thumbnail__caption">
-                        <h3 class="text-xsmall text-overflow" building_name="<%= review.user.nickname %>">
-                          <span><i class="icon-rate-60 text-xxsmall opacity-60" title=""></i></span><%= review.user.nickname %><small 2014=""></small>
-                        </h3>
-                        <p class="text-small">
-                          <span class="rating-star"><i class="star-actived rate-<%= review.rate %>0"></i></span> <!--レビューを意味する星を表示-->
-                        </p>
-                        <p>
-                          <%= review.review %>
-                        </p>
-                      </div>
-                    </li>
-                <% end %>
-              </ul>
             </div>
-          </article>
+
+            <!--建物投稿画面へのリンク-->
+            <div style="text-align: right">
+              <a href="/buildings/<%= @building.id %>/reviews/new">この建物を投稿する</a> <!--「この建物を投稿する」をクリックすると投稿ページに移動-->
+            </div>
+
+            <!--みんなのレビューを表示-->
+            <h3 class="text-middle">みんなのレビュー</h3>
+            <% @building.reviews.each do |review| %> <!--建物ページでレビューの一覧を表示-->
+              <div class="media">
+                <div class="media-body">
+                  <h4 class="media-heading"><%= review.user.nickname %></h4>
+                  <%= review.review %></br>
+                  評価: <%= review.rate %></br>
+                </div>
+              </div>
+            <% end %>
+
+          </div>
         </div>
-        <div id="yjSub">
+      </div>
+    </div>
+  </div>
+</div>

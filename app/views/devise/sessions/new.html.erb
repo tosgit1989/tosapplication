@@ -1,31 +1,41 @@
-<div class="bgcolor-white pt1em pb1em" id="contents">  <div id="main_cnt_wrapper">
-  <div id="yjContentsBody">
-    <div class="yjContainer">
-      <div class="form_box">
-        <h2>hotelication<span>ログイン</span></h2> <!--オリジナルアプリケーション名は'hotelication'に決めた。-->
-        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <h1 class="text-muted">サインインページ</h1><!--title-->
+  </div>
+</nav>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="bs-docs-section">
 
-          <!--メールアドレス入力欄-->
-          <div>
-            <%= f.email_field :email, autofocus: true, :placeholder => 'メールアドレスを入力' %>
-          </div>
+            <!--フォーム-->
+            <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+              <!--メールアドレス入力欄-->
+              <p><%= f.label :email, 'メールアドレス', class: "col-md-3 col-xs-12" %>
+              <%= f.email_field :email, autofocus: true, :placeholder => 'メールアドレスを入力', class: "col-md-9 col-xs-12" %></p>
 
-          <!--パスワード入力欄-->
-          <div>
-            <%= f.password_field :password, autocomplete: "off", :placeholder => 'パスワードを入力' %>
-          </div>
+              <!--パスワード入力欄-->
+              <p><%= f.label :password, 'パスワード', class: "col-md-3 col-xs-12" %>
+              <%= f.password_field :password, autocomplete: "off", :placeholder => 'パスワードを入力', class: "col-md-9 col-xs-12" %></p>
 
-          <div class="row">
-            <% if devise_mapping.rememberable? -%>
-              <div class="col-xs-6"><%= f.check_box :remember_me %> <%= f.label :パスワードを記憶 %></div>
+              <!--サインインボタン-->
+              <%= button_tag type: "submit", class: "btn btn--block" do %>サインイン<% end %>
+
+              <!--パスワードを記憶するかどうか-->
+              <p>
+                <% if devise_mapping.rememberable? %>
+                  <%= f.check_box :remember_me %><%= f.label :パスワードを記憶 %>
+                <% end %>
+              </p>
             <% end %>
-            <div class="col-xs-6">パスワードを忘れましたか？</div>
-            <div class="submit"><%= f.submit "ログイン" %></div>
+
+            <p><strong>アカウントを持っていない方は、<a href="/users/sign_up">こちら</a></strong></p>
+            <p><strong>パスワードを忘れた方は、<a href="/users/password/new">こちら</a></strong></p>
+
           </div>
-        <% end %>
-        <div class="more_link_box">
-        <strong>まだアカウントを持っていませんか？</strong>
-        <%= render "devise/shared/links" %>
+        </div>
       </div>
     </div>
   </div>

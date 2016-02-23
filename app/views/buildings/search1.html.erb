@@ -1,0 +1,48 @@
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <h1 class="text-muted">投稿する建物を検索</h1><!--title-->
+  </div>
+</nav>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="bs-docs-section">
+
+            <!--検索フォーム-->
+            <h3 class="text-middle">検索</h3>
+            <%= form_tag('/buildings/search1', method: :get) do %>
+              <input class="search__query" name="keyword" placeholder="建物名を入力" type="text" value=""><button class="btn-search" building_name="検索" type="submit"><i class="icon-search">検索</i></button></input>
+            <% end %>
+
+          </div>
+          <div class="bs-docs-section">
+            
+            <!--検索結果を表示-->
+            <h3 class="text-middle">検索結果</h3>
+            <% @buildings.each do |building| %>
+              <div class="media">
+                <div class="media-left">
+                  <a href="#">
+                    <img class="media-object" src="<%= building.image_url %>" alt="...">
+                  </a>
+                </div>
+                <div class="media-body">
+                  <h4 class="media-heading"><a href="/buildings/<%= building.id %>/reviews/new"><%= building.building_name %></a></h4>
+                  <%= building.detail %></br>
+                  <% if building.reviews.present? %>
+                    平均評価: <%= building.review_average %>
+                  <% else %>
+                    平均評価: -
+                  <% end %>
+                </div>
+              </div>
+            <% end %>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

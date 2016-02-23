@@ -1,39 +1,43 @@
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <h1 class="text-muted">新規登録ページ</h1> <!--title-->
+  </div>
+</nav>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="bs-docs-section text-middle">
 
-<div class="bgcolor-white pt1em pb1em" id="contents">  <div id="main_cnt_wrapper">
-  <div id="yjContentsBody">
-    <div class="yjContainer">
-      <div class="form_box">
-        <h2>hotelication<span>新規登録</span></h2> <!--オリジナルアプリケーション名は'hotelication'に決めた。-->
+            <!--フォーム-->
+            <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+              <%= devise_error_messages! %>
+              <!--メールアドレス入力欄-->
+              <p><%= f.label :email, 'メールアドレス(必須)', class: "col-md-3 col-xs-12" %>
+              <%= f.email_field :email, autofocus: true, :placeholder => 'メールアドレスを入力', class: "col-md-9 col-xs-12" %></p>
 
-        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-          <%= devise_error_messages! %>
+              <!--パスワード入力欄-->
+              <p><%= f.label :password, 'パスワード(必須・8文字以上)', class: "col-md-3 col-xs-12" %> <% if @validatable %><i>(<%= @minimum_password_length %> characters minimum)</i><% end %>
+              <%= f.password_field :password, autocomplete: "off", :placeholder => 'パスワードを入力', class: "col-md-9 col-xs-12" %></p>
 
-          <!--メールアドレス入力欄-->
-          <div class="label"><%= f.label :email %><br />
-          <%= f.email_field :email, autofocus: true, :placeholder => 'メールアドレスを入力' %></div>
+              <!--パスワード確認入力欄-->
+              <p><%= f.label :password_confirmation, 'パスワード確認(必須)', class: "col-md-3 col-xs-12" %>
+              <%= f.password_field :password_confirmation, autocomplete: "off", :placeholder => 'パスワードを入力（確認）', class: "col-md-9 col-xs-12" %></p>
 
-          <!--パスワード入力欄-->
-          <div class="label"><%= f.label :password %> <% if @validatable %><i>(<%= @minimum_password_length %> characters minimum)</i><% end %><br />
-          <%= f.password_field :password, autocomplete: "off", :placeholder => 'パスワードを入力' %></div>
+              <!--ニックネーム入力欄-->
+              <p><%= f.label :nickname, 'ニックネーム(必須)', class: "col-md-3 col-xs-12" %>
+              <%= f.text_field :nickname, placeholder: 'ニックネームを入力', class: "col-md-9 col-xs-12" %></p>
 
-          <!--パスワード確認入力欄-->
-          <div class="label"><%= f.label :password_confirmation %><br />
-          <%= f.password_field :password_confirmation, autocomplete: "off", :placeholder => 'パスワードを入力（確認）' %></div>
+              <!--新規登録ボタン-->
+              <%= button_tag type: "submit", class: "btn btn--block" do %>新規登録<% end %>
 
-          <!--ニックネーム入力欄-->
-          <div class="label"><%= f.label :nickname %><br />
-          <%= f.text_field :nickname, placeholder: 'ニックネームを入力(必須)' %></div> <!--userのnicknameを入力必須に-->
+            <% end %>
 
-          <div class="submit">
-          <div class="actions">
-          <%= f.submit %>
-          </div></div>
+            <p><strong>既にアカウントをお持ちの方は、<a href="/users/sign_in">こちら</a></strong></p>
 
-          <div class="more_link_box">
-          <strong>すでにアカウントを持っていますか？</strong>
-          <%= render "devise/shared/links" %>
           </div>
-        <% end %>
+        </div>
       </div>
     </div>
   </div>

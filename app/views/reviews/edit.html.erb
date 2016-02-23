@@ -1,58 +1,47 @@
-<div id="main_cnt_wrapper">
-  <div id="yjContentsBody">
-    <div class="yjContainer">
-      <span class="yjGuid"><a id="yjContentsStart" name="yjContentsStart"></a><img alt="ここから本文です" height="1" src="http://i.yimg.jp/yui/jp/tmpl/1.1.0/audionav.gif" width="1"></span>
-      <div id="yjMain">
-        <article class="section">
-          <div class="container">
-            <header class="header header--section">
-              <h2 class="text-middle">
-                <i class="icon-hotel color-gray-light"></i>投稿内容の編集
-              </h2>
-            </header>
-            <div>
-              <ul class="listview js-lazy-load-images">
-                <li style="margin-bottom: 15px">
-                  <div class="listview__element--right-icon">
-                    <div class="box">
-                      <div class="box__cell w80">
-                        <div class="thumbnail thumbnail--photo">
-                          <div class="thumbnail__figure" style="background-image: url(<%= @building.image_url %>);"></div>
-                        </div>
-                      </div>
-                      <div class="box__cell pl1em">
-                        <a class="text-middle text-break color-sub" href="/buildings/<%= @building.id %>">
-                          <%= @building.building_name %>
-                        </a>
-                        <p class="text-xsmall">
-                        </p>
-                        <p class="text-xsmall opacity-60"></p>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-              </ul>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <h1 class="text-muted">投稿内容の編集</h1><!--title-->
+  </div>
+</nav>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="bs-docs-section">
+
+            <!--投稿編集対象の建物-->
+            <div class="media">
+              <div class="media-left">
+                <a href="#">
+                  <img class="media-object" src="<%= @building.image_url %>" alt="...">
+                </a>
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading"><a href="/buildings/<%= @building.id %>"><%= @building.building_name %></a></h4>
+              </div>
             </div>
-          </div>
-          <%= form_for [@building, @review] do |f| %>
+
+            <!--フォーム-->
+            <%= form_for [@building, @review] do |f| %>
               <div style="margin: 10px 0">
                 <%= f.label :評価, style: { 'margin-right' => 10 } %>
                 <%= f.number_field :rate, placeholder: '評価', value: 1, max: 10, min: 1, html: { class: "search__query", style: 'text-align: right;' } %>
               </div>
               <div style="margin: 10px 0">
-                <%= f.text_area :review, placeholder: 'レビューを書いてね！', style: 'width: 100%;height: 300px;' %>
+                <%= f.text_area :review, placeholder: 'レビューを入力', style: 'width: 100%;height: 300px;' %>
               </div>
-              <div class="row">
+              <div style="margin: 10px 0">
                 <div class="col10 push1">
                   <%= button_tag type: "submit", class: "btn btn--block" do %>
-                      更新する<i class="icon-arrow-right"></i>
+                    更新する
                   <% end %>
                 </div>
               </div>
-          <% end %>
-        </article>
-      </div>
-      <div id="yjSub">
+            <% end %>
+
+          </div>
+        </div>
       </div>
     </div>
   </div>

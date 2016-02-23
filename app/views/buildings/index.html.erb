@@ -1,41 +1,66 @@
-  <div id="main_cnt_wrapper">
-    <div id="yjContentsBody">
-      <div class="yjContainer">
-        <span class="yjGuid"><a id="yjContentsStart" name="yjContentsStart"></a><img alt="ここから本文です" height="1" src="http://i.yimg.jp/yui/jp/tmpl/1.1.0/audionav.gif" width="1"></span>
-        <div id="yjMain">
-          <article class="section">
-            <div class="container">
-              <header class="header header--section">
-                <h2 class="text-middle">
-                  <i class="icon-movie color-gray-light"></i>新着建物
-                </h2>
-              </header>
-              <ul class="thumbnails thumbnail--movies row grid4 js-lazy-load-images js-my-check-stats" id="list-module">
-                <% @buildings.each do |building| %>
-                  <li class="col">
-                    <a href="/buildings/<%= building.id %>"><div class="thumbnail__figure" style="background-image:url(<%= building.image_url %>)"></div></a>
-                    <div class="thumbnail__caption">
-                      <!-- 以下のh3要素3行分において、作品タイトルが表示できるように-->
-                      <h3 class="text-xsmall text-overflow" building_name="<%= building.building_name %>">
-                        <span><i class="icon-rate-60 text-xxsmall opacity-60" title=""></i></span><%= building.building_name %>"
-                      </h3>
-                      <p class="text-small">
-                        <!--以下のif構文9行分において、トップページで各建物の平均評価点が出るように-->
-                        <% if building.reviews.present? %>
-                        <span class="rating-star">
-                          <i class="star_actived rate-<%= building.review_average %>0"></i>
-                        </span>
-                        <% else %>
-                        <span class="rating-star">
-                          <i class="star-actived rate-0"></i>
-                        </span>
-                        <% end %>
-                      </p>
-                    </div>
-                  </li>
-                <% end %>
-              </ul>
-            </div>
-          </article>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <h1 class="text-muted">トップページ</h1><!--title-->
+  </div>
+</nav>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="row">
+
+        <div class="col-md-6">
+          <div class="bs-docs-section">
+            <!--新着建物を表示-->
+            <h3 class="text-middle">新着建物</h3>
+            <% @buildings.each do |building| %>
+              <div class="media">
+                <div class="media-left">
+                  <a href="#">
+                    <img class="media-object" src="<%= building.image_url %>" alt="...">
+                  </a>
+                </div>
+                <div class="media-body">
+                  <h4 class="media-heading"><a href="/buildings/<%= building.id %>"><%= building.building_name %></a></h4>
+                  <%= building.detail %></br>
+                  <% if building.reviews.present? %>
+                    平均評価: <%= building.review_average %>
+                  <% else %>
+                    平均評価: -
+                  <% end %>
+                </div>
+              </div>
+            <% end %>
+          </div>
         </div>
-        <div id="yjSub">
+
+        <div class="col-md-6">
+          <div class="bs-docs-section">
+            <!--投稿ランキングを表示-->
+            <h3 class="text-middle">投稿ランキング</h3>
+            <% @ranking.each.with_index(1) do |building, i| %>
+              <div class="media">
+                <div class="media-left">
+                  <a href="#">
+                    <img class="media-object" src="<%= building.image_url %>" alt="...">
+                  </a>
+                </div>
+                <div class="media-body">
+                  <h4 class="media-heading"><a href="/buildings/<%= building.id %>"><%= building.building_name %></a></h4>
+                  <%= building.detail %></br>
+                  <%= i %>位</br>
+                  <% if building.reviews.present? %>
+                      平均評価: <%= building.review_average %>
+                  <% else %>
+                      平均評価: -
+                  <% end %>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
