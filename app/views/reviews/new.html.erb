@@ -24,14 +24,27 @@
 
             <!--フォーム-->
             <%= form_for [@building, @review] do |f| %>
-              <div style="margin: 10px 0">
-                <%= f.label :評価, style: { 'margin-right' => 10 } %>
-                <%= f.number_field :rate, placeholder: '評価', value: 1, max: 10, min: 1, html: { class: "search__query", style: 'text-align: right;' } %>
+              <div class="form-group">
+                <p class="control-label col-xs-12"><strong>レート(10段階中どれか1つを選択してください)</strong></p>
+                <div class="col-xs-12">
+                  <div class="radio-inline"><input type="radio" value="1" name="review[rate]" id="review_rate"><label>1</label></div>
+                  <div class="radio-inline"><input type="radio" value="2" name="review[rate]" id="review_rate"><label>2</label></div>
+                  <div class="radio-inline"><input type="radio" value="3" name="review[rate]" id="review_rate"><label>3</label></div>
+                  <div class="radio-inline"><input type="radio" value="4" name="review[rate]" id="review_rate"><label>4</label></div>
+                  <div class="radio-inline"><input type="radio" value="5" name="review[rate]" id="review_rate"><label>5</label></div>
+                  <div class="radio-inline"><input type="radio" value="6" name="review[rate]" id="review_rate"><label>6</label></div>
+                  <div class="radio-inline"><input type="radio" value="7" name="review[rate]" id="review_rate"><label>7</label></div>
+                  <div class="radio-inline"><input type="radio" value="8" name="review[rate]" id="review_rate"><label>8</label></div>
+                  <div class="radio-inline"><input type="radio" value="9" name="review[rate]" id="review_rate"><label>9</label></div>
+                  <div class="radio-inline"><input type="radio" value="10" name="review[rate]" id="review_rate"><label>10</label></div>
+                </div>
               </div>
-              <div style="margin: 10px 0">
+
+              <div class="form-group">
+                <p class="control-label col-xs-12"><strong>レビュー</strong></p>
                 <%= f.text_area :review, placeholder: 'レビューを入力', style: 'width: 100%;height: 300px;' %>
               </div>
-              <div style="margin: 10px 0">
+              <div class="form-group">
                 <div class="col10 push1">
                   <%= button_tag type: "submit", class: "btn btn--block" do %>
                     投稿する
