@@ -1,7 +1,16 @@
-<div class="">
-  <div class="">
-    <h3>投稿内容を更新しました。</h3>
-    <%= link_to "自分の投稿を見る", user_path(current_user) %>
-    <%= link_to "ホームに戻る", root_path %>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <h1 class="text-muted">投稿を更新しました。</h1> <!--title-->
+  </div>
+</nav>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h4><a href="/users/<%= current_user.id %>">マイページへ</a></h4>
+    </div>
+    <div class="col-md-12">
+      <h4><a href="/">トップページへ</a></h4>
+    </div>
   </div>
 </div>
