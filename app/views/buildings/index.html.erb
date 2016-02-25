@@ -21,7 +21,6 @@
                 </div>
                 <div class="media-body">
                   <h4 class="media-heading"><a href="/buildings/<%= building.id %>"><%= building.building_name %></a></h4>
-                  <%= building.detail %></br>
                   <% if building.reviews.present? %>
                     平均評価: <%= building.review_average %>
                   <% else %>
@@ -46,7 +45,6 @@
                 </div>
                 <div class="media-body">
                   <h4 class="media-heading"><a href="/buildings/<%= building.id %>"><%= building.building_name %></a></h4>
-                  <%= building.detail %></br>
                   <%= i %>位</br>
                   <% if building.reviews.present? %>
                       平均評価: <%= building.review_average %>
