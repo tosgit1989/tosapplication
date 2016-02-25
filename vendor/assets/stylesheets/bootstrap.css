@@ -6758,3 +6758,8 @@ button.close {
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */
+
+/*# add to original bootstrap.css */
+.header_and_content {
+  min-height: calc(100vh - 30px);
+}
