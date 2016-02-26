@@ -13,7 +13,10 @@
             <!--検索フォーム-->
             <h3 class="text-middle">検索</h3>
             <%= form_tag('/buildings/search2', method: :get) do %>
-              <input class="search__query" name="keyword" placeholder="建物名を入力" type="text" value=""><button class="btn-search" building_name="検索" type="submit"><i class="icon-search">検索</i></button></input>
+              <div class="form-group">
+                <input class="form-control" name="keyword" placeholder="建物名を入力" type="text" value=""><br>
+                <button class="btn btn--block" building_name="検索" type="submit">検索</button></input>
+              </div>
             <% end %>
 
           </div>
