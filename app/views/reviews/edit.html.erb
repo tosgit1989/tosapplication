@@ -22,11 +22,11 @@
               </div>
             </div>
 
-                        <!--フォーム-->
+            <!--フォーム-->
             <%= form_for [@building, @review] do |f| %>
               <div class="form-group">
-                <p class="control-label col-xs-12"><strong>レート(<span class="text-danger">変更する場合のみ、</span>10段階中どれか1つを選択してください)</strong></p>
-                <div class="col-xs-12">
+                <p class="control-label"><strong>レート(<span class="text-danger">変更する場合のみ、</span>10段階中どれか1つを選択してください)</strong></p>
+                <div>
                   <div class="radio-inline"><input type="radio" value="1" name="review[rate]" id="review_rate"><label>1</label></div>
                   <div class="radio-inline"><input type="radio" value="2" name="review[rate]" id="review_rate"><label>2</label></div>
                   <div class="radio-inline"><input type="radio" value="3" name="review[rate]" id="review_rate"><label>3</label></div>
@@ -41,15 +41,13 @@
               </div>
 
               <div class="form-group">
-                <p class="control-label col-xs-12"><strong>レビュー</strong></p>
-                <%= f.text_area :review, placeholder: 'レビューを入力', style: 'width: 100%;height: 300px;' %>
+                <p class="control-label"><strong>レビュー</strong></p>
+                <%= f.text_area :review, placeholder: 'レビューを入力', style: 'height: 300px;', class: 'form-control' %>
               </div>
               <div class="form-group">
-                <div class="col10 push1">
-                  <%= button_tag type: "submit", class: "btn btn--block" do %>
-                    更新する
-                  <% end %>
-                </div>
+                <%= button_tag type: "submit", class: "btn btn--block" do %>
+                  更新する
+                <% end %>
               </div>
             <% end %>
 
