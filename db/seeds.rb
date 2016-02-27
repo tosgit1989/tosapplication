@@ -8,8 +8,8 @@
 
 require "csv"
 
-users_csv = CSV.readlines("db/users.csv")
-users_csv.shift
-users_csv.each do |row|
-  User.create(email: row[1])
+buildings_csv = CSV.readlines("db/buildings.csv")
+buildings_csv.shift
+buildings_csv.each do |row|
+  Building.create(building_name: row[1], image_url: row[2], detail: row[3], access: row[4], address: row[5])
 end
