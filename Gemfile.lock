@@ -187,6 +187,7 @@ DEPENDENCIES
   jquery-rails
   mechanize
   mysql2 (= 0.3.18)
+  nokogiri
   rails (= 4.2.5)
   rails_12factor
   sass-rails (~> 5.0)
