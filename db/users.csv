@@ -1,0 +1,6 @@
+id,"email","encrypted_password","reset_password_token","reset_password_sent_at","remember_created_at",sign_in_count,"current_sign_in_at","last_sign_in_at","current_sign_in_ip","last_sign_in_ip","created_at","updated_at","nickname"
+1,"email1@gmail.com","$2a$10$45tj5PiwwFIgzK8hKP2fF.qJliSNZA7WTFHv8VBuUTB.NIp2iquTS",NULL,NULL,NULL,35,"2016-02-26 13:38:11","2016-02-25 14:39:37","::1","::1","2016-02-03 21:22:42","2016-02-26 13:38:11","nickname1"
+2,"email2@gmail.com","$2a$10$Hiq0he.iJGz2l.fT2eRpGuiIAsneEUYeo/PgjPfvjv3sQKSe3Mkd6",NULL,NULL,NULL,9,"2016-02-25 14:32:27","2016-02-23 11:33:04","::1","::1","2016-02-04 00:50:26","2016-02-25 14:32:27","nickname2"
+3,"email3@gmail.com","$2a$10$IJYaI/a7ZVwmnl7SJoCwAOWD0oiRCsJV2XsUTApQvGkXdmFI/5XhS",NULL,NULL,NULL,2,"2016-02-10 10:08:46","2016-02-06 02:22:25","::1","::1","2016-02-06 02:22:25","2016-02-10 10:08:46","nickname3"
+4,"email4@gmail.com","$2a$10$1WM5.biKN6F.QcbspFM0Cu6dKFHHVt7XZnA8Q2qZDAl80Ij2DVRmi",NULL,NULL,NULL,1,"2016-02-10 10:18:38","2016-02-10 10:18:38","::1","::1","2016-02-10 10:18:38","2016-02-10 10:18:38","nickname4"
+5,"email5@gmail.com","$2a$10$QZ32QFutveCJtBrX8TDAVO5mnXjNMAkGbA3kzlnZXB0rLrXPB2Lna",NULL,NULL,NULL,1,"2016-02-22 02:48:11","2016-02-22 02:48:11","::1","::1","2016-02-22 02:48:11","2016-02-22 02:48:11","nickname5"
