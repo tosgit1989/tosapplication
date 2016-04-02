@@ -46,7 +46,13 @@ end
 group :production, :staging do
   gem 'rails_12factor'
 end
+group :development do
+  gem 'better_errors'
+
+  gem 'binding_of_caller'
+end
 gem 'devise'
 gem 'mechanize'
 gem 'nokogiri'
-# ターミナルでコミットできるかどうか確認の目的で追記
+gem 'anemone'
+
