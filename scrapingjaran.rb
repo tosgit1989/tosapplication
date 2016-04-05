@@ -6,7 +6,7 @@ require 'mysql'
 class Scrape
 
   def main()
-    connection = Mysql::new('localhost', 'root', '', 'tosapplication_development')
+    connection = Mysql::new("localhost", "root", "", "tosapplication_development")
 
     prefectures = YAML.load_file('config/prefectures.yaml')
     for prefecture in prefectures do
@@ -56,37 +56,36 @@ class Scrape
                 a_fee2 = node.css('.result-body .hotel-detail .hotel-detail-header td .s11_66').inner_text.gsub(/(\s)/,"") # 料金一人あたり換算時
                 a_access = node.css('.result-body .hotel-detail .hotel-detail-body td .s11_33').inner_text.gsub(/(\s)/,"") # アクセス
                 a_address = node.css('.result-header tr .s11_66').inner_text # 場所
-                puts building_name
 
                 statement = connection.prepare("
-                INSERT INTO buildings (
-                            building_name,
-                            image_url,
-                            detail,
-                            fee1,
-                            fee2,
-                            access,
-                            address
-                            )
-                VALUES (
-                #{a_building_name},
-                #{a_image_url},
-                #{a_detail},
-                #{a_fee1},
-                #{a_fee2},
-                #{a_access},
-                #{a_address}
-                )
-            ")
+                  INSERT INTO buildings (
+                    building_name,
+                    image_url,
+                    detail,
+                    fee1,
+                    fee2,
+                    access,
+                    address
+                  )
+                  VALUES (
+                    '#{a_building_name}',
+                    '#{a_image_url}',
+                    '#{a_detail}',
+                    '#{a_fee1}',
+                    '#{a_fee2}',
+                    '#{a_access}',
+                    '#{a_address}'
+                  )
+                ")
 
                 puts statement
 
                 begin
                   result = statement.execute()
-                    # result.each do |tuple|
-                    #   puts tuple[0]  # value1 の値
-                    #   puts tuple[1]  # value2 の値
-                    # end
+                  # result.each do |tuple|
+                  #   puts tuple[0]  # value1 の値
+                  #   puts tuple[1]  # value2 の値
+                  # end
                 ensure
                   statement.close
                 end
