@@ -50,7 +50,7 @@ class Scrape
               page_max = (building_count + 29) / 30 # 最大ページ番号
               if page_num <= page_max then
                 a_building_name = node.css('.result-body .hotel-detail .hotel-detail-header a').inner_text # ホテル名
-                a_image_url = node.css('.result-body .hotel-picture .main img').attribute('src').value # 画像URL
+                begin a_image_url = node.css('.result-body .hotel-picture .main img').attribute('src').value rescue a_image_url = "#{pref_num}-#{area_num}-#{page_num}-err" end # 画像URL
                 a_detail = node.css('.result-body .hotel-detail .hotel-detail-body td .s12_33').inner_text.gsub(/(\s)/,"") # 詳細
                 a_fee1 = node.css('.result-body .hotel-detail .hotel-detail-header td .s14_00').inner_text.gsub(/(\s)/,"") # 料金
                 a_fee2 = node.css('.result-body .hotel-detail .hotel-detail-header td .s11_66').inner_text.gsub(/(\s)/,"") # 料金一人あたり換算時
