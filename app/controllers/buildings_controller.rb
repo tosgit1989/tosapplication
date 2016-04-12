@@ -2,7 +2,7 @@ class BuildingsController < RankingController
   before_action :authenticate_user!, only: :search # ログインしていない時にレビューを投稿しようとすると、ログイン画面にリダイレクト
   def index
     # buildingsテーブルから最新順に建物を２件取得する
-    @buildings = Building.order('id ASC').limit(2)
+    @buildings = Building.order('id ASC').limit(20)
   end
 
   def show
@@ -12,11 +12,11 @@ class BuildingsController < RankingController
 
   def search1
     # 検索フォームのキーワードをあいまい検索して、buildingsテーブルから2件の建物情報を取得する
-    @buildings = Building.where('building_name LIKE(?)', "%#{params[:keyword]}%").limit(2)
+    @buildings = Building.where('building_name LIKE(?)', "%#{params[:keyword]}%").limit(20)
   end
 
   def search2
     # 検索フォームのキーワードをあいまい検索して、buildingsテーブルから2件の建物情報を取得する
-    @buildings = Building.where('building_name LIKE(?)', "%#{params[:keyword]}%").limit(2)
+    @buildings = Building.where('building_name LIKE(?)', "%#{params[:keyword]}%").limit(20)
   end
 end
