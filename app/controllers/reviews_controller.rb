@@ -14,7 +14,6 @@ class ReviewsController < RankingController
   def destroy # レビュー削除機能
     @review = Review.find(params[:id])
     @review.destroy
-    redirect_to controller: :users, action: :show # マイページにリダイレクトする
   end
 
   def edit # レビュー編集機能

@@ -21,21 +21,8 @@
         <div class="col-md-6">
           <div class="bs-docs-section">
             <h3 class="text-middle"><%= current_user.nickname %>さんの投稿一覧</h3>
-            <% current_user.reviews.each do |review| %>
-              <div class="media">
-                <div class="media-left">
-                  <a href="#">
-                    <img class="media-object" src="<%= review.building.image_url %>" alt="...">
-                  </a>
-                </div>
-                <div class="media-body">
-                  <h4 class="media-heading"><a href="/buildings/<%= review.building_id %>"><%= review.building.building_name %></a></h4>
-                  <%= review.review %></br>
-                  評価: <%= review.rate %></br>
-                  このレビューを <a href="/buildings/<%= review.building_id %>/reviews/<%= review.id %>/edit">編集</a> / <%= link_to '削除', "/buildings/#{review.building_id}/reviews/#{review.id}", method: :delete %>
-                </div>
-              </div>
-            <% end %>
+            <ul><%= render current_user.reviews %></ul>
+
           </div>
         </div>
 
