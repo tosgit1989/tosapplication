@@ -4,4 +4,8 @@ class Building < ActiveRecord::Base
   def review_average
     self.reviews.average(:rate).round
   end
+
+  def review_count
+    self.reviews.count(:id)
+  end
 end
