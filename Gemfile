@@ -55,4 +55,10 @@ gem 'devise'
 gem 'mechanize'
 gem 'nokogiri'
 gem 'anemone'
+gem 'paperclip'
+gem 'kaminari'
+gem 'kaminari-bootstrap', '~> 3.0.1'
+group :test do
+  gem 'factory_girl_rails', '~> 4.6.0'
+end
 
