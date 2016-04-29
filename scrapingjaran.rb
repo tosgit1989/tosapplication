@@ -10,26 +10,26 @@ class Scrape
 
     prefectures = YAML.load_file('config/prefectures.yaml')
     for prefecture in prefectures do
-      prefecture_code = prefecture[0].to_s
-      prefecture_name = prefecture[1]
+      pref_code = prefecture[0].to_s
+      pref_name = prefecture[1]
 
-      if prefecture_code.length < 2 then
-        prefecture_code = '0' + prefecture_code
+      if pref_code.length < 2 then
+        pref_code = "0#{pref_code}"
       end
 
-      puts prefecture_code
-      puts prefecture_name
-      scrape(prefecture_name, prefecture_code, connection)
+      puts pref_code
+      puts pref_name
+      scrape(pref_name, pref_code, connection)
     end
     connection.close
   end
 
-  def scrape(prefecture, pref_num, connection)
+  def scrape(a_pref_name, a_pref_code, a_connection)
     98.times do |h|
       if h <= 8 then
-        area_num = "0#{h + 1}"
+        area_code = "0#{h + 1}"
       else
-        area_num = "#{h + 1}"
+        area_code = "#{h + 1}"
       end
 
       sleep(1)
@@ -38,9 +38,9 @@ class Scrape
         page_num = i + 1
         urls = []
         if page_num == 1 then
-          urls.push("http://www.jalan.net/#{pref_num}0000/LRG_#{pref_num}#{area_num}00/?screenId=UWW1402&distCd=&photo=&activeSort=0&mvTabFlg=&rootCd=&stayYear=&stayMonth=&stayDay=&stayCount=&roomCount=&dateUndecided=&adultNum=&roomCrack=200000&kenCd=#{pref_num}0000&lrgCd=#{pref_num}#{area_num}00&vosFlg=6&idx=0")
+          urls.push("http://www.jalan.net/#{a_pref_code}0000/LRG_#{a_pref_code}#{area_code}00/?screenId=UWW1402&distCd=&photo=&activeSort=0&mvTabFlg=&rootCd=&stayYear=&stayMonth=&stayDay=&stayCount=&roomCount=&dateUndecided=&adultNum=&roomCrack=200000&kenCd=#{a_pref_code}0000&lrgCd=#{a_pref_code}#{area_code}00&vosFlg=6&idx=0")
         else
-          urls.push("http://www.jalan.net/#{pref_num}0000/LRG_#{pref_num}#{area_num}00/page#{i}.html?screenId=UWW1402&distCd=&photo=&activeSort=0&mvTabFlg=&rootCd=&stayYear=&stayMonth=&stayDay=&stayCount=&roomCount=&dateUndecided=&adultNum=&roomCrack=200000&kenCd=#{pref_num}0000&lrgCd=#{pref_num}#{area_num}00&vosFlg=6&idx=#{(page_num * 30) - 30}")
+          urls.push("http://www.jalan.net/#{a_pref_code}0000/LRG_#{a_pref_code}#{area_code}00/page#{i}.html?screenId=UWW1402&distCd=&photo=&activeSort=0&mvTabFlg=&rootCd=&stayYear=&stayMonth=&stayDay=&stayCount=&roomCount=&dateUndecided=&adultNum=&roomCrack=200000&kenCd=#{a_pref_code}0000&lrgCd=#{a_pref_code}#{area_code}00&vosFlg=6&idx=#{(page_num * 30) - 30}")
         end
         Anemone.crawl(urls, :depth_limit => 0) do |anemone|
           anemone.on_every_page do |page|
@@ -49,15 +49,15 @@ class Scrape
               building_count = page.doc.css('.s16_F60b').inner_text.to_i  # 軒数
               page_max = (building_count + 29) / 30 # 最大ページ番号
               if page_num <= page_max then
-                a_building_name = node.css('.result-body .hotel-detail .hotel-detail-header a').inner_text # ホテル名
-                begin a_image_url = node.css('.result-body .hotel-picture .main img').attribute('src').value rescue a_image_url = "#{pref_num}-#{area_num}-#{page_num}-err" end # 画像URL
-                a_detail = node.css('.result-body .hotel-detail .hotel-detail-body td .s12_33').inner_text.gsub(/(\s)/,"") # 詳細
-                a_fee1 = node.css('.result-body .hotel-detail .hotel-detail-header td .s14_00').inner_text.gsub(/(\s)/,"") # 料金
-                a_fee2 = node.css('.result-body .hotel-detail .hotel-detail-header td .s11_66').inner_text.gsub(/(\s)/,"") # 料金一人あたり換算時
-                a_access = node.css('.result-body .hotel-detail .hotel-detail-body td .s11_33').inner_text.gsub(/(\s)/,"") # アクセス
-                a_address = node.css('.result-header tr .s11_66').inner_text # 場所
+                building_name = node.css('.result-body .hotel-detail .hotel-detail-header a').inner_text # ホテル名
+                begin image_url = node.css('.result-body .hotel-picture .main img').attribute('src').value rescue image_url = "" end # 画像URL
+                detail = node.css('.result-body .hotel-detail .hotel-detail-body td .s12_33').inner_text.gsub(/(\s)/,"") # 詳細
+                fee1 = node.css('.result-body .hotel-detail .hotel-detail-header td .s14_00').inner_text.gsub(/(\s)/,"") # 料金
+                fee2 = node.css('.result-body .hotel-detail .hotel-detail-header td .s11_66').inner_text.gsub(/(\s)/,"") # 料金一人あたり換算時
+                access = node.css('.result-body .hotel-detail .hotel-detail-body td .s11_33').inner_text.gsub(/(\s)/,"") # アクセス
+                address = node.css('.result-header tr .s11_66').inner_text # 場所
 
-                statement = connection.prepare("
+                statement = a_connection.prepare("
                   INSERT INTO buildings (
                     building_name,
                     image_url,
@@ -68,13 +68,13 @@ class Scrape
                     address
                   )
                   VALUES (
-                    '#{a_building_name}',
-                    '#{a_image_url}',
-                    '#{a_detail}',
-                    '#{a_fee1}',
-                    '#{a_fee2}',
-                    '#{a_access}',
-                    '#{a_address}'
+                    '#{building_name}',
+                    '#{image_url}',
+                    '#{detail}',
+                    '#{fee1}',
+                    '#{fee2}',
+                    '#{access}',
+                    '#{address}'
                   )
                 ")
 
