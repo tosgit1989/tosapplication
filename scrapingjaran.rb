@@ -49,13 +49,13 @@ class Scrape
               building_count = page.doc.css('.s16_F60b').inner_text.to_i  # 軒数
               page_max = (building_count + 29) / 30 # 最大ページ番号
               if page_num <= page_max then
-                building_name = node.css('.result-body .hotel-detail .hotel-detail-header a').inner_text # ホテル名
+                building_name = node.css('.result-body .hotel-detail .hotel-detail-header a').inner_text.gsub(/'/, "’") # ホテル名
                 begin image_url = node.css('.result-body .hotel-picture .main img').attribute('src').value rescue image_url = "" end # 画像URL
-                detail = node.css('.result-body .hotel-detail .hotel-detail-body td .s12_33').inner_text.gsub(/(\s)/,"") # 詳細
-                fee1 = node.css('.result-body .hotel-detail .hotel-detail-header td .s14_00').inner_text.gsub(/(\s)/,"") # 料金
-                fee2 = node.css('.result-body .hotel-detail .hotel-detail-header td .s11_66').inner_text.gsub(/(\s)/,"") # 料金一人あたり換算時
-                access = node.css('.result-body .hotel-detail .hotel-detail-body td .s11_33').inner_text.gsub(/(\s)/,"") # アクセス
-                address = node.css('.result-header tr .s11_66').inner_text # 場所
+                detail = node.css('.result-body .hotel-detail .hotel-detail-body td .s12_33').inner_text.gsub(/(\s)/,"").gsub(/'/, "’") # 詳細
+                fee1 = node.css('.result-body .hotel-detail .hotel-detail-header td .s14_00').inner_text.gsub(/(\s)/,"").gsub(/'/, "’") # 料金
+                fee2 = node.css('.result-body .hotel-detail .hotel-detail-header td .s11_66').inner_text.gsub(/(\s)/,"").gsub(/'/, "’") # 料金一人あたり換算時
+                access = node.css('.result-body .hotel-detail .hotel-detail-body td .s11_33').inner_text.gsub(/(\s)/,"").gsub(/'/, "’") # アクセス
+                address = node.css('.result-header tr .s11_66').inner_text.gsub(/'/, "’") # 場所
 
                 statement = a_connection.prepare("
                   INSERT INTO buildings (
