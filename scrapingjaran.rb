@@ -1,5 +1,4 @@
 require 'anemone'
-require 'csv'
 require 'yaml'
 require 'mysql'
 
