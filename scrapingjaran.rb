@@ -16,8 +16,7 @@ class Scrape
         pref_code = "0#{pref_code}"
       end
 
-      puts pref_code
-      puts pref_name
+      puts "都道府県:#{pref_name} 都道府県コード:#{pref_code}"
       scrape(pref_name, pref_code, connection)
     end
     connection.close
@@ -33,8 +32,11 @@ class Scrape
 
       sleep(1)
 
+      puts "エリアコード:#{area_code}"
+
       10.times do |i|
         page_num = i + 1
+        puts "ページ番号:#{page_num}"
         urls = []
         if page_num == 1 then
           urls.push("http://www.jalan.net/#{a_pref_code}0000/LRG_#{a_pref_code}#{area_code}00/?screenId=UWW1402&distCd=&photo=&activeSort=0&mvTabFlg=&rootCd=&stayYear=&stayMonth=&stayDay=&stayCount=&roomCount=&dateUndecided=&adultNum=&roomCrack=200000&kenCd=#{a_pref_code}0000&lrgCd=#{a_pref_code}#{area_code}00&vosFlg=6&idx=0")
