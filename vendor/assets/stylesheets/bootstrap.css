@@ -6763,3 +6763,6 @@ button.close {
 .header_and_content {
   min-height: calc(100vh - 30px);
 }
+.height_30px {
+  height: 30px;
+}
