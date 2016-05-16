@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160218050907) do
+ActiveRecord::Schema.define(version: 20160407221609) do
 
   create_table "buildings", force: :cascade do |t|
     t.string   "building_name", limit: 255
@@ -23,6 +23,9 @@ ActiveRecord::Schema.define(version: 20160218050907) do
     t.datetime "updated_at"
     t.string   "fee1",          limit: 255
     t.string   "fee2",          limit: 255
+    t.string   "area_num",      limit: 255
+    t.integer  "page_num",      limit: 4
+    t.integer  "page_max",      limit: 4
   end
 
   create_table "reviews", force: :cascade do |t|
