@@ -61,4 +61,15 @@ gem 'kaminari-bootstrap', '~> 3.0.1'
 group :test do
   gem 'factory_girl_rails', '~> 4.6.0'
 end
+group :development, :test do
+ gem 'capistrano'
+ gem 'capistrano-bundler'
+ gem 'capistrano-rails'
+ gem 'capistrano-rbenv'
+end
+
+group :production, :staging do
+  gem 'unicorn'
+end
+
 
