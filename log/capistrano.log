@@ -1,0 +1,107 @@
+# Logfile created on 2016-05-25 23:07:31 +0900 by logger.rb/44203
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-05-25 23:07:31 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [144ba4a7] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as kagatoshio@00.00.000.000
+ DEBUG [144ba4a7] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-05-25 23:23:52 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [9f74f076] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as kagatoshio@00.00.000.000
+ DEBUG [9f74f076] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-05-26 22:12:46 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [34d4221e] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as kagatoshio@00.00.000.000
+ DEBUG [34d4221e] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-05-26 22:21:48 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [2ca5af48] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as kagatoshio@00.00.000.000
+ DEBUG [2ca5af48] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-05-28 13:07:53 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [8c3deeaf] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as kagatoshio@00.00.000.000
+ DEBUG [8c3deeaf] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-05-28 13:13:36 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [831e039b] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as kagatoshio@52.196.151.177
+ DEBUG [831e039b] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [831e039b] Finished in 1.137 seconds with exit status 0 (successful).
+  INFO [492ead65] Running /usr/bin/env sudo mkdir -pv /var/www/tosapplication as kagatoshio@52.196.151.177
+ DEBUG [492ead65] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo mkdir -pv /var/www/tosapplication )
+ DEBUG [492ead65] 	sudo
+ DEBUG [492ead65] 	: 
+ DEBUG [492ead65] 	端末 (tty) が存在せず、パスワードを尋ねる (askpass) プログラムが指定されていません
+ DEBUG [492ead65] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-05-28 13:15:38 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [533c5009] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as ec2-user@52.196.151.177
+ DEBUG [533c5009] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-05-28 13:16:55 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [9ca8c58e] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as kagatoshio@52.196.151.177
+ DEBUG [9ca8c58e] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [9ca8c58e] Finished in 0.908 seconds with exit status 0 (successful).
+  INFO [9adcc3b2] Running /usr/bin/env sudo mkdir -pv /var/www/tosapplication as kagatoshio@52.196.151.177
+ DEBUG [9adcc3b2] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo mkdir -pv /var/www/tosapplication )
+ DEBUG [9adcc3b2] 	sudo
+ DEBUG [9adcc3b2] 	: 
+ DEBUG [9adcc3b2] 	端末 (tty) が存在せず、パスワードを尋ねる (askpass) プログラムが指定されていません
+ DEBUG [9adcc3b2] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-05-28 13:18:11 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [94099665] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as kagatoshio@52.196.151.177
+ DEBUG [94099665] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [94099665] Finished in 1.870 seconds with exit status 0 (successful).
+  INFO [f4e163e9] Running /usr/bin/env sudo mkdir -pv /var/www/tosapplication as kagatoshio@52.196.151.177
+ DEBUG [f4e163e9] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env sudo mkdir -pv /var/www/tosapplication )
+ DEBUG [f4e163e9] 	sudo
+ DEBUG [f4e163e9] 	: 
+ DEBUG [f4e163e9] 	端末 (tty) が存在せず、パスワードを尋ねる (askpass) プログラムが指定されていません
+ DEBUG [f4e163e9] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-05-28 13:32:47 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [fd48a6ec] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as ec2-user@54.199.173.146
+ DEBUG [fd48a6ec] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-05-28 13:33:50 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [e47b2773] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as ec2-user@aws-tosapplication
+ DEBUG [e47b2773] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-05-28 13:38:34 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [18abd01d] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as ec2-user@aws-tosapplication
+ DEBUG [18abd01d] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-05-28 13:38:49 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [eecf3096] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as ec2-user@aows-tosapplication
+ DEBUG [eecf3096] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-05-28 13:42:14 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [1a16f803] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as ec-user@aws-tosapplication
+ DEBUG [1a16f803] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-05-28 13:42:49 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [9fb54e68] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as ec2-user@aws-tosapplication
+ DEBUG [9fb54e68] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-05-28 13:43:57 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [f9a3c951] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as ec2-user@54.199.173.146
+ DEBUG [f9a3c951] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-05-28 13:44:06 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [b97d3cf7] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as ec2-user@54.199.173.146
+ DEBUG [b97d3cf7] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
