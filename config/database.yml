@@ -51,5 +51,5 @@ production:
   <<: *default
   database: tosapplication_production
   username: root
-  password: <%= ENV['TOSAPPLICATION_DATABASE_PASSWORD'] %>
+  password: pisqlSWI
   socket: /var/lib/mysql/mysql.sock
