@@ -52,7 +52,3 @@ production:
   database: tosapplication_production
   username: root
   password: pisqlSWI
-<<<<<<< HEAD
-  socket: /var/lib/mysql/mysql.sock
-=======
->>>>>>> 5123dff8b9b0aa4c13e82e78f161def59c967d4c

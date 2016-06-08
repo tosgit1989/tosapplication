@@ -136,3 +136,37 @@
  DEBUG [c039e799] Command: [ -f /var/www/rails/tosapplication/shared/config/database.yml ]
  DEBUG [c039e799] Finished in 0.048 seconds with exit status 1 (failed).
  ERROR linked file /var/www/rails/tosapplication/shared/config/database.yml does not exist on 54.199.209.187
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-06-08 20:42:58 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [579e0926] Running [ -d ~/.rbenv/versions/2.3.1 ] as ec2-user@54.199.209.187
+ DEBUG [579e0926] Command: [ -d ~/.rbenv/versions/2.3.1 ]
+ DEBUG [579e0926] Finished in 9.900 seconds with exit status 0 (successful).
+  INFO [7e779151] Running /usr/bin/env mkdir -p /tmp// as ec2-user@54.199.209.187
+ DEBUG [7e779151] Command: ( export RBENV_ROOT="~/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /tmp// )
+  INFO [7e779151] Finished in 0.075 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp//git-ssh.sh 0.0%
+  INFO Uploading /tmp//git-ssh.sh 100.0%
+  INFO [9d690c42] Running /usr/bin/env chmod +rx /tmp//git-ssh.sh as ec2-user@54.199.209.187
+ DEBUG [9d690c42] Command: ( export RBENV_ROOT="~/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env chmod +rx /tmp//git-ssh.sh )
+  INFO [9d690c42] Finished in 0.091 seconds with exit status 0 (successful).
+  INFO [6f444170] Running /usr/bin/env git ls-remote --heads  as ec2-user@54.199.209.187
+ DEBUG [6f444170] Command: ( export RBENV_ROOT="~/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp//git-ssh.sh" ; /usr/bin/env git ls-remote --heads  )
+ DEBUG [6f444170] 	fatal: No remote configured to list refs from.
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-06-08 20:44:14 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [ac4c8f56] Running [ -d ~/.rbenv/versions/2.3.1 ] as ec2-user@54.199.209.187
+ DEBUG [ac4c8f56] Command: [ -d ~/.rbenv/versions/2.3.1 ]
+ DEBUG [ac4c8f56] Finished in 0.778 seconds with exit status 0 (successful).
+  INFO [6b216740] Running /usr/bin/env mkdir -p /tmp// as ec2-user@54.199.209.187
+ DEBUG [6b216740] Command: ( export RBENV_ROOT="~/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /tmp// )
+  INFO [6b216740] Finished in 0.066 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp//git-ssh.sh 0.0%
+  INFO Uploading /tmp//git-ssh.sh 100.0%
+  INFO [f3ce6538] Running /usr/bin/env chmod +rx /tmp//git-ssh.sh as ec2-user@54.199.209.187
+ DEBUG [f3ce6538] Command: ( export RBENV_ROOT="~/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env chmod +rx /tmp//git-ssh.sh )
+  INFO [f3ce6538] Finished in 0.072 seconds with exit status 0 (successful).
+  INFO [8537c4d4] Running /usr/bin/env git ls-remote --heads  as ec2-user@54.199.209.187
+ DEBUG [8537c4d4] Command: ( export RBENV_ROOT="~/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp//git-ssh.sh" ; /usr/bin/env git ls-remote --heads  )
+ DEBUG [8537c4d4] 	fatal: No remote configured to list refs from.

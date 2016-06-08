@@ -1,5 +1,5 @@
 # config valid only for current version of Capistrano
- lock '3.5.0'  
+lock '3.5.0'
 
 set :application, 'tosapplication'
  set :repo_url, 'https://tosgit1989@github.com/tosgit1989/tosapplication.git'
