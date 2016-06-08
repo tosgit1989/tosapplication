@@ -105,3 +105,34 @@
   INFO ---------------------------------------------------------------------------
  DEBUG [b97d3cf7] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as ec2-user@54.199.173.146
  DEBUG [b97d3cf7] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-06-07 07:46:43 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [5e2ac60f] Running [ -d ~/.rbenv/versions/2.3.1 ] as ec2-user@54.199.209.187
+ DEBUG [5e2ac60f] Command: [ -d ~/.rbenv/versions/2.3.1 ]
+ DEBUG [5e2ac60f] Finished in 0.336 seconds with exit status 0 (successful).
+  INFO [57816ab2] Running /usr/bin/env mkdir -p /tmp/tosapplication/ as ec2-user@54.199.209.187
+ DEBUG [57816ab2] Command: ( export RBENV_ROOT="~/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /tmp/tosapplication/ )
+  INFO [57816ab2] Finished in 0.044 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/tosapplication/git-ssh.sh 0.0%
+  INFO Uploading /tmp/tosapplication/git-ssh.sh 100.0%
+  INFO [28af4560] Running /usr/bin/env chmod +rx /tmp/tosapplication/git-ssh.sh as ec2-user@54.199.209.187
+ DEBUG [28af4560] Command: ( export RBENV_ROOT="~/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env chmod +rx /tmp/tosapplication/git-ssh.sh )
+  INFO [28af4560] Finished in 0.043 seconds with exit status 0 (successful).
+  INFO [4e353b6f] Running /usr/bin/env git ls-remote --heads https://tosgit1989@github.com/tosgit1989/tosapplication.git as ec2-user@54.199.209.187
+ DEBUG [4e353b6f] Command: ( export RBENV_ROOT="~/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/tosapplication/git-ssh.sh" ; /usr/bin/env git ls-remote --heads https://tosgit1989@github.com/tosgit1989/tosapplication.git )
+ DEBUG [4e353b6f] 	552011adcd1923021cbb56fd4fc3baaffa347ed4	refs/heads/master
+  INFO [4e353b6f] Finished in 0.929 seconds with exit status 0 (successful).
+  INFO [6cc3213c] Running /usr/bin/env mkdir -p /var/www/rails/tosapplication/shared /var/www/rails/tosapplication/releases as ec2-user@54.199.209.187
+ DEBUG [6cc3213c] Command: ( export RBENV_ROOT="~/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/rails/tosapplication/shared /var/www/rails/tosapplication/releases )
+  INFO [6cc3213c] Finished in 0.051 seconds with exit status 0 (successful).
+  INFO [23cb3eb1] Running /usr/bin/env mkdir -p /var/www/rails/tosapplication/shared/log /var/www/rails/tosapplication/shared/tmp/pids /var/www/rails/tosapplication/shared/tmp/cache /var/www/rails/tosapplication/shared/tmp/sockets /var/www/rails/tosapplication/shared/public/system /var/www/rails/tosapplication/shared/public/assets as ec2-user@54.199.209.187
+ DEBUG [23cb3eb1] Command: ( export RBENV_ROOT="~/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/rails/tosapplication/shared/log /var/www/rails/tosapplication/shared/tmp/pids /var/www/rails/tosapplication/shared/tmp/cache /var/www/rails/tosapplication/shared/tmp/sockets /var/www/rails/tosapplication/shared/public/system /var/www/rails/tosapplication/shared/public/assets )
+  INFO [23cb3eb1] Finished in 0.048 seconds with exit status 0 (successful).
+  INFO [5cda3228] Running /usr/bin/env mkdir -p /var/www/rails/tosapplication/shared/config as ec2-user@54.199.209.187
+ DEBUG [5cda3228] Command: ( export RBENV_ROOT="~/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/rails/tosapplication/shared/config )
+  INFO [5cda3228] Finished in 0.046 seconds with exit status 0 (successful).
+ DEBUG [c039e799] Running [ -f /var/www/rails/tosapplication/shared/config/database.yml ] as ec2-user@54.199.209.187
+ DEBUG [c039e799] Command: [ -f /var/www/rails/tosapplication/shared/config/database.yml ]
+ DEBUG [c039e799] Finished in 0.048 seconds with exit status 1 (failed).
+ ERROR linked file /var/www/rails/tosapplication/shared/config/database.yml does not exist on 54.199.209.187
