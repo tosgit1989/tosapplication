@@ -14,7 +14,7 @@ default: &default
   encoding: utf8
   pool: 5
   username: root
-  password: pisqlSWI
+  password:
   socket: /tmp/mysql.sock
 
 development:
@@ -51,4 +51,4 @@ production:
   <<: *default
   database: tosapplication_production
   username: root
-  password: pisqlSWI
+  password:
