@@ -4,41 +4,52 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
-      <div class="row">
+      <div class="bs-docs-section">
         <!--ホテルの画像-->
-        <div class="media"><div class="media-left"><a href="/buildings/<%= building.id %>">
+        <div class="media"><div class="media-left"><a href="#">
           <img class="media-object" src="<%= @building.image_url %>" alt="hotel_picture">
         </a></div></div>
         <!--ホテル投稿画面へのリンク-->
         <div style="text-align: right">
-          <a href="/buildings/<%= @building.id %>/reviews/new">このホテルを投稿する</a> <!--「このホテルを投稿する」をクリックすると投稿ページに移動-->
+          <% if user_signed_in? %>
+            <a href="/buildings/<%= @building.id %>/reviews/new">レビューを書く</a> <!--「レビューを書く」をクリックすると投稿ページに移動-->
+          <% else %>
+            <a href="/buildings/<%= @building.id %>/reviews/new">サインインしてレビューを書く</a>
+          <% end %>
         </div>
 
-        <!--detailなどを表示--->
-        <div class="col-md-6">
-          <div class="bs-docs-section">
+        <!--タブ-->
+        <ul class="nav nav-tabs">
+          <li class="active"><a href="#tab1" data-toggle="tab">詳細情報</a></li>
+          <li><a href="#tab2" data-toggle="tab">みんなのレビュー</a></li>
+        </ul>
+        <!-- / タブ-->
+        <!--コンテンツ-->
+        <div id="myTabContent" class="tab-content">
+          <div class="tab-pane fade in active" id="tab1">
+            <!--detailなどを表示--->
             <h3 class="text-middle">詳細情報</h3>
             <%= @building.detail %><br>
             【宿泊料金】<%= @building.fee1 %><%= @building.fee2 %><br>
             <%= @building.access %>
+            <div class="media"></div> <!--この行はフッターとの隙間確保用-->
           </div>
-        </div>
-
-        <!--みんなのレビューを表示-->
-        <div class="col-md-6">
-          <div class="bs-docs-section">
+          <div class="tab-pane fade" id="tab2">
+            <!--みんなのレビューを表示-->
             <h3 class="text-middle">みんなのレビュー</h3>
             <% @building.reviews.each do |review| %>
-              <div class="media">
-                <div class="media-body">
-                  <h4 class="media-heading"><%= review.user.nickname %></h4>
-                  <%= review.review %></br>
-                  評価: <%= review.rate %></br>
+                <div class="media">
+                  <div class="media-body">
+                    <h4 class="media-heading"><%= review.user.nickname %></h4>
+                    <%= review.review %></br>
+                    評価: <%= review.rate %></br>
+                  </div>
                 </div>
-              </div>
             <% end %>
+            <div class="media"></div> <!--この行はフッターとの隙間確保用-->
           </div>
         </div>
+        <!-- /コンテンツ-->
 
       </div>
     </div>
