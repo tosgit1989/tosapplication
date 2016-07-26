@@ -21,56 +21,64 @@
   <![endif]-->
 </head>
 <body style="background-color:#d3d3d3">
-<div class="header_and_content">
-<!--ここからBootstrap/navbar-->
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="active navbar-brand" href="/">hotelication</a>
-    </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li><a href="/buildings/search1">投稿する</a></li>
-        <li><a href="/buildings/search2">投稿・詳細を見る</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <% if user_signed_in? %>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">現在のユーザー: <%= current_user.nickname %><span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="/users/<%= current_user.id %>">マイページ</a></li>
-              <li role="separator" class="divider"></li>
-              <li><%= link_to 'サインアウト', destroy_user_session_path, method: :delete %></li>
-            </ul>
-          </li>
-        <% else %>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">現在サインインしていません。</a>
-            <ul class="dropdown-menu">
-              <li><a href="/users/sign_in">サインインページヘ</a></li>
-              <li><a href="/users/sign_up">新規登録ページヘ</a></li>
-            </ul>
-          </li>
-        <% end %>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-<!--ここまでBootstrap/navbar-->
+  <!--ここからBootstrap/navbar-->
+  <nav class="navbar navbar-fixed-top navbar-inverse"> <!--①navbar-fixed-top追加-->
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="active navbar-brand" href="/">hotelication</a>
+      </div>
 
-<%= yield %>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <% if user_signed_in? %>
+            <li><a href="/buildings/search1">レビューを書く</a></li>
+          <% else %>
+            <li><a href="/buildings/search1">サインインしてレビューを書く</a></li>
+          <% end %>
+          <li><a href="/buildings/search2">レビュー・詳細を見る</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <% if user_signed_in? %>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">現在のユーザー: <%= current_user.nickname %><span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="/users/<%= current_user.id %>">マイページ</a></li>
+                <li role="separator" class="divider"></li>
+                <li><%= link_to 'サインアウト', destroy_user_session_path, method: :delete %></li>
+              </ul>
+            </li>
+          <% else %>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">現在サインインしていません。</a>
+              <ul class="dropdown-menu">
+                <li><a href="/users/sign_in">サインインページヘ</a></li>
+                <li><a href="/users/sign_up">新規登録ページヘ</a></li>
+              </ul>
+            </li>
+          <% end %>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+  <!--ここまでBootstrap/navbar-->
 
-</div>
-  <footer class="bs-docs-footer height_30px" style="background-color:#000000">
+  <div style="min-height: calc(100vh - 30px)"><!--②移転--><!--⑤min-heightをCSS経由にせずに指定-->
+    <!--高さ50px分の余白-->
+    <div style="height:50px; background-color:transparent"></div> <!--③この行を追加-->
+
+    <!--content出力-->
+    <%= yield %>
+  </div>
+  <footer class="bs-docs-footer" style="background-color: #000000; height: 30px"> <!--④heightをCSS経由にせずに指定-->
     <div class="container">
       <p class="text-muted"></p>
     </div>
