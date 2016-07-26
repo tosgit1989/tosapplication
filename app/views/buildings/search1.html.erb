@@ -25,7 +25,7 @@
             <% @buildings.each do |building| %>
               <div class="media">
                 <div class="media-left">
-                  <a href="#">
+                  <a href="/buildings/<%= building.id %>/reviews/new">
                     <img class="media-object" src="<%= building.image_url %>" alt="...">
                   </a>
                 </div>

@@ -13,7 +13,7 @@
             <% @buildings.each do |building| %>
               <div class="media">
                 <div class="media-left">
-                  <a href="#">
+                  <a href="/buildings/<%= building.id %>">
                     <img class="media-object" src="<%= building.image_url %>" alt="<%= building.image_url %>">
                   </a>
                 </div>
@@ -39,7 +39,7 @@
             <% @ranking.each.with_index(1) do |building, i| %>
               <div class="media">
                 <div class="media-left">
-                  <a href="#">
+                  <a href="/buildings/<%= building.id %>">
                     <img class="media-object" src="<%= building.image_url %>" alt="...">
                   </a>
                 </div>
