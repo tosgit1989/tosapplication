@@ -5,13 +5,13 @@
   <div class="row">
     <div class="col-xs-12">
       <div class="row">
-        <!--建物の画像-->
+        <!--ホテルの画像-->
         <div class="media"><div class="media-left"><a href="#">
           <img class="media-object" src="<%= @building.image_url %>" alt="...">
         </a></div></div>
-        <!--建物投稿画面へのリンク-->
+        <!--ホテル投稿画面へのリンク-->
         <div style="text-align: right">
-          <a href="/buildings/<%= @building.id %>/reviews/new">この建物を投稿する</a> <!--「この建物を投稿する」をクリックすると投稿ページに移動-->
+          <a href="/buildings/<%= @building.id %>/reviews/new">このホテルを投稿する</a> <!--「このホテルを投稿する」をクリックすると投稿ページに移動-->
         </div>
 
         <!--detailなどを表示--->
@@ -27,7 +27,7 @@
         <!--みんなのレビューを表示-->
         <div class="col-md-6">
           <div class="bs-docs-section">
-            <h3 class="text-middle">みんなの投稿</h3>
+            <h3 class="text-middle">みんなのレビュー</h3>
             <% @building.reviews.each do |review| %>
               <div class="media">
                 <div class="media-body">
