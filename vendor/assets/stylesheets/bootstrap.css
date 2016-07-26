@@ -6760,9 +6760,14 @@ button.close {
 /*# sourceMappingURL=bootstrap.css.map */
 
 /*# add to original bootstrap.css */
-.header_and_content {
-  min-height: calc(100vh - 30px);
+.page-title {
+  background-color: purple;
 }
-.height_30px {
-  height: 30px;
+
+.page-title .page-title-text {
+  font-family: "Times New Roman";
+  font-size: 40px;
+  font-style: italic;
+  color: white;
 }
+
