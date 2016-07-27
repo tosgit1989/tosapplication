@@ -1,10 +1,10 @@
 <div class="media">
-  <div class="media-left">
+  <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3">
     <a href="/buildings/<%= review.building_id %>">
       <img class="media-object" src="<%= review.building.image_url %>" alt="hotel_picture">
     </a>
   </div>
-  <div class="media-body">
+  <div class="col-xs-12 col-sm-7 col-md-8 col-lg-9">
     <h4 class="media-heading"><a href="/buildings/<%= review.building_id %>"><%= review.building.building_name %></a></h4>
     <%= review.review %></br>
     評価: <%= review.rate %></br>
