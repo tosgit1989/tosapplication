@@ -21,7 +21,7 @@
                 <div class="media">
                   <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3">
                     <a href="/buildings/<%= building.id %>">
-                      <img class="media-object" src="<%= building.image_url %>" alt="hotel_picture">
+                      <img class="media-object" src="<%= building.image_url %>" alt="hotel_picture" style="width: 100%; height: auto">
                     </a>
                   </div>
                   <div class="col-xs-12 col-sm-7 col-md-8 col-lg-9">
@@ -43,12 +43,12 @@
             <h3 class="text-middle">投稿ランキング</h3>
             <% @ranking.each.with_index(1) do |building, i| %>
                 <div class="media">
-                  <div class="media-left">
+                  <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3">
                     <a href="/buildings/<%= building.id %>">
-                      <img class="media-object" src="<%= building.image_url %>" alt="...">
+                      <img class="media-object" src="<%= building.image_url %>" alt="hotel_picture"  style="width: 100%; height: auto">
                     </a>
                   </div>
-                  <div class="media-body">
+                  <div class="col-xs-12 col-sm-7 col-md-8 col-lg-9">
                     <h4 class="media-heading"><%= i %>位: <a href="/buildings/<%= building.id %>"><%= building.building_name %></a></h4>
                     <%= building.detail %></br>
                     投稿: <%= building.review_count %>件
