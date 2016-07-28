@@ -3,19 +3,21 @@
 </div>
 <div class="container">
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-xs-12">
       <div class="row">
-        <div class="col-md-12">
+        <div class="col-xs-12">
           <div class="bs-docs-section">
+
+            <div class="media"></div> <!--この行はページタイトルとの隙間確保用-->
 
             <!--投稿対象のホテル-->
             <div class="media">
-              <div class="media-left">
+              <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3">
                 <a href="/buildings/<%= @building.id %>">
                   <img class="media-object" src="<%= @building.image_url %>" alt="hotel_picture">
                 </a>
               </div>
-              <div class="media-body">
+              <div class="col-xs-12 col-sm-7 col-md-8 col-lg-9">
                 <h4 class="media-heading"><a href="/buildings/<%= @building.id %>"><%= @building.building_name %></a></h4>
               </div>
             </div>
