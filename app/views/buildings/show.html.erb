@@ -15,9 +15,9 @@
         <!--ホテル投稿画面へのリンク-->
         <div style="text-align: right">
           <% if user_signed_in? %>
-            <a href="/buildings/<%= @building.id %>/reviews/new">レビューを書く</a> <!--「レビューを書く」をクリックすると投稿ページに移動-->
+            <a href="/buildings/<%= @building.id %>/reviews/new" class="btn btn-primary" role="button">レビューを書く</a> <!--「レビューを書く」をクリックすると投稿ページに移動-->
           <% else %>
-            <a href="/buildings/<%= @building.id %>/reviews/new">サインインしてレビューを書く</a>
+            <a href="/buildings/<%= @building.id %>/reviews/new" class="btn btn-primary" role="button">サインインしてレビューを書く</a>
           <% end %>
         </div>
 
