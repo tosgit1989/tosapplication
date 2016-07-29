@@ -23,16 +23,16 @@
           <div class="form-group">
             <p class="control-label"><strong>レート(<span class="text-danger">変更する場合のみ、</span>10段階中どれか1つを選択してください)</strong></p>
             <div>
-              <div class="radio-inline"><input type="radio" value="1" name="review[rate]" id="review_rate"><label>1</label></div>
-              <div class="radio-inline"><input type="radio" value="2" name="review[rate]" id="review_rate"><label>2</label></div>
-              <div class="radio-inline"><input type="radio" value="3" name="review[rate]" id="review_rate"><label>3</label></div>
-              <div class="radio-inline"><input type="radio" value="4" name="review[rate]" id="review_rate"><label>4</label></div>
-              <div class="radio-inline"><input type="radio" value="5" name="review[rate]" id="review_rate"><label>5</label></div>
-              <div class="radio-inline"><input type="radio" value="6" name="review[rate]" id="review_rate"><label>6</label></div>
-              <div class="radio-inline"><input type="radio" value="7" name="review[rate]" id="review_rate"><label>7</label></div>
-              <div class="radio-inline"><input type="radio" value="8" name="review[rate]" id="review_rate"><label>8</label></div>
-              <div class="radio-inline"><input type="radio" value="9" name="review[rate]" id="review_rate"><label>9</label></div>
-              <div class="radio-inline"><input type="radio" value="10" name="review[rate]" id="review_rate"><label>10</label></div>
+              <div class="radio-inline"><input type="radio" value="1" name="review[rate]" id="review_rate" <% if @review.rate == 1 then %>checked="checked"<% end %>><label>1</label></div>
+              <div class="radio-inline"><input type="radio" value="2" name="review[rate]" id="review_rate" <% if @review.rate == 2 then %>checked="checked"<% end %>><label>2</label></div>
+              <div class="radio-inline"><input type="radio" value="3" name="review[rate]" id="review_rate" <% if @review.rate == 3 then %>checked="checked"<% end %>><label>3</label></div>
+              <div class="radio-inline"><input type="radio" value="4" name="review[rate]" id="review_rate" <% if @review.rate == 4 then %>checked="checked"<% end %>><label>4</label></div>
+              <div class="radio-inline"><input type="radio" value="5" name="review[rate]" id="review_rate" <% if @review.rate == 5 then %>checked="checked"<% end %>><label>5</label></div>
+              <div class="radio-inline"><input type="radio" value="6" name="review[rate]" id="review_rate" <% if @review.rate == 6 then %>checked="checked"<% end %>><label>6</label></div>
+              <div class="radio-inline"><input type="radio" value="7" name="review[rate]" id="review_rate" <% if @review.rate == 7 then %>checked="checked"<% end %>><label>7</label></div>
+              <div class="radio-inline"><input type="radio" value="8" name="review[rate]" id="review_rate" <% if @review.rate == 8 then %>checked="checked"<% end %>><label>8</label></div>
+              <div class="radio-inline"><input type="radio" value="9" name="review[rate]" id="review_rate" <% if @review.rate == 9 then %>checked="checked"<% end %>><label>9</label></div>
+              <div class="radio-inline"><input type="radio" value="10" name="review[rate]" id="review_rate" <% if @review.rate == 10 then %>checked="checked"<% end %>><label>10</label></div>
             </div>
           </div>
 
