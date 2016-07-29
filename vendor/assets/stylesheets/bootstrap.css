@@ -6762,6 +6762,7 @@ button.close {
 /*# add to original bootstrap.css */
 .page-title {
   background-color: purple;
+  margin-bottom: 15px;
 }
 
 .page-title .page-title-text {
