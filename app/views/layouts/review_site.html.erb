@@ -39,12 +39,7 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <% if user_signed_in? %>
-            <li><a href="/buildings/search1">レビューを書く</a></li>
-          <% else %>
-            <li><a href="/buildings/search1">サインインしてレビューを書く</a></li>
-          <% end %>
-          <li><a href="/buildings/search2">レビュー・詳細を見る</a></li>
+          <li><a href="/buildings/search1">ホテルを検索</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <% if user_signed_in? %>
