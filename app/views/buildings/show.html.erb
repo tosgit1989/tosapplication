@@ -7,9 +7,11 @@
       <div class="bs-docs-section">
 
         <!--ホテルの画像-->
-        <div class="media"><div class="col-xs-12 col-sm-5 col-md-4 col-lg-3"><a href="#">
-          <img class="media-object" src="<%= @building.image_url %>" alt="hotel_picture">
-        </a></div></div>
+        <div class="media">
+          <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3">
+            <img class="media-object" src="<%= @building.image_url %>" alt="hotel_picture" style="width: 100%; height: auto">
+          </div>
+        </div>
         <!--ホテル投稿画面へのリンク-->
         <div style="text-align: right">
           <% if user_signed_in? %>
