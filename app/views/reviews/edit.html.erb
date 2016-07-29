@@ -21,7 +21,7 @@
         <!--フォーム-->
         <%= form_for [@building, @review] do |f| %>
           <div class="form-group">
-            <p class="control-label"><strong>レート(<span class="text-danger">変更する場合のみ、</span>10段階中どれか1つを選択してください)</strong></p>
+            <h3 class="text-middle">レート(どれか1つを選択)</h3>
             <div>
               <div class="radio-inline"><input type="radio" value="1" name="review[rate]" id="review_rate" <% if @review.rate == 1 then %>checked="checked"<% end %>><label>1</label></div>
               <div class="radio-inline"><input type="radio" value="2" name="review[rate]" id="review_rate" <% if @review.rate == 2 then %>checked="checked"<% end %>><label>2</label></div>
@@ -37,7 +37,7 @@
           </div>
 
           <div class="form-group">
-            <p class="control-label"><strong>レビュー</strong></p>
+            <h3 class="text-middle">レビュー</h3>
             <%= f.text_area :review, placeholder: 'レビューを入力', style: 'height: 300px;', class: 'form-control' %>
           </div>
           <div class="form-group">
