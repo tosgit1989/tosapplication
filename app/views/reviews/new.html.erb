@@ -4,53 +4,49 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
-      <div class="row">
-        <div class="col-xs-12">
-          <div class="bs-docs-section">
+      <div class="bs-docs-section">
 
-            <!--投稿対象のホテル-->
-            <div class="media">
-              <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3">
-                <a href="/buildings/<%= @building.id %>">
-                  <img class="media-object" src="<%= @building.image_url %>" alt="hotel_picture" style="width: 100%; height: auto">
-                </a>
-              </div>
-              <div class="col-xs-12 col-sm-7 col-md-8 col-lg-9">
-                <h4 class="media-heading"><a href="/buildings/<%= @building.id %>"><%= @building.building_name %></a></h4>
-              </div>
-            </div>
-
-            <!--フォーム-->
-            <%= form_for [@building, @review] do |f| %>
-              <div class="form-group">
-                <p class="control-label"><strong>レート(10段階中どれか1つを選択してください)</strong></p>
-                <div>
-                  <div class="radio-inline"><input type="radio" value="1" name="review[rate]" id="review_rate"><label>1</label></div>
-                  <div class="radio-inline"><input type="radio" value="2" name="review[rate]" id="review_rate"><label>2</label></div>
-                  <div class="radio-inline"><input type="radio" value="3" name="review[rate]" id="review_rate"><label>3</label></div>
-                  <div class="radio-inline"><input type="radio" value="4" name="review[rate]" id="review_rate"><label>4</label></div>
-                  <div class="radio-inline"><input type="radio" value="5" name="review[rate]" id="review_rate"><label>5</label></div>
-                  <div class="radio-inline"><input type="radio" value="6" name="review[rate]" id="review_rate"><label>6</label></div>
-                  <div class="radio-inline"><input type="radio" value="7" name="review[rate]" id="review_rate"><label>7</label></div>
-                  <div class="radio-inline"><input type="radio" value="8" name="review[rate]" id="review_rate"><label>8</label></div>
-                  <div class="radio-inline"><input type="radio" value="9" name="review[rate]" id="review_rate"><label>9</label></div>
-                  <div class="radio-inline"><input type="radio" value="10" name="review[rate]" id="review_rate"><label>10</label></div>
-                </div>
-              </div>
-
-                <div class="form-group">
-                  <p class="control-label"><strong>レビュー</strong></p>
-                  <%= f.text_area :review, placeholder: 'レビューを入力', style: 'height: 300px;', class: 'form-control' %>
-                </div>
-                <div class="form-group">
-                  <%= button_tag type: "submit", class: "btn btn-primary" do %>
-                    投稿する
-                  <% end %>
-                </div>
-            <% end %>
-
+        <!--投稿対象のホテル-->
+        <div class="media">
+          <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3">
+            <a href="/buildings/<%= @building.id %>">
+              <img class="media-object" src="<%= @building.image_url %>" alt="hotel_picture" style="width: 100%; height: auto">
+            </a>
+          </div>
+          <div class="col-xs-12 col-sm-7 col-md-8 col-lg-9">
+            <h4 class="media-heading"><a href="/buildings/<%= @building.id %>"><%= @building.building_name %></a></h4>
           </div>
         </div>
+
+        <!--フォーム-->
+        <%= form_for [@building, @review] do |f| %>
+          <div class="form-group">
+            <p class="control-label"><strong>レート(10段階中どれか1つを選択してください)</strong></p>
+            <div>
+              <div class="radio-inline"><input type="radio" value="1" name="review[rate]" id="review_rate"><label>1</label></div>
+              <div class="radio-inline"><input type="radio" value="2" name="review[rate]" id="review_rate"><label>2</label></div>
+              <div class="radio-inline"><input type="radio" value="3" name="review[rate]" id="review_rate"><label>3</label></div>
+              <div class="radio-inline"><input type="radio" value="4" name="review[rate]" id="review_rate"><label>4</label></div>
+              <div class="radio-inline"><input type="radio" value="5" name="review[rate]" id="review_rate"><label>5</label></div>
+              <div class="radio-inline"><input type="radio" value="6" name="review[rate]" id="review_rate"><label>6</label></div>
+              <div class="radio-inline"><input type="radio" value="7" name="review[rate]" id="review_rate"><label>7</label></div>
+              <div class="radio-inline"><input type="radio" value="8" name="review[rate]" id="review_rate"><label>8</label></div>
+              <div class="radio-inline"><input type="radio" value="9" name="review[rate]" id="review_rate"><label>9</label></div>
+              <div class="radio-inline"><input type="radio" value="10" name="review[rate]" id="review_rate"><label>10</label></div>
+            </div>
+          </div>
+
+            <div class="form-group">
+              <p class="control-label"><strong>レビュー</strong></p>
+              <%= f.text_area :review, placeholder: 'レビューを入力', style: 'height: 300px;', class: 'form-control' %>
+            </div>
+            <div class="form-group">
+              <%= button_tag type: "submit", class: "btn btn-primary" do %>
+                投稿する
+              <% end %>
+            </div>
+        <% end %>
+
       </div>
     </div>
   </div>
