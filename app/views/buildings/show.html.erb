@@ -6,20 +6,27 @@
     <div class="col-xs-12">
       <div class="bs-docs-section">
 
-        <!--ホテルの画像-->
         <div class="media">
+          <!--ホテルの画像-->
           <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3">
             <img class="media-object" src="<%= @building.image_url %>" alt="hotel_picture" style="width: 100%; height: auto">
           </div>
+
+          <!--中間余白-->
+          <div class="col-sm-2 col-md-4 col-lg-6"></div>
+
+          <!--ホテル投稿画面へのリンク-->
+          <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3">
+              <% if user_signed_in? %>
+                  <a href="/buildings/<%= @building.id %>/reviews/new" class="btn btn-primary" role="button" style="width: 100%">レビューを書く</a> <!--「レビューを書く」をクリックすると投稿ページに移動-->
+              <% else %>
+                  <a href="/buildings/<%= @building.id %>/reviews/new" class="btn btn-primary" role="button" style="width: 100%">サインインしてレビューを書く</a>
+              <% end %>
+          </div>
+
         </div>
-        <!--ホテル投稿画面へのリンク-->
-        <div style="text-align: right">
-          <% if user_signed_in? %>
-            <a href="/buildings/<%= @building.id %>/reviews/new" class="btn btn-primary" role="button">レビューを書く</a> <!--「レビューを書く」をクリックすると投稿ページに移動-->
-          <% else %>
-            <a href="/buildings/<%= @building.id %>/reviews/new" class="btn btn-primary" role="button">サインインしてレビューを書く</a>
-          <% end %>
-        </div>
+
+        <div class="media"></div> <!--この行は隙間確保用-->
 
         <!--タブ-->
         <ul class="nav nav-tabs">
