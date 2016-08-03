@@ -14,34 +14,17 @@
         <!-- / タブ-->
         <!--コンテンツ-->
         <div id="myTabContent" class="tab-content">
+          <!--tab1(新着ホテル)-->
           <div class="tab-pane fade in active" id="tab1">
-            <!--新着ホテルを表示-->
             <h3 class="text-middle">新着ホテル</h3>
-            <% @buildings.each do |building| %>
-                <div class="media">
-                  <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3">
-                    <a href="/buildings/<%= building.id %>">
-                      <img class="media-object" src="<%= building.image_url %>" alt="hotel_picture" style="width: 100%; height: auto">
-                    </a>
-                  </div>
-                  <div class="col-xs-12 col-sm-7 col-md-8 col-lg-9">
-                    <h4 class="media-heading"><a href="/buildings/<%= building.id %>"><%= building.building_name %></a></h4>
-                    <%= building.detail %></br>
-                    投稿: <%= building.review_count %>件
-                    <% if building.reviews.present? %>
-                        平均評価: <%= building.review_rate_average %>
-                    <% else %>
-                        平均評価: -
-                    <% end %>
-                    </br>
-                    このホテルの <a href="/buildings/<%= building.id %>/reviews/new">レビューを書く</a> / <a href="/buildings/<%= building.id %>">レビュー・詳細を見る</a>
-                  </div>
-                </div>
-            <% end %>
+            <div class="render_box"><%= render @buildings %></div>
+            <div class="media"></div> <!--この行はフッターとの隙間確保用-->
+            <div class="reload1"><p>さらに見る</p></div>
             <div class="media"></div> <!--この行はフッターとの隙間確保用-->
           </div>
+
+          <!--tab2(投稿ランキング)-->
           <div class="tab-pane fade" id="tab2">
-            <!--投稿ランキングを表示-->
             <h3 class="text-middle">投稿ランキング</h3>
             <% @ranking.each.with_index(1) do |building, i| %>
                 <div class="media">
@@ -66,12 +49,8 @@
             <% end %>
             <div class="media"></div> <!--この行はフッターとの隙間確保用-->
           </div>
-        </div>
-        <!-- /コンテンツ-->
 
       </div>
     </div>
   </div>
 </div>
-
-
