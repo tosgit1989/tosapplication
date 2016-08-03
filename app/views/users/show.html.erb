@@ -24,7 +24,7 @@
           <div class="tab-pane fade" id="tab2">
             <!--自分の投稿したものを表示-->
             <h3 class="text-middle"><%= current_user.nickname %>さんのレビュー一覧</h3>
-            <ul><%= render current_user.reviews %></ul>
+            <div class="render_box"><%= render current_user.reviews %></div>
             <div class="media"></div> <!--この行はフッターとの隙間確保用-->
           </div>
         </div>
