@@ -19,8 +19,9 @@
             <h3 class="text-middle">新着ホテル</h3>
             <div class="render_box"><%= render @buildings %></div>
             <div class="media"></div> <!--この行はフッターとの隙間確保用-->
-            <div class="reload1"><p>さらに見る</p></div>
+            <div class="render_box_reload"></div>
             <div class="media"></div> <!--この行はフッターとの隙間確保用-->
+            <button class="btn btn-primary" style="position: fixed; top: 66px; right: 16px">次の20件を読み込む</button>
           </div>
 
           <!--tab2(投稿ランキング)-->
@@ -55,3 +56,66 @@
     </div>
   </div>
 </div>
+
+<!--この行より下は、scriptについて記述-->
+<script> 
+  console.log('toshiodayo');
+
+  // group_id_countの初期値を設定
+  var group_id_count = 1
+  // contents配列(この書き方だとidが200までのホテルにしか対応しないので、今後ここを編集の予定)
+  var contents = [
+    { group_id: 1, contents_text: "<%= j(render @buildings.where('id >= 1 and id <= 20')) %>"},
+    { group_id: 2, contents_text: "<%= j(render @buildings.where('id >= 21 and id <= 40')) %>"},
+    { group_id: 3, contents_text: "<%= j(render @buildings.where('id >= 41 and id <= 60')) %>"},
+    { group_id: 4, contents_text: "<%= j(render @buildings.where('id >= 61 and id <= 80')) %>"},
+    { group_id: 5, contents_text: "<%= j(render @buildings.where('id >= 81 and id <= 100')) %>"},
+    { group_id: 6, contents_text: "<%= j(render @buildings.where('id >= 101 and id <= 120')) %>"},
+    { group_id: 7, contents_text: "<%= j(render @buildings.where('id >= 121 and id <= 140')) %>"},
+    { group_id: 8, contents_text: "<%= j(render @buildings.where('id >= 141 and id <= 160')) %>"},
+    { group_id: 9, contents_text: "<%= j(render @buildings.where('id >= 161 and id <= 180')) %>"},
+    { group_id: 10, contents_text: "<%= j(render @buildings.where('id >= 181 and id <= 200')) %>"},
+  ];
+
+  // getContentsを定義
+     var getContents = function() {
+
+    group_id_count = group_id_count + 1;
+
+    $.each(contents, function(index, elem) {
+      if (elem.group_id == group_id_count) { 
+        $('div.render_box_reload') .append(elem.contents_text);
+      } 
+    }) 
+
+    };
+
+  // ajaxTestを定義
+  var ajaxTest = function(cb) {
+    $.ajax({
+      method: 'GET',
+      url: '',
+      data: {}
+    }).done(cb).fail(function(err) {
+      console.log(err);
+    });
+  };
+
+  // スクロールによる操作
+  $(window).on("scroll", function() { 
+    var scrollHeight = $(document).height();
+     var scrollPosition = $(window).height() + $(window).scrollTop(); 
+    if ((scrollHeight - scrollPosition) / scrollHeight === 0) {
+      ajaxTest(function() {
+        getContents();
+      });
+    } 
+  });  
+
+  // ボタンクリックによる操作
+  $(function() { 
+    $('div#tab1 button.btn').click(function() { 
+      getContents();
+     })
+   })  
+</script> 
