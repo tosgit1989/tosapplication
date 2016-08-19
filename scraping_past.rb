@@ -58,6 +58,7 @@ class Scrape
                 fee2 = node.css('.result-body .hotel-detail .hotel-detail-header td .s11_66').inner_text.gsub(/(\s)/,"").gsub(/'/, "’") # 料金一人あたり換算時
                 access = node.css('.result-body .hotel-detail .hotel-detail-body td .s11_33').inner_text.gsub(/(\s)/,"").gsub(/'/, "’") # アクセス
                 address = node.css('.result-header tr .s11_66').inner_text.gsub(/'/, "’") # 場所
+                prefareapage = "#{c_pref_code}#{c_area_code}0#{c_page_num.to_s}" # 都道府県コードエリアコードページ番号
 
                 statement = a_connection.prepare("
                   INSERT INTO buildings (
@@ -67,7 +68,8 @@ class Scrape
                     fee1,
                     fee2,
                     access,
-                    address
+                    address,
+                    prefareapage
                   )
                   VALUES (
                     '#{building_name}',
@@ -76,7 +78,8 @@ class Scrape
                     '#{fee1}',
                     '#{fee2}',
                     '#{access}',
-                    '#{address}'
+                    '#{address}',
+                    '#{prefareapage}'
                   )
                 ")
 
