@@ -58,12 +58,12 @@
 </div>
 
 <!--この行より下は、scriptについて記述-->
-<script> 
+<script>
   console.log('toshiodayo');
 
   // group_id_countの初期値を設定
   var group_id_count = 1
-  // contents配列(この書き方だとidが200までのホテルにしか対応しないので、今後ここを編集の予定)
+  // contents配列(この書き方だと冗長なうえidが500までのホテルにしか対応しないので、今後ここを編集の予定)
   var contents = [
     { group_id: 1, contents_text: "<%= j(render @buildings.where('id >= 1 and id <= 20')) %>"},
     { group_id: 2, contents_text: "<%= j(render @buildings.where('id >= 21 and id <= 40')) %>"},
@@ -75,20 +75,35 @@
     { group_id: 8, contents_text: "<%= j(render @buildings.where('id >= 141 and id <= 160')) %>"},
     { group_id: 9, contents_text: "<%= j(render @buildings.where('id >= 161 and id <= 180')) %>"},
     { group_id: 10, contents_text: "<%= j(render @buildings.where('id >= 181 and id <= 200')) %>"},
+    { group_id: 11, contents_text: "<%= j(render @buildings.where('id >= 201 and id <= 220')) %>"},
+    { group_id: 12, contents_text: "<%= j(render @buildings.where('id >= 221 and id <= 240')) %>"},
+    { group_id: 13, contents_text: "<%= j(render @buildings.where('id >= 241 and id <= 260')) %>"},
+    { group_id: 14, contents_text: "<%= j(render @buildings.where('id >= 261 and id <= 280')) %>"},
+    { group_id: 15, contents_text: "<%= j(render @buildings.where('id >= 281 and id <= 300')) %>"},
+    { group_id: 16, contents_text: "<%= j(render @buildings.where('id >= 301 and id <= 320')) %>"},
+    { group_id: 17, contents_text: "<%= j(render @buildings.where('id >= 321 and id <= 340')) %>"},
+    { group_id: 18, contents_text: "<%= j(render @buildings.where('id >= 341 and id <= 360')) %>"},
+    { group_id: 19, contents_text: "<%= j(render @buildings.where('id >= 361 and id <= 380')) %>"},
+    { group_id: 20, contents_text: "<%= j(render @buildings.where('id >= 381 and id <= 400')) %>"},
+    { group_id: 21, contents_text: "<%= j(render @buildings.where('id >= 401 and id <= 420')) %>"},
+    { group_id: 22, contents_text: "<%= j(render @buildings.where('id >= 421 and id <= 440')) %>"},
+    { group_id: 23, contents_text: "<%= j(render @buildings.where('id >= 441 and id <= 460')) %>"},
+    { group_id: 24, contents_text: "<%= j(render @buildings.where('id >= 461 and id <= 480')) %>"},
+    { group_id: 25, contents_text: "<%= j(render @buildings.where('id >= 481 and id <= 500')) %>"},
   ];
 
   // getContentsを定義
-     var getContents = function() {
+  var getContents = function() {
 
     group_id_count = group_id_count + 1;
 
     $.each(contents, function(index, elem) {
-      if (elem.group_id == group_id_count) { 
+      if (elem.group_id == group_id_count) {
         $('div.render_box_reload') .append(elem.contents_text);
-      } 
-    }) 
+      }
+    })
 
-    };
+  };
 
   // ajaxTestを定義
   var ajaxTest = function(cb) {
@@ -102,20 +117,20 @@
   };
 
   // スクロールによる操作
-  $(window).on("scroll", function() { 
+  $(window).on("scroll", function() {
     var scrollHeight = $(document).height();
-     var scrollPosition = $(window).height() + $(window).scrollTop(); 
+    var scrollPosition = $(window).height() + $(window).scrollTop();
     if ((scrollHeight - scrollPosition) / scrollHeight === 0) {
       ajaxTest(function() {
         getContents();
       });
-    } 
-  });  
+    }
+  });
 
   // ボタンクリックによる操作
-  $(function() { 
-    $('div#tab1 button.btn').click(function() { 
+  $(function() {
+    $('div#tab1 button.btn').click(function() {
       getContents();
-     })
-   })  
+    })
+  })
 </script> 
