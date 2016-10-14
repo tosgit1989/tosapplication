@@ -12,7 +12,7 @@ class BuildingsController < RankingController
 
   def search1
     # 検索フォームのキーワードをあいまい検索して、buildingsテーブルから建物情報を取得する
-    @buildings = Building.where('building_name LIKE(?)', "%#{params[:keyword]}%").where('address LIKE(?)', "%#{params[:keypref]}%").page(params[:page]).per(20)
+    @buildings = Building.where('address LIKE(?)', "%#{params[:keypref]}%").where('building_name LIKE(?)', "%#{params[:keyword]}%").where('detail LIKE(?)', "%#{params[:keydeta]}%").page(params[:page]).per(20)
   end
 
 end
