@@ -18,7 +18,7 @@
         <% end %>
 
         <!--検索結果を表示-->
-        <h3 class="text-middle">検索結果</h3>
+        <h3 class="text-middle">検索結果(<%= @buildings.count %>件見つかりました)</h3>
         <% @buildings.each do |building| %>
           <div class="media">
             <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3">
