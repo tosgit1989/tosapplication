@@ -10,7 +10,7 @@
         <h3 class="text-middle">検索</h3>
         <%= form_tag('/buildings/search1', method: :get) do %>
           <div class="form-group">
-          <input class="form-control" name="keypref" placeholder="都道府県を入力" type="text" value=""><br>
+            <input class="form-control" name="keypref" placeholder="都道府県を入力" type="text" value=""><br>
             <input class="form-control" name="keyword" placeholder="ホテル名を入力" type="text" value=""><br>
             <input class="form-control" name="keydeta" placeholder="詳細情報を入力" type="text" value=""><br>
             <button class="btn btn-primary" building_name="検索" type="submit">検索</button>
@@ -18,8 +18,8 @@
         <% end %>
 
         <!--検索結果を表示-->
-        <h3 class="text-middle">検索結果(<%= @buildings.count %>件見つかりました)</h3>
-        <% @buildings.each do |building| %>
+        <h3 class="text-middle">検索結果(<%= @buildings_a.count %>件見つかりました)</h3>
+        <% @buildings_b.each do |building| %>
           <div class="media">
             <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3">
               <a href="/buildings/<%= building.id %>">
@@ -40,7 +40,7 @@
             </div>
           </div>
         <% end %>
-        <%= paginate(@buildings) %>
+        <%= paginate(@buildings_b) %>
       </div>
 
     </div>
