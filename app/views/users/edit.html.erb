@@ -1,0 +1,32 @@
+<div class="container-fluid page-title">
+  <p class="page-title-text">ユーザー情報の編集</p><!--title-->
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="bs-docs-section">
+
+        <!--フォーム-->
+        <%= form_for @user do |f| %>
+          <!--メールアドレス入力欄-->
+          <div class="form-group">
+            <p class="text-middle">メールアドレス</p>
+            <%= f.email_field :email, placeholder: 'メールアドレスを入力', class: 'form-control' %>
+          </div>
+
+          <!--ニックネーム入力欄-->
+          <div class="form-group">
+            <p class="text-middle">ニックネーム</p>
+            <%= f.text_field :nickname, placeholder: 'ニックネームを入力', class: 'form-control' %>
+          </div>
+          <div class="form-group">
+            <%= button_tag type: "submit", class: "btn btn-primary" do %>
+              更新する
+            <% end %>
+          </div>
+        <% end %>
+
+      </div>
+    </div>
+  </div>
+</div>

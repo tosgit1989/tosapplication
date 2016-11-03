@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     get 'api/get_buildings' => 'reviews#new'
 
     devise_for :users
-    resources :users, only: :show
+    resources :users, only: [:show, :edit, :update]
     resources :buildings, only: :show do
     resources :reviews, only: [:new, :create, :destroy, :edit, :update]
     collection do
