@@ -1,13 +1,13 @@
 <div class="media">
   <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3">
-    <a href="/buildings/<%= review.building_id %>">
-      <img class="media-object" src="<%= review.building.image_url %>" alt="hotel_picture" style="width: 100%; height: auto">
+    <a href="/hotels/<%= review.hotel_id %>">
+      <img class="media-object" src="<%= review.hotel.image_url %>" alt="hotel_picture" style="width: 100%; height: auto">
     </a>
   </div>
   <div class="col-xs-12 col-sm-7 col-md-8 col-lg-9">
-    <h4 class="media-heading"><a href="/buildings/<%= review.building_id %>"><%= review.building.building_name %></a></h4>
+    <h4 class="media-heading"><a href="/hotels/<%= review.hotel_id %>"><%= review.hotel.hotel_name %></a></h4>
     <%= review.review %></br>
     評価: <%= review.rate %></br>
-    このレビューを <a href="/buildings/<%= review.building_id %>/reviews/<%= review.id %>/edit">編集</a> / <%= link_to '削除', "/buildings/#{review.building_id}/reviews/#{review.id}", method: :delete, remote: true %>
+    このレビューを <a href="/hotels/<%= review.hotel_id %>/reviews/<%= review.id %>/edit">編集</a> / <%= link_to '削除', "/hotels/#{review.hotel_id}/reviews/#{review.id}", method: :delete, remote: true %>
   </div>
 </div>

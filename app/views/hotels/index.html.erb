@@ -1,0 +1,136 @@
+<div class="container-fluid page-title">
+  <p class="page-title-text">トップページ</p><!--title-->
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="bs-docs-section">
+
+        <!--タブ-->
+        <ul class="nav nav-tabs">
+          <li class="active"><a href="#tab1" data-toggle="tab">新着ホテル</a></li>
+          <li><a href="#tab2" data-toggle="tab">投稿ランキング</a></li>
+        </ul>
+        <!-- / タブ-->
+        <!--コンテンツ-->
+        <div id="myTabContent" class="tab-content">
+          <!--tab1(新着ホテル)-->
+          <div class="tab-pane fade in active" id="tab1">
+            <h3 class="text-middle">新着ホテル</h3>
+            <div class="render_box"><%= render @hotels %></div>
+            <div class="media"></div> <!--この行はフッターとの隙間確保用-->
+            <div class="render_box_reload"></div>
+            <div class="media"></div> <!--この行はフッターとの隙間確保用-->
+            <button class="btn btn-primary" style="position: fixed; top: 66px; right: 16px">次の20件を読み込む</button>
+          </div>
+
+          <!--tab2(投稿ランキング)-->
+          <div class="tab-pane fade" id="tab2">
+            <h3 class="text-middle">投稿ランキング</h3>
+            <% @ranking.each.with_index(1) do |hotel, i| %>
+                <div class="media">
+                  <div class="col-xs-12 col-sm-5 col-md-4 col-lg-3">
+                    <a href="/hotels/<%= hotel.id %>">
+                      <img class="media-object" src="<%= hotel.image_url %>" alt="hotel_picture"  style="width: 100%; height: auto">
+                    </a>
+                  </div>
+                  <div class="col-xs-12 col-sm-7 col-md-8 col-lg-9">
+                    <h4 class="media-heading"><%= i %>位: <a href="/hotels/<%= hotel.id %>"><%= hotel.hotel_name %></a></h4>
+                    <%= hotel.detail %></br>
+                    投稿: <%= hotel.review_count %>件
+                    <% if hotel.reviews.present? %>
+                        平均評価: <%= hotel.review_rate_average %>
+                    <% else %>
+                        平均評価: -
+                    <% end %>
+                    </br>
+                    このホテルの <a href="/hotels/<%= hotel.id %>/reviews/new">レビューを書く</a> / <a href="/hotels/<%= hotel.id %>">レビュー・詳細を見る</a>
+                  </div>
+                </div>
+            <% end %>
+            <div class="media"></div> <!--この行はフッターとの隙間確保用-->
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--この行より下は、scriptについて記述-->
+<script>
+  console.log('toshiodayo');
+
+  // group_id_countの初期値を設定
+  var group_id_count = 1
+  // contents配列(この書き方だと冗長なうえidが500までのホテルにしか対応しないので、今後ここを編集の予定)
+  var contents = [
+    { group_id: 1, contents_text: "<%= j(render @hotels.where('id >= 1 and id <= 20')) %>"},
+    { group_id: 2, contents_text: "<%= j(render @hotels.where('id >= 21 and id <= 40')) %>"},
+    { group_id: 3, contents_text: "<%= j(render @hotels.where('id >= 41 and id <= 60')) %>"},
+    { group_id: 4, contents_text: "<%= j(render @hotels.where('id >= 61 and id <= 80')) %>"},
+    { group_id: 5, contents_text: "<%= j(render @hotels.where('id >= 81 and id <= 100')) %>"},
+    { group_id: 6, contents_text: "<%= j(render @hotels.where('id >= 101 and id <= 120')) %>"},
+    { group_id: 7, contents_text: "<%= j(render @hotels.where('id >= 121 and id <= 140')) %>"},
+    { group_id: 8, contents_text: "<%= j(render @hotels.where('id >= 141 and id <= 160')) %>"},
+    { group_id: 9, contents_text: "<%= j(render @hotels.where('id >= 161 and id <= 180')) %>"},
+    { group_id: 10, contents_text: "<%= j(render @hotels.where('id >= 181 and id <= 200')) %>"},
+    { group_id: 11, contents_text: "<%= j(render @hotels.where('id >= 201 and id <= 220')) %>"},
+    { group_id: 12, contents_text: "<%= j(render @hotels.where('id >= 221 and id <= 240')) %>"},
+    { group_id: 13, contents_text: "<%= j(render @hotels.where('id >= 241 and id <= 260')) %>"},
+    { group_id: 14, contents_text: "<%= j(render @hotels.where('id >= 261 and id <= 280')) %>"},
+    { group_id: 15, contents_text: "<%= j(render @hotels.where('id >= 281 and id <= 300')) %>"},
+    { group_id: 16, contents_text: "<%= j(render @hotels.where('id >= 301 and id <= 320')) %>"},
+    { group_id: 17, contents_text: "<%= j(render @hotels.where('id >= 321 and id <= 340')) %>"},
+    { group_id: 18, contents_text: "<%= j(render @hotels.where('id >= 341 and id <= 360')) %>"},
+    { group_id: 19, contents_text: "<%= j(render @hotels.where('id >= 361 and id <= 380')) %>"},
+    { group_id: 20, contents_text: "<%= j(render @hotels.where('id >= 381 and id <= 400')) %>"},
+    { group_id: 21, contents_text: "<%= j(render @hotels.where('id >= 401 and id <= 420')) %>"},
+    { group_id: 22, contents_text: "<%= j(render @hotels.where('id >= 421 and id <= 440')) %>"},
+    { group_id: 23, contents_text: "<%= j(render @hotels.where('id >= 441 and id <= 460')) %>"},
+    { group_id: 24, contents_text: "<%= j(render @hotels.where('id >= 461 and id <= 480')) %>"},
+    { group_id: 25, contents_text: "<%= j(render @hotels.where('id >= 481 and id <= 500')) %>"},
+  ];
+
+  // getContentsを定義
+  var getContents = function() {
+
+    group_id_count = group_id_count + 1;
+
+    $.each(contents, function(index, elem) {
+      if (elem.group_id == group_id_count) {
+        $('div.render_box_reload') .append(elem.contents_text);
+      }
+    })
+
+  };
+
+  // ajaxTestを定義
+  var ajaxTest = function(cb) {
+    $.ajax({
+      method: 'GET',
+      url: '',
+      data: {}
+    }).done(cb).fail(function(err) {
+      console.log(err);
+    });
+  };
+
+  // スクロールによる操作
+  $(window).on("scroll", function() {
+    var scrollHeight = $(document).height();
+    var scrollPosition = $(window).height() + $(window).scrollTop();
+    if ((scrollHeight - scrollPosition) / scrollHeight === 0) {
+      ajaxTest(function() {
+        getContents();
+      });
+    }
+  });
+
+  // ボタンクリックによる操作
+  $(function() {
+    $('div#tab1 button.btn').click(function() {
+      getContents();
+    })
+  })
+</script> 

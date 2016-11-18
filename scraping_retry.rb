@@ -94,10 +94,10 @@ class Scrape
       anemone.on_every_page do |page|
         doc = Nokogiri::HTML.parse(page.body.encode('utf-8', 'shift_jis', :undef => :replace, :replace => '?'))
         page.doc.css('.search-result-cassette').each do |node|
-          building_count = page.doc.css('.s16_F60b').inner_text.to_i  # 軒数
-          page_max = (building_count + 29) / 30 # 最大ページ番号
+          hotel_count = page.doc.css('.s16_F60b').inner_text.to_i  # 軒数
+          page_max = (hotel_count + 29) / 30 # 最大ページ番号
           if c_page_num <= page_max then
-            building_name = node.css('.result-body .hotel-detail .hotel-detail-header a').inner_text.gsub(/'/, "’") # ホテル名
+            hotel_name = node.css('.result-body .hotel-detail .hotel-detail-header a').inner_text.gsub(/'/, "’") # ホテル名
             begin image_url = node.css('.result-body .hotel-picture .main img').attribute('src').value rescue image_url = "" end # 画像URL
             detail = node.css('.result-body .hotel-detail .hotel-detail-body td .s12_33').inner_text.gsub(/(\s)/,"").gsub(/'/, "’") # 詳細
             fee1 = node.css('.result-body .hotel-detail .hotel-detail-header td .s14_00').inner_text.gsub(/(\s)/,"").gsub(/'/, "’") # 料金
@@ -107,8 +107,8 @@ class Scrape
             prefareapage = "#{c_pref_code}#{c_area_code}0#{c_page_num.to_s}" # 都道府県コードエリアコードページ番号
 
             statement = c_connection.prepare("
-                  INSERT INTO buildings (
-                    building_name,
+                  INSERT INTO hotels (
+                    hotel_name,
                     image_url,
                     detail,
                     fee1,
@@ -118,7 +118,7 @@ class Scrape
                     prefareapage
                   )
                   VALUES (
-                    '#{building_name}',
+                    '#{hotel_name}',
                     '#{image_url}',
                     '#{detail}',
                     '#{fee1}',

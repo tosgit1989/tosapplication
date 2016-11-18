@@ -1,4 +1,4 @@
-id,"building_name","image_url","detail","access","address","created_at","updated_at","fee1","fee2"
+id,"hotel_name","image_url","detail","access","address","created_at","updated_at","fee1","fee2"
 1,"hotel1",NULL,"これはhotel1","◯◯駅から徒歩1分","◯◯県△△市✕✕1-1-1",NULL,NULL,NULL,NULL
 2,"hotel2",NULL,"これはhotel2","◯◯駅から徒歩2分","◯◯県△△市✕✕1-1-2",NULL,NULL,NULL,NULL
 3,"hotel3",NULL,"これはhotel3","◯◯駅から徒歩3分","◯◯県△△市✕✕1-1-3",NULL,NULL,NULL,NULL

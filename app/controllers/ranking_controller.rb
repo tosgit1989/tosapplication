@@ -3,7 +3,7 @@ class RankingController < ApplicationController
   before_action :ranking
 
   def ranking
-    building_ids = Review.group(:building_id).order('count_building_id DESC').limit(5).count(:building_id).keys
-    @ranking = building_ids.map{|id| Building.find id}
+    hotel_ids = Review.group(:hotel_id).order('count_hotel_id DESC').limit(5).count(:hotel_id).keys
+    @ranking = hotel_ids.map{|id| Hotel.find id}
   end
 end

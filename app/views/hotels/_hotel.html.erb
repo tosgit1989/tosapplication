@@ -1,0 +1,19 @@
+<div class='media'>
+  <div class='col-xs-12 col-sm-5 col-md-4 col-lg-3'>
+    <a href='/hotels/<%= hotel.id %>'>
+      <img class='media-object' src='<%= hotel.image_url %>' alt='hotel_picture' style='width: 100%; height: auto'>
+    </a>
+  </div>
+  <div class='col-xs-12 col-sm-7 col-md-8 col-lg-9'>
+    <h4 class='media-heading'><a href='/hotels/<%= hotel.id %>'><%= hotel.hotel_name %></a></h4>
+    <%= hotel.detail %></br>
+    投稿: <%= hotel.review_count %>件
+    <% if hotel.reviews.present? %>
+        平均評価: <%= hotel.review_rate_average %>
+    <% else %>
+        平均評価: -
+    <% end %>
+    </br>
+    このホテルの <a href='/hotels/<%= hotel.id %>/reviews/new'>レビューを書く</a> / <a href='/hotels/<%= hotel.id %>'>レビュー・詳細を見る</a>
+  </div>
+</div>
