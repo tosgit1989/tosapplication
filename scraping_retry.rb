@@ -21,7 +21,7 @@ class Scrape
     puts 'ページ番号を入力してください。'
     page_e = gets.to_i
 
-    connection = Mysql::new("localhost", "root", "", "tosapplication_development")
+    connection = Mysql::new("localhost", "root", "", "tosapplication")
 
     prefectures = YAML.load_file('config/prefectures.yaml')
     for prefecture in prefectures do

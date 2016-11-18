@@ -6,7 +6,7 @@ require 'mysql'
 class Scrape
 
   def main()
-    connection = Mysql::new("localhost", "root", "", "tosapplication_development")
+    connection = Mysql::new("localhost", "root", "", "tosapplication")
 
     prefectures = YAML.load_file('config/prefectures.yaml')
     for prefecture in prefectures do

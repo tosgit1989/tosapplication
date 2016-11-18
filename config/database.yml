@@ -18,7 +18,7 @@ default: &default
 
 development:
   <<: *default
-  database: tosapplication_development
+  database: tosapplication
   socket: /tmp/mysql.sock
 
 # Warning: The database defined as "test" will be erased and
