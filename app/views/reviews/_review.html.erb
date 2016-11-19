@@ -7,7 +7,7 @@
   <div class="col-xs-12 col-sm-7 col-md-8 col-lg-9">
     <h4 class="media-heading"><a href="/hotels/<%= review.hotel_id %>"><%= review.hotel.hotel_name %></a></h4>
     <%= review.review %></br>
-    評価: <%= review.rate %></br>
+    レート: <strong><%= review.rate %></strong> / 10</br>
     このレビューを <a href="/hotels/<%= review.hotel_id %>/reviews/<%= review.id %>/edit">編集</a> / <%= link_to '削除', "/hotels/#{review.hotel_id}/reviews/#{review.id}", method: :delete, remote: true %>
   </div>
 </div>
