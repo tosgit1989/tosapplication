@@ -1,5 +1,4 @@
 class RankingController < ApplicationController
-  layout 'review_site'
   before_action :ranking
 
   def ranking
