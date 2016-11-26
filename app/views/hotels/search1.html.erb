@@ -10,9 +10,12 @@
         <h3 class="text-middle">検索</h3>
         <%= form_tag('/hotels/search1', method: :get) do %>
           <div class="form-group">
-            <input class="form-control" name="keypref" placeholder="都道府県を入力" type="text" value=""><br>
-            <input class="form-control" name="keyword" placeholder="ホテル名を入力" type="text" value=""><br>
-            <input class="form-control" name="keydeta" placeholder="詳細情報を入力" type="text" value=""><br>
+            <p><strong>都道府県</strong></p>
+            <input class="form-control" name="keypref" placeholder="キーワードを入力" type="text" value=""><br>
+            <p><strong>ホテル名</strong></p>
+            <input class="form-control" name="keyword" placeholder="キーワードを入力" type="text" value=""><br>
+            <p><strong>詳細情報</strong></p>
+            <input class="form-control" name="keydeta" placeholder="キーワードを入力" type="text" value=""><br>
             <button class="btn btn-primary" hotel_name="検索" type="submit">検索</button>
           </div>
         <% end %>
